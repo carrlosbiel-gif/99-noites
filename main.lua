@@ -1,62 +1,59 @@
---// 99 Nights in the Forest [ANTI-BAN & SAFE] //--
+--// 99 Noites na Floresta - Versão Performance & Safe //--
+-- Baseado no código de carrlosbiel-gif
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
--- Services & Cache
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local US = game:GetService("UserInputService")
-local VIM = game:GetService("VirtualInputManager")
-local LP = Players.LocalPlayer
-local Camera = workspace.CurrentCamera
-
--- Configuração de Segurança
-local SafeConfig = {
-    Aimbot = false,
-    SafeESP = false,
-    LegitFarm = false,
-    Fly = false,
-    Smoothing = 0.4, -- Quanto maior, mais "humana" a mira
-    WaitTime = 0.5   -- Delay randômico para evitar padrões
+-- Configurações de Segurança (Anti-Detecção)
+local Settings = {
+    FarmSpeed = 0.3,
+    Smoothing = 0.25, -- Mira suave para evitar ban
+    FlySpeed = 50,
+    PanicKey = Enum.KeyCode.P -- Tecla P fecha tudo
 }
 
-local Targets = {"Alien", "Wolf", "Cultist", "Bear"}
-
--- Função de Click Humanizado (Não clica sempre no mesmo milissegundo)
-local function humanClick()
-    VIM:SendMouseButtonEvent(0, 0, 0, true, game, 0)
-    task.wait(math.random(5, 15) / 100) -- Delay aleatório entre clicks
-    VIM:SendMouseButtonEvent(0, 0, 0, false, game, 0)
-end
-
--- Window Setup
 local Window = Rayfield:CreateWindow({
-    Name = "99 Nights | Stealth Edition",
-    LoadingTitle = "Modo Seguro Ativado",
-    LoadingSubtitle = "Proteção Anti-Cheat",
+    Name = "99 Noites | Pro Edition",
+    LoadingTitle = "Carregando Otimizações...",
+    LoadingSubtitle = "by Gemini Safe-Mode",
     KeySystem = false,
 })
 
-local Main = Window:CreateTab("Segurança")
+-- Cache de Serviços para Performance
+local LP = game:GetService("Players").LocalPlayer
+local RS = game:GetService("RunService")
+local VIM = game:GetService("VirtualInputManager")
 
--- 1. LEGIT AUTO FARM (Sem teleporte agressivo)
+-- Função de Click Seguro
+local function safeClick()
+    VIM:SendMouseButtonEvent(0, 0, 0, true, game, 0)
+    task.wait(math.random(2, 5) / 100)
+    VIM:SendMouseButtonEvent(0, 0, 0, false, game, 0)
+end
+
+-- Aba Principal
+local Main = Window:CreateTab("Automação", 4483362458)
+
+local AutoFarm = false
 Main:CreateToggle({
-    Name = "Legit Farm (Apenas alcance manual)",
+    Name = "Farm de Árvores (Legit Mode)",
     CurrentValue = false,
-    Callback = function(v) SafeConfig.LegitFarm = v end
+    Callback = function(v) 
+        AutoFarm = v 
+        if v then
+            Rayfield:Notify({Title = "Segurança", Content = "Apenas bata nas árvores, o script cuidará do click.", Duration = 3})
+        end
+    end
 })
 
+-- Loop de Farm Otimizado (Gasta menos CPU)
 task.spawn(function()
-    while task.wait(0.3) do
-        if SafeConfig.LegitFarm and LP.Character and LP.Character:FindFirstChild("HumanoidRootPart") then
-            -- Em vez de teleportar pelo mapa, ele só bate se você chegar PERTO da árvore
-            -- Isso evita o ban por "Teleportation Detection"
+    while task.wait(Settings.FarmSpeed) do
+        if AutoFarm and LP.Character then
+            local root = LP.Character:FindFirstChild("HumanoidRootPart")
             for _, obj in ipairs(workspace:GetChildren()) do
                 if obj.Name == "Small Tree" and obj:FindFirstChild("Trunk") then
-                    local dist = (obj.Trunk.Position - LP.Character.HumanoidRootPart.Position).Magnitude
-                    if dist < 12 then -- Distância de segurança (braço do personagem)
-                        humanClick()
-                        task.wait(0.2)
+                    if (obj.Trunk.Position - root.Position).Magnitude < 15 then
+                        safeClick()
                         break
                     end
                 end
@@ -65,61 +62,47 @@ task.spawn(function()
     end
 end)
 
--- 2. AIMBOT SUAVE (Lerp interpolation)
-Main:CreateToggle({
-    Name = "Silent Aimbot (Suave)",
+-- Aba de Combate
+local Combat = Window:CreateTab("Combate", 4483362458)
+
+local AimbotActive = false
+Combat:CreateToggle({
+    Name = "Aimbot Suave (Botão Direito)",
     CurrentValue = false,
-    Callback = function(v) SafeConfig.Aimbot = v end
+    Callback = function(v) AimbotActive = v end
 })
 
-RunService.RenderStepped:Connect(function()
-    if SafeConfig.Aimbot and US:IsMouseButtonPressed(Enum.UserInputType.MouseButton2) then
+-- Sistema de Mira com Interpolação (Não puxa instantâneo)
+RS.RenderStepped:Connect(function()
+    if AimbotActive and game:GetService("UserInputService"):IsMouseButtonPressed(Enum.UserInputType.MouseButton2) then
         local target = nil
-        local shortestDist = 150 -- FOV Limitado para não parecer estranho
+        local dist = 200
         
         for _, npc in ipairs(workspace:GetChildren()) do
-            if table.find(Targets, npc.Name) and npc:FindFirstChild("Head") then
-                local pos, onScreen = Camera:WorldToViewportPoint(npc.Head.Position)
+            if (npc.Name == "Wolf" or npc.Name == "Alien") and npc:FindFirstChild("Head") then
+                local screenPos, onScreen = workspace.CurrentCamera:WorldToViewportPoint(npc.Head.Position)
                 if onScreen then
-                    local mag = (Vector2.new(pos.X, pos.Y) - US:GetMouseLocation()).Magnitude
-                    if mag < shortestDist then
+                    local mDist = (Vector2.new(screenPos.X, screenPos.Y) - game:GetService("UserInputService"):GetMouseLocation()).Magnitude
+                    if mDist < dist then
+                        dist = mDist
                         target = npc.Head
-                        shortestDist = mag
                     end
                 end
             end
         end
         
         if target then
-            -- INTERPOLAÇÃO (Faz a câmera girar suavemente, não instantâneo)
-            local targetCF = CFrame.new(Camera.CFrame.Position, target.Position)
-            Camera.CFrame = Camera.CFrame:Lerp(targetCF, SafeConfig.Smoothing)
+            local lookAt = CFrame.new(workspace.CurrentCamera.CFrame.Position, target.Position)
+            workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame:Lerp(lookAt, Settings.Smoothing)
         end
     end
 end)
 
--- 3. ESP SEGURO (Usa Box Simples em vez de Highlight pesado)
-Main:CreateToggle({
-    Name = "Box ESP (Menos detectável)",
-    CurrentValue = false,
-    Callback = function(v) SafeConfig.SafeESP = v end
-})
-
--- Aba de Exploração Segura
-local Exploit = Window:CreateTab("Exploits")
-
-Exploit:CreateButton({
-    Name = "Teleporte Seguro (Tween)",
-    Callback = function()
-        -- Exemplo: Teleporte com "frio" (suavizado) para evitar kick
-        Rayfield:Notify({Title = "Aviso", Content = "Use teleporte apenas em emergências!", Duration = 3})
+-- Botão de Pânico (Fecha o Script se um Admin aparecer)
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Settings.PanicKey then
+        Rayfield:Destroy()
     end
-})
+end)
 
-Exploit:CreateSlider({
-    Name = "Suavidade da Mira",
-    Range = {1, 10},
-    Increment = 1,
-    CurrentValue = 4,
-    Callback = function(v) SafeConfig.Smoothing = v / 10 end
-})
+Rayfield:Notify({Title = "Sucesso", Content = "Script carregado com base no GitHub oficial.", Duration = 5})
