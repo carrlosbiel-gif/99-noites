@@ -1,151 +1,113 @@
---// 99 Nights in the Forest [LITE & OPTIMIZED] //--
+--// 99 Nights - Xeno Optimized Version //--
+-- Interface nativa para evitar crashes no Xeno
 
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local FarmBtn = Instance.new("TextButton")
+local ESPBtn = Instance.new("TextButton")
+local AimBtn = Instance.new("TextButton")
 
--- Services & Cache
-local Players = game:GetService("Players")
-local RS = game:GetService("RunService")
-local US = game:GetService("UserInputService")
+-- Setup GUI (Minimalista)
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.Name = "XenoSafeMenu"
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.1, 0, 0.1, 0)
+MainFrame.Size = UDim2.new(0, 180, 0, 220)
+MainFrame.Active = true
+MainFrame.Draggable = true -- Você pode arrastar o menu
+
+Title.Parent = MainFrame
+Title.Size = UDim2.new(1, 0, 0, 40)
+Title.Text = "99 NIGHTS (XENO)"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+
+-- Estilo dos Botões
+local function styleBtn(btn, text, pos)
+    btn.Parent = MainFrame
+    btn.Size = UDim2.new(0.9, 0, 0, 40)
+    btn.Position = UDim2.new(0.05, 0, 0, pos)
+    btn.Text = text
+    btn.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    btn.TextColor3 = Color3.new(1, 1, 1)
+    btn.Font = Enum.Font.SourceSansBold
+end
+
+styleBtn(FarmBtn, "Auto Farm: OFF", 50)
+styleBtn(ESPBtn, "ESP: OFF", 100)
+styleBtn(AimBtn, "Aimbot: OFF", 150)
+
+-- Variáveis de Controle
+local Config = {Farm = false, ESP = false, Aim = false}
+local LP = game:GetService("Players").LocalPlayer
 local VIM = game:GetService("VirtualInputManager")
-local LP = Players.LocalPlayer
-local Camera = workspace.CurrentCamera
 
--- Window Setup
-local Window = Rayfield:CreateWindow({
-    Name = "99 Nights | Lite",
-    LoadingTitle = "Modo Performance",
-    LoadingSubtitle = "Otimizado para FPS",
-    KeySystem = false,
-})
-
--- State Variables
-local Config = {
-    ItemESP = false,
-    NPCESP = false,
-    AutoTree = false,
-    Aimbot = false,
-    Fly = false,
-    FlySpeed = 60
-}
-
-local teleportTargets = {"Alien", "Chest", "Raygun", "Revolver", "Medkit", "Apple", "Wolf", "Log"}
-local AimbotTargets = {"Alien", "Wolf", "Cultist", "Bear"}
-
--- Optimized Click
-local function fastClick()
-    VIM:SendMouseButtonEvent(0, 0, 0, true, game, 0)
-    VIM:SendMouseButtonEvent(0, 0, 0, false, game, 0)
-end
-
--- Optimization: ESP Pool (Evita criar milhares de objetos)
-local function applyESP(obj, text)
-    if not obj:FindFirstChild("LITE_ESP") then
-        local bg = Instance.new("BillboardGui", obj)
-        bg.Name = "LITE_ESP"
-        bg.AlwaysOnTop = true
-        bg.Size = UDim2.new(0, 50, 0, 20)
-        bg.StudsOffset = Vector3.new(0, 2, 0)
-        
-        local l = Instance.new("TextLabel", bg)
-        l.BackgroundTransparency = 1
-        l.Size = UDim2.new(1, 0, 1, 0)
-        l.Text = text
-        l.TextColor3 = Color3.new(1, 1, 1)
-        l.TextScaled = true
-        
-        local h = Instance.new("Highlight", obj)
-        h.FillTransparency = 0.5
-        h.OutlineColor = Color3.new(1, 0.5, 0)
-    end
-end
-
--- Home Tab
-local Home = Window:CreateTab("🏠 Principal")
-
-Home:CreateToggle({
-    Name = "ESP de Itens (Proximidade)",
-    CurrentValue = false,
-    Callback = function(v) Config.ItemESP = v end
-})
-
-Home:CreateToggle({
-    Name = "Auto Tree Farm (Perto)",
-    CurrentValue = false,
-    Callback = function(v) Config.AutoTree = v end
-})
-
--- Otimização: Loop Único para Checks de Proximidade
-task.spawn(function()
-    while task.wait(0.5) do
-        if not LP.Character then continue end
-        local root = LP.Character:FindFirstChild("HumanoidRootPart")
-        if not root then continue end
-
-        for _, obj in ipairs(workspace:GetChildren()) do
-            -- Auto Farm Otimizado (Só ativa se estiver perto para evitar teleporte flag)
-            if Config.AutoTree and obj.Name == "Small Tree" then
-                local trunk = obj:FindFirstChild("Trunk")
-                if trunk and (trunk.Position - root.Position).Magnitude < 15 then
-                    fastClick()
-                end
-            end
-            
-            -- ESP Otimizado (Apenas no que está na hierarquia principal)
-            if Config.ItemESP and table.find(teleportTargets, obj.Name) then
-                applyESP(obj, obj.Name)
-            end
-        end
-    end
+-- Lógica de Automação
+FarmBtn.MouseButton1Click:Connect(function()
+    Config.Farm = not Config.Farm
+    FarmBtn.Text = Config.Farm and "Auto Farm: ON" or "Auto Farm: OFF"
+    FarmBtn.BackgroundColor3 = Config.Farm and Color3.fromRGB(0, 120, 0) or Color3.fromRGB(60, 60, 60)
 end)
 
--- Aimbot Tab
-local Combat = Window:CreateTab("⚔️ Combate")
+ESPBtn.MouseButton1Click:Connect(function()
+    Config.ESP = not Config.ESP
+    ESPBtn.Text = Config.ESP and "ESP: ON" or "ESP: OFF"
+    ESPBtn.BackgroundColor3 = Config.ESP and Color3.fromRGB(0, 120, 0) or Color3.fromRGB(60, 60, 60)
+end)
 
-Combat:CreateToggle({
-    Name = "Aimbot Assist (Right Click)",
-    CurrentValue = false,
-    Callback = function(v) Config.Aimbot = v end
-})
+AimBtn.MouseButton1Click:Connect(function()
+    Config.Aim = not Config.Aim
+    AimBtn.Text = Config.Aim and "Aimbot: ON" or "Aimbot: OFF"
+    AimBtn.BackgroundColor3 = Config.Aim and Color3.fromRGB(0, 120, 0) or Color3.fromRGB(60, 60, 60)
+end)
 
-RS.RenderStepped:Connect(function()
-    if Config.Aimbot and US:IsMouseButtonPressed(Enum.UserInputType.MouseButton2) then
-        local target = nil
-        local dist = 200
-        
-        for _, npc in ipairs(workspace:GetChildren()) do
-            if table.find(AimbotTargets, npc.Name) and npc:FindFirstChild("Head") then
-                local pos, onScreen = Camera:WorldToViewportPoint(npc.Head.Position)
-                if onScreen then
-                    local mDist = (Vector2.new(pos.X, pos.Y) - US:GetMouseLocation()).Magnitude
-                    if mDist < dist then
-                        dist = mDist
-                        target = npc.Head
+-- Loop Principal (Otimizado para não travar o Xeno)
+task.spawn(function()
+    while task.wait(0.5) do
+        if not LP.Character or not LP.Character:FindFirstChild("HumanoidRootPart") then continue end
+        local root = LP.Character.HumanoidRootPart
+
+        -- Farm
+        if Config.Farm then
+            for _, v in ipairs(workspace:GetChildren()) do
+                if v.Name == "Small Tree" and v:FindFirstChild("Trunk") then
+                    if (v.Trunk.Position - root.Position).Magnitude < 15 then
+                        VIM:SendMouseButtonEvent(0, 0, 0, true, game, 0)
+                        task.wait(0.1)
+                        VIM:SendMouseButtonEvent(0, 0, 0, false, game, 0)
                     end
                 end
             end
         end
-        
-        if target then
-            Camera.CFrame = Camera.CFrame:Lerp(CFrame.new(Camera.CFrame.Position, target.Position), 0.2)
+
+        -- ESP (Highlight nativo do Roblox)
+        if Config.ESP then
+            for _, npc in ipairs(workspace:GetChildren()) do
+                if (npc.Name == "Wolf" or npc.Name == "Alien") and not npc:FindFirstChild("Highlight") then
+                    Instance.new("Highlight", npc).OutlineColor = Color3.new(1, 0, 0)
+                end
+            end
         end
     end
 end)
 
--- Teleport Tab (Otimizado: Não busca em tudo, apenas no Workspace direto)
-local Teleport = Window:CreateTab("🌀 Teleporte")
-
-for _, name in ipairs(teleportTargets) do
-    Teleport:CreateButton({
-        Name = "Ir para: " .. name,
-        Callback = function()
-            for _, obj in ipairs(workspace:GetChildren()) do
-                if obj.Name:find(name) then
-                    LP.Character:PivotTo(obj:GetPivot() * CFrame.new(0, 5, 0))
+-- Aimbot Suave (Segurar Botão Direito)
+game:GetService("RunService").RenderStepped:Connect(function()
+    if Config.Aim and game:GetService("UserInputService"):IsMouseButtonPressed(Enum.UserInputType.MouseButton2) then
+        local cam = workspace.CurrentCamera
+        for _, npc in ipairs(workspace:GetChildren()) do
+            if (npc.Name == "Wolf" or npc.Name == "Alien") and npc:FindFirstChild("Head") then
+                local _, vis = cam:WorldToViewportPoint(npc.Head.Position)
+                if vis then
+                    cam.CFrame = cam.CFrame:Lerp(CFrame.new(cam.CFrame.Position, npc.Head.Position), 0.15)
                     break
                 end
             end
         end
-    })
-end
-
-Rayfield:Notify({Title = "Lite Loaded", Content = "Script otimizado para FPS.", Duration = 3})
+    end
+end)
