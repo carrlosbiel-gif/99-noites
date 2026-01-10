@@ -1,4 +1,4 @@
---// 99 Nights in the Forest - XENO OPTIMIZED (MEGA MAGNET 5KM) //--
+--// 99 Nights in the Forest - ULTRA PREMIUM (STAMINA & LASER) //--
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
@@ -11,14 +11,14 @@ local camera = workspace.CurrentCamera
 
 -- Window Setup
 local Window = Rayfield:CreateWindow({
-    Name = "99 Nights - Mega Magnet",
-    LoadingTitle = "Carregando Configurações...",
+    Name = "99 Nights - Ultra Premium",
+    LoadingTitle = "Injetando Cheats...",
     LoadingSubtitle = "by Raygull & Gemini",
     ConfigurationSaving = { Enabled = false },
     KeySystem = false,
 })
 
--- Itens para o ESP e Teleporte Individual
+-- Itens para Magnet e ESP
 local teleportTargets = {
     "Alien Chest", "Stronghold Diamond Chest", "Item Chest", "Item Chest2", "Item Chest3", 
     "Item Chest4", "Item Chest6", "Chest", "Seed Box", "Raygun", "Revolver", "Rifle", 
@@ -27,89 +27,84 @@ local teleportTargets = {
     "Washing Machine", "Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire"
 }
 
--- MAGNET V2 - RAIO DE 5KM
-local function megaMagnet()
-    -- Itens que serão puxados automaticamente
-    local itemsToGrab = {
-        "Coal", "Log", "Broken Fan", "Radio", "Tire", 
-        "Old Tire", "Washing Machine", "Old Car Engine"
-    }
-    
-    local character = LocalPlayer.Character
-    local hrp = character and character:FindFirstChild("HumanoidRootPart")
-    if not hrp then return end
-    
-    local count = 0
-    local maxDistance = 5000 -- Raio de 5km (em studs)
+-- FUNÇÃO: INFINITE STAMINA & LASER (Loop)
+local InfiniteStamina = false
+local InfiniteLaser = false
 
-    for _, obj in pairs(workspace:GetDescendants()) do
-        if table.find(itemsToGrab, obj.Name) then
-            local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
-            
-            if handle then
-                -- Verifica se o item está dentro do raio de 5km
-                local distance = (hrp.Position - handle.Position).Magnitude
-                
-                if distance <= maxDistance then
-                    -- Traz o item para cima de você
-                    if obj:IsA("Model") then 
-                        obj:PivotTo(hrp.CFrame + Vector3.new(0, 3, 0)) 
-                    else 
-                        obj.CFrame = hrp.CFrame + Vector3.new(0, 3, 0)
-                    end
-                    
-                    -- Força o servidor a liberar o botão de interagir
-                    if firetouchinterest then
-                        firetouchinterest(hrp, handle, 0)
-                        task.wait(0.02)
-                        firetouchinterest(hrp, handle, 1)
-                    end
-                    count = count + 1
-                end
+task.spawn(function()
+    while task.wait(0.5) do
+        -- Stamina Infinita
+        if InfiniteStamina then
+            local stats = LocalPlayer:FindFirstChild("leaderstats") or LocalPlayer:FindFirstChild("Stats")
+            if stats and stats:FindFirstChild("Stamina") then
+                stats.Stamina.Value = 100
+            end
+            -- Tentativa via Script Local (comum em jogos de sobrevivência)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Stamina") then
+                LocalPlayer.Character.Stamina.Value = 100
+            end
+        end
+        
+        -- Munição/Laser Infinito
+        if InfiniteLaser then
+            local tool = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
+            if tool and (tool.Name:find("Laser") or tool.Name:find("Gun") or tool.Name:find("Raygun")) then
+                -- Tenta resetar a munição na Tool
+                if tool:FindFirstChild("Ammo") then tool.Ammo.Value = 999 end
+                if tool:FindFirstChild("Energy") then tool.Energy.Value = 100 end
             end
         end
     end
+end)
+
+-- MEGA MAGNET (5KM)
+local function megaMagnet()
+    local itemsToGrab = {"Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire", "Washing Machine", "Old Car Engine"}
+    local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+    if not hrp then return end
     
-    Rayfield:Notify({
-        Title = "Mega Magnet 5km",
-        Content = "Foram encontrados e trazidos " .. tostring(count) .. " itens!",
-        Duration = 4
-    })
-end
-
--- ESP Function
-local function createESP(item)
-    local adorneePart = item:IsA("Model") and item:FindFirstChildWhichIsA("BasePart") or (item:IsA("BasePart") and item)
-    if not adorneePart or item:FindFirstChildWhichIsA("Humanoid") then return end
-
-    if not item:FindFirstChild("ESP_Billboard") then
-        local billboard = Instance.new("BillboardGui", item)
-        billboard.Name = "ESP_Billboard"
-        billboard.Adornee = adorneePart
-        billboard.Size = UDim2.new(0, 60, 0, 25)
-        billboard.AlwaysOnTop = true
-        billboard.StudsOffset = Vector3.new(0, 3, 0)
-
-        local label = Instance.new("TextLabel", billboard)
-        label.Size = UDim2.new(1, 0, 1, 0)
-        label.Text = item.Name
-        label.BackgroundTransparency = 1
-        label.TextColor3 = Color3.fromRGB(0, 255, 255)
-        label.TextStrokeTransparency = 0
-        label.TextScaled = true
+    local count = 0
+    for _, obj in pairs(workspace:GetDescendants()) do
+        if table.find(itemsToGrab, obj.Name) then
+            local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
+            if handle and (hrp.Position - handle.Position).Magnitude <= 5000 then
+                if obj:IsA("Model") then obj:PivotTo(hrp.CFrame + Vector3.new(0, 3, 0)) else obj.CFrame = hrp.CFrame + Vector3.new(0, 3, 0) end
+                if firetouchinterest then
+                    firetouchinterest(hrp, handle, 0)
+                    task.wait(0.01)
+                    firetouchinterest(hrp, handle, 1)
+                end
+                count = count + 1
+            end
+        end
     end
+    Rayfield:Notify({Title = "Magnet", Content = count .. " itens trazidos!", Duration = 3})
 end
 
--- GUI TABS
-local HomeTab = Window:CreateTab("🏠 Principal")
+-- TABS DA GUI
+local MainTab = Window:CreateTab("🏠 Modificadores")
 
-HomeTab:CreateButton({
-    Name = "🧲 MEGA MAGNET (5KM RAIO)",
+MainTab:CreateToggle({
+    Name = "⚡ Stamina Infinita",
+    CurrentValue = false,
+    Callback = function(v) InfiniteStamina = v end
+})
+
+MainTab:CreateToggle({
+    Name = "🔫 Laser/Munição Infinita",
+    CurrentValue = false,
+    Callback = function(v) InfiniteLaser = v end
+})
+
+MainTab:CreateButton({
+    Name = "🧲 Puxar Itens (5KM)",
     Callback = megaMagnet
 })
 
-HomeTab:CreateToggle({
-    Name = "Item ESP (Ciano)",
+local VisualTab = Window:CreateTab("👁️ Visual/ESP")
+
+VisualTab:CreateToggle({
+    Name = "Item ESP (Nomes)",
     CurrentValue = false,
     Callback = function(state)
         if not state then
@@ -118,13 +113,20 @@ HomeTab:CreateToggle({
             end
         else
             for _, item in pairs(workspace:GetDescendants()) do
-                if table.find(teleportTargets, item.Name) then createESP(item) end
+                if table.find(teleportTargets, item.Name) then
+                    local b = Instance.new("BillboardGui", item)
+                    b.Name = "ESP_Billboard"; b.AlwaysOnTop = true; b.Size = UDim2.new(0,50,0,20); b.StudsOffset = Vector3.new(0,3,0)
+                    local l = Instance.new("TextLabel", b)
+                    l.Size = UDim2.new(1,0,1,0); l.Text = item.Name; l.TextColor3 = Color3.fromRGB(0,255,255); l.BackgroundTransparency = 1; l.TextScaled = true
+                end
             end
         end
     end
-})
+end)
 
-HomeTab:CreateToggle({
+local MiscTab = Window:CreateTab("🚀 Outros")
+
+MiscTab:CreateToggle({
     Name = "Voo (Fly)",
     CurrentValue = false,
     Callback = function(v)
@@ -132,34 +134,18 @@ HomeTab:CreateToggle({
         local hrp = LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
         if flying then
             local bv = Instance.new("BodyVelocity", hrp)
-            bv.Name = "FlyVelocity"
-            bv.MaxForce = Vector3.new(9e9, 9e9, 9e9)
+            bv.Name = "FlyVel"; bv.MaxForce = Vector3.new(9e9,9e9,9e9)
             task.spawn(function()
                 while flying do
-                    bv.Velocity = camera.CFrame.LookVector * 70
+                    bv.Velocity = camera.CFrame.LookVector * 80
                     task.wait()
                     if not flying then bv:Destroy() break end
                 end
             end)
         else
-            if hrp:FindFirstChild("FlyVelocity") then hrp.FlyVelocity:Destroy() end
+            if hrp:FindFirstChild("FlyVel") then hrp.FlyVel:Destroy() end
         end
     end
 })
 
-local TeleTab = Window:CreateTab("📍 Teleportes")
-for _, itemName in ipairs(teleportTargets) do
-    TeleTab:CreateButton({
-        Name = "Ir até: " .. itemName,
-        Callback = function()
-            for _, obj in pairs(workspace:GetDescendants()) do
-                if obj.Name == itemName then
-                    LocalPlayer.Character:PivotTo(obj:GetPivot() + Vector3.new(0, 5, 0))
-                    break
-                end
-            end
-        end
-    })
-end
-
-Rayfield:Notify({Title = "Pronto!", Content = "Script carregado. Use o Mega Magnet com cuidado!"})
+Rayfield:Notify({Title = "Sucesso", Content = "Stamina e Laser Infinito ativados!"})
