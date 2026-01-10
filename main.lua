@@ -1,87 +1,106 @@
---// 99 NIGHTS - ULTIMATE GOD MODE + HITBOX BYPASS //--
+--// 99 Nights - LASER BUFF, ESP & GLOBAL MAGNET //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local RunService = game:GetService("RunService")
 
--- Função para configurar o God Mode e Desviar a Hitbox
-local function ApplyGodMode(char)
-    local hum = char:WaitForChild("Humanoid")
-    local root = char:WaitForChild("HumanoidRootPart")
-    
-    -- 1. Impede o Humanoid de entrar no estado de "Morto"
-    hum:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
-    
-    -- 2. DESVIO DE HITBOX (Move as partes sensíveis para cima da cabeça)
-    task.spawn(function()
-        for _, part in pairs(char:GetChildren()) do
-            if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
-                -- Cria um loop para manter as partes acima de você
-                RunService.Stepped:Connect(function()
-                    if char:FindFirstChild(part.Name) then
-                        -- Mantém a colisão ativa para você não atravessar o chão, 
-                        -- mas desloca o centro de dano para 15 studs acima
-                        part.CanTouch = false -- Monstros não conseguem "tocar" mais
+-- 1. CANHÃO LASER INFINITO E RÁPIDO
+task.spawn(function()
+    while task.wait(0.1) do
+        local char = LocalPlayer.Character
+        local tool = char and char:FindFirstChildWhichIsA("Tool")
+        
+        if tool then
+            -- Tenta encontrar qualquer valor de carga/energia na arma
+            for _, v in pairs(tool:GetDescendants()) do
+                if v:IsA("NumberValue") or v:IsA("IntValue") then
+                    -- Trava energia e munição no máximo
+                    if v.Name:find("Energy") or v.Name:find("Charge") or v.Name:find("Ammo") then
+                        v.Value = 100
                     end
-                end)
+                    -- Zera o tempo de espera (Cooldown) para atirar várias vezes
+                    if v.Name:find("Cooldown") or v.Name:find("Delay") or v.Name:find("Rate") then
+                        v.Value = 0
+                    end
+                end
             end
         end
-    end)
+    end
+end)
 
-    -- 3. Deleta scripts de dano internos
-    for _, v in pairs(char:GetDescendants()) do
-        if v:IsA("LocalScript") or v:IsA("Script") then
-            local name = v.Name:lower()
-            if name:find("hunger") or name:find("damage") or name:find("health") or name:find("fome") then
-                v.Disabled = true
-                v:Destroy()
+-- 2. ESP DE ITENS (TODO O MAPA)
+local targets = {
+    "Alien Chest", "Stronghold Diamond Chest", "Item Chest", "Item Chest2", "Item Chest3", 
+    "Item Chest4", "Item Chest6", "Chest", "Seed Box", "Raygun", "Revolver", "Rifle", 
+    "Laser Sword", "Riot Shield", "Spear", "Good Axe", "UFO Component", "UFO Junk", 
+    "Laser Fence Blueprint", "Cultist Gem", "Medkit", "Fuel Canister", "Old Car Engine", 
+    "Washing Machine", "Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire"
+}
+
+local function applyESP(obj)
+    if table.find(targets, obj.Name) and not obj:FindFirstChild("ESP_Tag") then
+        local b = Instance.new("BillboardGui", obj)
+        b.Name = "ESP_Tag"
+        b.AlwaysOnTop = true
+        b.Size = UDim2.new(0, 100, 0, 30)
+        b.StudsOffset = Vector3.new(0, 3, 0)
+        
+        local l = Instance.new("TextLabel", b)
+        l.Size = UDim2.new(1, 0, 1, 0)
+        l.Text = obj.Name
+        l.TextColor3 = Color3.fromRGB(0, 255, 255) -- Ciano
+        l.BackgroundTransparency = 1
+        l.TextScaled = true
+        l.Font = Enum.Font.SourceSansBold
+    end
+end
+
+-- Scan inicial e contínuo para ESP
+task.spawn(function()
+    while task.wait(2) do
+        for _, obj in pairs(workspace:GetDescendants()) do
+            applyESP(obj)
+        end
+    end
+end)
+
+-- 3. MEGA MAGNET GLOBAL (PUXAR TUDO DO MAPA)
+local function runGlobalMagnet()
+    local itemsToGrab = {"Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire", "Washing Machine", "Old Car Engine"}
+    local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+    if not hrp then return end
+    
+    for _, obj in pairs(workspace:GetDescendants()) do
+        if table.find(itemsToGrab, obj.Name) then
+            local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
+            if handle then
+                -- Teleporta para o jogador (independente da distância)
+                if obj:IsA("Model") then 
+                    obj:PivotTo(hrp.CFrame * CFrame.new(0, 5, -3)) 
+                else 
+                    obj.CFrame = hrp.CFrame * CFrame.new(0, 5, -3)
+                end
+                
+                -- Simula toque para coletar
+                if firetouchinterest then
+                    firetouchinterest(hrp, handle, 0)
+                    firetouchinterest(hrp, handle, 1)
+                end
             end
         end
     end
 end
 
--- Ativa ao nascer
-LocalPlayer.CharacterAdded:Connect(ApplyGodMode)
-if LocalPlayer.Character then ApplyGodMode(LocalPlayer.Character) end
-
--- 4. LOOP DE CURA E HITBOX SUPREMA
-RunService.Heartbeat:Connect(function()
-    pcall(function()
-        local char = LocalPlayer.Character
-        if char then
-            local hum = char:FindFirstChildOfClass("Humanoid")
-            if hum then
-                hum.MaxHealth = 100
-                hum.Health = 100
-            end
-            
-            -- Cria uma "Plataforma de Hitbox" invisível acima da cabeça
-            -- Isso engana o servidor fazendo o dano cair num lugar vazio
-            local fakeHitbox = char:FindFirstChild("FakeHitbox") or Instance.new("Part", char)
-            if fakeHitbox.Name ~= "FakeHitbox" then
-                fakeHitbox.Name = "FakeHitbox"
-                fakeHitbox.Transparency = 1
-                fakeHitbox.CanCollide = false
-                fakeHitbox.Size = Vector3.new(2, 2, 2)
-            end
-            fakeHitbox.CFrame = char.HumanoidRootPart.CFrame * CFrame.new(0, 15, 0)
-
-            -- Trava Fome e Stamina
-            for _, stat in pairs(char:GetDescendants()) do
-                if stat:IsA("NumberValue") or stat:IsA("IntValue") then
-                    local n = stat.Name:lower()
-                    if n:find("health") or n:find("hunger") or n:find("stamina") or n:find("food") then
-                        stat.Value = 100
-                    end
-                end
-            end
-        end
-    end)
+-- Ativar Magnet com a Seta para Baixo (Teclado/Controle)
+game:GetService("UserInputService").InputBegan:Connect(function(input, processed)
+    if input.KeyCode == Enum.KeyCode.Down or input.KeyCode == Enum.KeyCode.ButtonDpadDown then
+        runGlobalMagnet()
+    end
 end)
 
 -- Notificação
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "GOD MODE + HITBOX",
-    Text = "Sua Hitbox real agora está 15m acima de você!",
-    Duration = 10
+    Title = "ADMIN SYSTEM ON",
+    Text = "Laser Buffado | ESP Global | Seta Baixo = Magnet",
+    Duration = 5
 })
