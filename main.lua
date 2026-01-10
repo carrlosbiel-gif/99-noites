@@ -1,4 +1,4 @@
---// 99 Nights in the Forest Script - MODIFICADO //--
+--// 99 Nights in the Forest Script - PREMIUM MODIFICADO //--
 
 -- Load Rayfield UI Library
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
@@ -28,7 +28,7 @@ local Window = Rayfield:CreateWindow({
     KeySystem = false,
 })
 
--- Variables (Lista de ESP filtrada para itens valiosos)
+-- Variables
 local teleportTargets = {
     "Alien Chest", "Stronghold Diamond Chest", "Item Chest", "Item Chest2", "Item Chest3", 
     "Item Chest4", "Item Chest6", "Chest", "Seed Box", "Raygun", "Revolver", "Rifle", 
@@ -40,7 +40,7 @@ local AimbotTargets = {"Alien", "Alpha Wolf", "Wolf", "Crossbow Cultist", "Culti
 local espEnabled = false
 local npcESPEnabled = false
 local ignoreDistanceFrom = Vector3.new(0, 0, 0)
-local minDistance = 10 -- Reduzi para você ver itens mais perto
+local minDistance = 10 
 local AutoTreeFarmEnabled = false
 
 -- Click simulation
@@ -50,30 +50,43 @@ function mouse1click()
     VirtualInputManager:SendMouseButtonEvent(0, 0, 0, false, game, 0)
 end
 
--- Função Especial: Trazer Itens (Magnet)
+-- Função Especial: Magnet v2 (Traz e Habilita o "Pegar")
 local function teleportItemsToMe()
     local itemsToGrab = {"Coal", "Log", "Broken Fan"}
     local character = LocalPlayer.Character
-    if not character or not character:FindFirstChild("HumanoidRootPart") then return end
+    local hrp = character and character:FindFirstChild("HumanoidRootPart")
+    if not hrp then return end
     
-    local myPos = character.HumanoidRootPart.CFrame
     local count = 0
 
     for _, obj in pairs(workspace:GetDescendants()) do
         if table.find(itemsToGrab, obj.Name) then
-            if obj:IsA("Model") then
-                obj:PivotTo(myPos + Vector3.new(0, 2, 0))
-                count = count + 1
-            elseif obj:IsA("BasePart") then
-                obj.CFrame = myPos + Vector3.new(0, 2, 0)
+            -- Tenta achar a parte física do item
+            local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
+            
+            if handle then
+                -- Move o item para a sua posição exata
+                if obj:IsA("Model") then 
+                    obj:PivotTo(hrp.CFrame) 
+                else 
+                    obj.CFrame = hrp.CFrame 
+                end
+                
+                -- Simula o toque físico (Ativa o ProximityPrompt/Botão de Pegar)
+                if firetouchinterest then
+                    firetouchinterest(hrp, handle, 0)
+                    task.wait(0.01)
+                    firetouchinterest(hrp, handle, 1)
+                end
+                
                 count = count + 1
             end
         end
     end
     
     Rayfield:Notify({
-        Title = "Magnet Ativado",
-        Content = "Trouxe " .. tostring(count) .. " itens até você!",
+        Title = "Magnet v2 Ativado",
+        Content = "Trouxe " .. tostring(count) .. " itens. Se o botão não aparecer, ande um pouco.",
         Duration = 3,
         Image = 4483362458,
     })
@@ -100,7 +113,7 @@ RunService.RenderStepped:Connect(function()
     end
 end)
 
--- ESP Function (Cores Modificadas para Ciano)
+-- ESP Function
 local function createESP(item)
     local adorneePart
     if item:IsA("Model") then
@@ -137,8 +150,8 @@ local function createESP(item)
     if not item:FindFirstChild("ESP_Highlight") then
         local highlight = Instance.new("Highlight")
         highlight.Name = "ESP_Highlight"
-        highlight.FillColor = Color3.fromRGB(0, 255, 255) -- CIANO
-        highlight.OutlineColor = Color3.fromRGB(255, 255, 255) -- BRANCO
+        highlight.FillColor = Color3.fromRGB(0, 255, 255)
+        highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
         highlight.FillTransparency = 0.4
         highlight.OutlineTransparency = 0
         highlight.Adornee = item:IsA("Model") and item or adorneePart
@@ -160,13 +173,6 @@ local function toggleESP(state)
         end
     end
 end
-
-workspace.DescendantAdded:Connect(function(desc)
-    if espEnabled and table.find(teleportTargets, desc.Name) then
-        task.wait(0.1)
-        createESP(desc)
-    end
-end)
 
 -- ESP for NPCs
 local npcBoxes = {}
@@ -213,7 +219,6 @@ local function toggleNPCESP(state)
 end
 
 -- Auto Tree Farm
-local badTrees = {}
 task.spawn(function()
     while true do
         if AutoTreeFarmEnabled then
@@ -245,107 +250,4 @@ end)
 
 -- Aimbot Logic
 RunService.RenderStepped:Connect(function()
-    if not AimbotEnabled or not UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2) then return end
-    local mousePos = UserInputService:GetMouseLocation()
-    local closestTarget, shortestDistance = nil, math.huge
-    for _, obj in ipairs(workspace:GetDescendants()) do
-        if table.find(AimbotTargets, obj.Name) and obj:IsA("Model") then
-            local head = obj:FindFirstChild("Head")
-            if head then
-                local screenPos, onScreen = camera:WorldToViewportPoint(head.Position)
-                if onScreen then
-                    local dist = (Vector2.new(screenPos.X, screenPos.Y) - mousePos).Magnitude
-                    if dist < shortestDistance and dist <= FOVRadius then
-                        shortestDistance = dist
-                        closestTarget = head
-                    end
-                end
-            end
-        end
-    end
-    if closestTarget then
-        camera.CFrame = camera.CFrame:Lerp(CFrame.new(camera.CFrame.Position, closestTarget.Position), 0.2)
-    end
-end)
-
--- Fly Logic
-local flying, flyConnection = false, nil
-local speed = 60
-local function toggleFly(state)
-    flying = state
-    local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-    if not hrp then return end
-    if flying then
-        local bg = Instance.new("BodyGyro", hrp)
-        local bv = Instance.new("BodyVelocity", hrp)
-        bg.P = 9e4; bg.MaxTorque = Vector3.new(9e9, 9e9, 9e9); bg.CFrame = hrp.CFrame
-        bv.MaxForce = Vector3.new(9e9, 9e9, 9e9)
-        flyConnection = RunService.RenderStepped:Connect(function()
-            local moveVec = Vector3.zero
-            if UserInputService:IsKeyDown(Enum.KeyCode.W) then moveVec += camera.CFrame.LookVector end
-            if UserInputService:IsKeyDown(Enum.KeyCode.S) then moveVec -= camera.CFrame.LookVector end
-            if UserInputService:IsKeyDown(Enum.KeyCode.A) then moveVec -= camera.CFrame.RightVector end
-            if UserInputService:IsKeyDown(Enum.KeyCode.D) then moveVec += camera.CFrame.RightVector end
-            bv.Velocity = moveVec * speed
-            bg.CFrame = camera.CFrame
-        end)
-    else
-        if flyConnection then flyConnection:Disconnect() end
-        for _, v in pairs(hrp:GetChildren()) do if v:IsA("BodyGyro") or v:IsA("BodyVelocity") then v:Destroy() end end
-    end
-end
-
--- GUI Tabs
-local HomeTab = Window:CreateTab("🏠 Principal", 4483362458)
-
-HomeTab:CreateButton({
-    Name = "🔥 PUXAR CARVÃO, MADEIRA E VENTILADOR",
-    Callback = teleportItemsToMe
-})
-
-HomeTab:CreateToggle({
-    Name = "Item ESP (Ciano)",
-    CurrentValue = false,
-    Callback = toggleESP
-})
-
-HomeTab:CreateToggle({
-    Name = "NPC ESP",
-    CurrentValue = false,
-    Callback = toggleNPCESP
-})
-
-HomeTab:CreateToggle({
-    Name = "Auto Tree Farm",
-    CurrentValue = false,
-    Callback = function(v) AutoTreeFarmEnabled = v end
-})
-
-HomeTab:CreateToggle({
-    Name = "Aimbot (Botão Direito)",
-    CurrentValue = false,
-    Callback = function(v) AimbotEnabled = v end
-})
-
-HomeTab:CreateToggle({
-    Name = "Fly (Q)",
-    CurrentValue = false,
-    Callback = toggleFly
-})
-
-local TeleTab = Window:CreateTab("🧲 Teleports", 4483362458)
-for _, itemName in ipairs(teleportTargets) do
-    TeleTab:CreateButton({
-        Name = "Ir até: " .. itemName,
-        Callback = function()
-            for _, obj in pairs(workspace:GetDescendants()) do
-                if obj.Name == itemName and (obj:IsA("Model") or obj:IsA("BasePart")) then
-                    LocalPlayer.Character:PivotTo(obj:GetPivot() + Vector3.new(0, 5, 0))
-                    break
-                end
-            end
-        end
-    })
-end
-
-Rayfield:Notify({Title = "Script Carregado", Content = "Divirta-se!", Duration = 5})
+    if not AimbotEnabled or not UserInputService
