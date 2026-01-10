@@ -1,60 +1,57 @@
---// 99 Nights - GOD MODE V3 & CONTROLE MAGNET //--
+--// 99 Nights - HARD GOD MODE & UNIVERSAL MAGNET //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local UserInputService = game:GetService("UserInputService")
 
--- 1. LOOP DE SOBREVIVÊNCIA EXTREMA (Vida, Fome, Stamina, Laser)
+-- 1. HARD GOD MODE & STATUS FIX
 task.spawn(function()
-    while task.wait(0.1) do -- Loop mais rápido para a Vida não cair
-        local char = LocalPlayer.Character
-        if char then
-            local hum = char:FindFirstChildOfClass("Humanoid")
-            
-            -- GOD MODE (VIDA INFINITA)
-            if hum then
-                hum.MaxHealth = 999999
-                hum.Health = 999999
-                -- Tenta impedir que o script de dano do jogo te mate
-                if char:FindFirstChild("ForceField") == nil then
-                    local ff = Instance.new("ForceField", char)
-                    ff.Visible = false -- Fica imune mas sem o brilho azul
+    while task.wait() do -- Loop ultra rápido
+        pcall(function()
+            local char = LocalPlayer.Character
+            if char then
+                -- Tenta encontrar qualquer valor de Vida/Fome/Stamina no personagem ou no Player
+                for _, v in pairs(char:GetDescendants()) do
+                    if v:IsA("NumberValue") or v:IsA("IntValue") then
+                        if v.Name:find("Health") or v.Name:find("Vida") or v.Name:find("HP") then
+                            v.Value = 999999
+                        elseif v.Name:find("Hunger") or v.Name:find("Food") or v.Name:find("Fome") then
+                            v.Value = 100
+                        elseif v.Name:find("Stamina") or v.Name:find("Energy") then
+                            v.Value = 100
+                        end
+                    end
+                end
+                
+                -- God Mode no Humanoid padrão também
+                local hum = char:FindFirstChildOfClass("Humanoid")
+                if hum then
+                    hum.Health = hum.MaxHealth
                 end
             end
+        end)
+    end
+end)
 
-            -- SEM FOME (HUNGER)
-            local hungerPaths = {
-                char:FindFirstChild("Hunger"),
-                char:FindFirstChild("Food"),
-                LocalPlayer:FindFirstChild("Hunger"),
-                LocalPlayer:FindFirstChild("Stats") and LocalPlayer.Stats:FindFirstChild("Hunger")
-            }
-            for _, path in pairs(hungerPaths) do
-                if path then path.Value = 100 end
-            end
-
-            -- STAMINA INFINITA
-            if char:FindFirstChild("Stamina") then char.Stamina.Value = 100 end
-            if LocalPlayer:FindFirstChild("Stamina") then LocalPlayer.Stamina.Value = 100 end
-            
-            -- CANHÃO LASER / ARMAS INFINITAS
-            local tool = char:FindFirstChildWhichIsA("Tool")
-            if tool then
-                if tool:FindFirstChild("Ammo") then tool.Ammo.Value = 999 end
-                if tool:FindFirstChild("Energy") then tool.Energy.Value = 100 end
-                if tool:FindFirstChild("Charge") then tool.Charge.Value = 100 end
+-- 2. MUNIÇÃO INFINITA (LASER)
+task.spawn(function()
+    while task.wait(0.5) do
+        local tool = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
+        if tool then
+            for _, v in pairs(tool:GetDescendants()) do
+                if v:IsA("NumberValue") or v:IsA("IntValue") then
+                    if v.Name:find("Ammo") or v.Name:find("Energy") or v.Name:find("Charge") then
+                        v.Value = 999
+                    end
+                end
             end
         end
     end
 end)
 
--- 2. FUNÇÃO MAGNET (PUXAR ITENS - RAIO 5KM)
+-- 3. MAGNET MELHORADO (RAIO 5KM)
 local function runMagnet()
-    local itemsToGrab = {
-        "Coal", "Log", "Broken Fan", "Radio", "Tire", 
-        "Old Tire", "Washing Machine", "Old Car Engine"
-    }
-    
+    local itemsToGrab = {"Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire", "Washing Machine", "Old Car Engine"}
     local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
     if not hrp then return end
     
@@ -62,16 +59,14 @@ local function runMagnet()
         if table.find(itemsToGrab, obj.Name) then
             local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
             if handle then
-                local dist = (hrp.Position - handle.Position).Magnitude
-                if dist <= 5000 then
-                    -- Teleporta o item 5 metros acima de ti para não bugar
+                if (hrp.Position - handle.Position).Magnitude <= 5000 then
+                    -- Teleporta o item para a sua frente
                     if obj:IsA("Model") then 
-                        obj:PivotTo(hrp.CFrame * CFrame.new(0, 5, -2)) 
+                        obj:PivotTo(hrp.CFrame * CFrame.new(0, 2, -5)) 
                     else 
-                        obj.CFrame = hrp.CFrame * CFrame.new(0, 5, -2)
+                        obj.CFrame = hrp.CFrame * CFrame.new(0, 2, -5)
                     end
-                    
-                    -- Simula o toque para interagir
+                    -- Força o clique de pegar
                     if firetouchinterest then
                         firetouchinterest(hrp, handle, 0)
                         firetouchinterest(hrp, handle, 1)
@@ -82,17 +77,15 @@ local function runMagnet()
     end
 end
 
--- 3. ATIVAR MAGNET (CONTROLE: SETA BAIXO / TECLADO: SETA BAIXO)
-UserInputService.InputBegan:Connect(function(input, processed)
-    -- Removido o 'processed' para garantir que o controle funcione sempre
+-- 4. CONTROLE (DPAD DOWN) E TECLADO (SETABAIXO)
+UserInputService.InputBegan:Connect(function(input)
     if input.KeyCode == Enum.KeyCode.Down or input.KeyCode == Enum.KeyCode.ButtonDpadDown then
         runMagnet()
     end
 end)
 
--- Aviso de Início
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "GOD MODE ATIVO",
-    Text = "Vida, Fome e Laser OK! Seta Baixo no Controle = Magnet",
-    Duration = 10
+    Title = "ULTRA GOD MODE",
+    Text = "Varrendo Status... Seta Baixo = Magnet",
+    Duration = 5
 })
