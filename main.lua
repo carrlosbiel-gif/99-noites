@@ -1,28 +1,35 @@
---// 99 Nights in the Forest - GHOST SCRIPT (XENO SAFE) //--
---// SEM INTERFACE - MAIS RÁPIDO E ESTÁVEL //--
+--// 99 Nights in the Forest - GHOST (SETA BAIXO) - STAMINA, LASER & SEM FOME //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local UserInputService = game:GetService("UserInputService")
 
-print("Script Carregado! Pule para usar o Magnet.")
-
--- 1. CONFIGURAÇÃO DE STAMINA E LASER INFINITO
+-- 1. LOOP DE ATRIBUTOS INFINITOS (Stamina, Laser e Sem Fome)
 task.spawn(function()
     while task.wait(0.3) do
-        -- Stamina Infinita
         local char = LocalPlayer.Character
         if char then
+            -- --- SEM FOME (HUNGER) ---
+            if char:FindFirstChild("Hunger") then char.Hunger.Value = 100 end
+            if char:FindFirstChild("Food") then char.Food.Value = 100 end
+            -- Verifica também nas estatísticas do jogador
+            local stats = LocalPlayer:FindFirstChild("leaderstats") or LocalPlayer:FindFirstChild("Stats")
+            if stats then
+                if stats:FindFirstChild("Hunger") then stats.Hunger.Value = 100 end
+                if stats:FindFirstChild("Food") then stats.Food.Value = 100 end
+            end
+
+            -- --- STAMINA INFINITA ---
             if char:FindFirstChild("Stamina") then char.Stamina.Value = 100 end
             if LocalPlayer:FindFirstChild("Stamina") then LocalPlayer.Stamina.Value = 100 end
-        end
-        
-        -- Canhão/Armas Infinitas
-        local tool = char and char:FindFirstChildWhichIsA("Tool")
-        if tool then
-            if tool:FindFirstChild("Ammo") then tool.Ammo.Value = 999 end
-            if tool:FindFirstChild("Energy") then tool.Energy.Value = 100 end
-            if tool:FindFirstChild("Charge") then tool.Charge.Value = 100 end
+            
+            -- --- CANHÃO LASER / ARMAS INFINITAS ---
+            local tool = char:FindFirstChildWhichIsA("Tool")
+            if tool then
+                if tool:FindFirstChild("Ammo") then tool.Ammo.Value = 999 end
+                if tool:FindFirstChild("Energy") then tool.Energy.Value = 100 end
+                if tool:FindFirstChild("Charge") then tool.Charge.Value = 100 end
+            end
         end
     end
 end)
@@ -44,14 +51,14 @@ local function runMagnet()
             if handle then
                 local distance = (hrp.Position - handle.Position).Magnitude
                 if distance <= 5000 then
-                    -- Teleporta o item
+                    -- Teleporta o item para cima do jogador
                     if obj:IsA("Model") then 
                         obj:PivotTo(hrp.CFrame + Vector3.new(0, 3, 0)) 
                     else 
                         obj.CFrame = hrp.CFrame + Vector3.new(0, 3, 0)
                     end
                     
-                    -- Firetouch para conseguir usar/pegar
+                    -- Simula o toque para o botão de 'Usar' aparecer
                     if firetouchinterest then
                         firetouchinterest(hrp, handle, 0)
                         task.wait(0.01)
@@ -62,17 +69,20 @@ local function runMagnet()
             end
         end
     end
-    print("Magnet: " .. count .. " itens trazidos!")
 end
 
--- 3. ATIVAR MAGNET AO PULAR (Facilita no Mobile/Xeno)
-UserInputService.JumpRequest:Connect(function()
-    runMagnet()
+-- 3. ATIVAR MAGNET AO PREMIR A SETA PARA BAIXO
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if not gameProcessed then
+        if input.KeyCode == Enum.KeyCode.Down then
+            runMagnet()
+        end
+    end
 end)
 
--- Aviso Sonoro/Visual Simples
+-- Notificação de inicialização
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Ghost Script",
-    Text = "Stamina/Laser ON. Pule para Magnet!",
+    Title = "Ghost Script Ativo",
+    Text = "Stamina, Laser e Fome Ativos! Seta Baixo = Magnet",
     Duration = 5
 })
