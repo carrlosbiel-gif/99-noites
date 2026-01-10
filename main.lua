@@ -1,88 +1,60 @@
---// 99 Nights - REMOTE SPAMMER EDITION (XENO) //--
+--// 99 NIGHTS - ULTIMATE GOD MODE (BYPASS) //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
-local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+local RunService = game:GetService("RunService")
 
--- 1. HIT KILL (MATA TUDO QUE ESTÁ PERTO QUANDO VOCÊ CLICA)
-local function KillNearby()
-    local hrp = character:FindFirstChild("HumanoidRootPart")
-    if not hrp then return end
+-- Função para limpar scripts de dano e travar a vida
+local function ApplyGodMode(char)
+    local hum = char:WaitForChild("Humanoid")
     
-    for _, v in pairs(workspace:GetDescendants()) do
-        if v:IsA("Model") and v:FindFirstChild("Humanoid") and v.Name ~= LocalPlayer.Name then
-            local monsterHrp = v:FindFirstChild("HumanoidRootPart")
-            if monsterHrp and (hrp.Position - monsterHrp.Position).Magnitude <= 25 then
-                -- Tenta matar zerando a vida localmente (pra bugar o servidor)
-                v.Humanoid.Health = 0
-                
-                -- Tenta forçar o dano via toque (falso hit)
-                local tool = character:FindFirstChildWhichIsA("Tool")
-                if tool and tool:FindFirstChild("Handle") then
-                    firetouchinterest(monsterHrp, tool.Handle, 0)
-                    firetouchinterest(monsterHrp, tool.Handle, 1)
-                end
+    -- 1. Impede o Humanoid de entrar no estado de "Morto"
+    hum:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+    
+    -- 2. Tenta deletar ou desativar scripts de Fome, Sede e Dano
+    for _, v in pairs(char:GetDescendants()) do
+        if v:IsA("LocalScript") or v:IsA("Script") then
+            local name = v.Name:lower()
+            if name:find("hunger") or name:find("damage") or name:find("health") or name:find("fome") or name:find("take") then
+                v.Disabled = true
+                v:Destroy() -- Deleta o script de dano do seu corpo
             end
         end
     end
 end
 
--- Ativa o Hit Kill no clique
-LocalPlayer:GetMouse().Button1Down:Connect(KillNearby)
+-- Ativa sempre que o personagem nasce ou reseta
+LocalPlayer.CharacterAdded:Connect(ApplyGodMode)
+if LocalPlayer.Character then ApplyGodMode(LocalPlayer.Character) end
 
--- 2. TENTATIVA DE ITENS INFINITOS (BLOQUEIA O CONSUMO)
--- Esse método tenta deletar o comando de 'tirar item' do inventário
-task.spawn(function()
-    while task.wait(0.5) do
-        pcall(function()
-            local tool = character:FindFirstChildWhichIsA("Tool")
-            if tool then
-                -- Se o jogo usa 'Ammo' ou 'Durability' em NumberValues
-                for _, val in pairs(tool:GetDescendants()) do
-                    if val:IsA("IntValue") or val:IsA("NumberValue") then
-                        val.Value = 999 
-                    end
-                end
+-- 3. LOOP DE CURA FORÇADA (REGEN ULTRA RÁPIDA)
+RunService.Heartbeat:Connect(function()
+    pcall(function()
+        local char = LocalPlayer.Character
+        if char then
+            local hum = char:FindFirstChildOfClass("Humanoid")
+            if hum then
+                -- Trava a vida no máximo
+                hum.MaxHealth = 100
+                hum.Health = 100
             end
-        end)
-    end
-end)
-
--- 3. MEGA MAGNET (AUTOMÁTICO - 5KM)
-task.spawn(function()
-    local items = {"Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire", "Washing Machine", "Old Car Engine"}
-    while task.wait(1) do
-        local hrp = character:FindFirstChild("HumanoidRootPart")
-        if hrp then
-            for _, obj in pairs(workspace:GetDescendants()) do
-                if table.find(items, obj.Name) then
-                    local part = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
-                    if part then
-                        local dist = (hrp.Position - part.Position).Magnitude
-                        if dist <= 5000 then
-                            obj:PivotTo(hrp.CFrame * CFrame.new(0, 5, -2))
-                        end
+            
+            -- Procura por valores de Vida/Fome/Stamina e trava tudo no 100
+            for _, stat in pairs(char:GetDescendants()) do
+                if stat:IsA("NumberValue") or stat:IsA("IntValue") then
+                    local n = stat.Name:lower()
+                    if n:find("health") or n:find("hunger") or n:find("stamina") or n:find("food") then
+                        stat.Value = 100
                     end
                 end
             end
         end
-    end
+    end)
 end)
 
--- 4. STAMINA E FOME (VIA REMOTES)
-task.spawn(function()
-    while task.wait(0.5) do
-        -- Tenta resetar os valores de fome e stamina direto no player
-        local s = character:FindFirstChild("Stamina") or LocalPlayer:FindFirstChild("Stamina")
-        if s then s.Value = 100 end
-        
-        local f = character:FindFirstChild("Hunger") or LocalPlayer:FindFirstChild("Hunger")
-        if f then f.Value = 100 end
-    end
-end)
-
+-- Notificação
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "REMOTE BYPASS",
-    Text = "HitKill no Clique | Magnet Auto",
-    Duration = 5
+    Title = "GOD MODE ATIVADO",
+    Text = "Scripts de dano removidos. Imortalidade ON.",
+    Duration = 10
 })
