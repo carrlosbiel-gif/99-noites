@@ -1,91 +1,69 @@
---// 99 Nights - BYPASS GOD MODE (XENO SAFE) //--
+--// 99 Nights - INFINITE ITEMS & ADMIN AXE (HIT KILL) //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
-local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
 
--- 1. BYPASS DE DANO E FOME (Imortalidade Real)
+-- 1. TUDO INFINITO (Munição, Comida, Recursos na Mão)
 task.spawn(function()
     while task.wait(0.1) do
-        local char = LocalPlayer.Character
-        if char then
-            -- Deleta o script de dano por fome se ele existir no seu personagem
-            for _, v in pairs(char:GetDescendants()) do
-                if v:IsA("Script") or v:IsA("LocalScript") then
-                    if v.Name:find("Hunger") or v.Name:find("Damage") or v.Name:find("Health") then
-                        v.Disabled = true -- Desativa o script que tira sua vida
-                    end
+        local tool = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
+        if tool then
+            -- Procura qualquer valor numérico dentro da Tool (Ammo, Quantity, Amount, Energy)
+            for _, v in pairs(tool:GetDescendants()) do
+                if v:IsA("NumberValue") or v:IsA("IntValue") then
+                    v.Value = 999
                 end
             end
-            
-            -- Deixa o corpo "Inquebrável"
-            local hum = char:FindFirstChildOfClass("Humanoid")
-            if hum then
-                hum:SetStateEnabled(Enum.HumanoidStateType.Dead, false) -- Impede de entrar no estado de morto
-                hum.Health = 100 -- Tenta manter em 100
-            end
         end
     end
 end)
 
--- 2. MUNIÇÃO E STAMINA (Loop Direto)
-task.spawn(function()
-    while task.wait(0.3) do
-        local char = LocalPlayer.Character
-        if char then
-            -- Stamina
-            local s = char:FindFirstChild("Stamina") or LocalPlayer:FindFirstChild("Stamina")
-            if s then s.Value = 100 end
-            
-            -- Laser/Armas
-            local tool = char:FindFirstChildWhichIsA("Tool")
-            if tool then
-                local e = tool:FindFirstChild("Energy") or tool:FindFirstChild("Ammo") or tool:FindFirstChild("Charge")
-                if e then e.Value = 999 end
-            end
-        end
-    end
-end)
-
--- 3. MAGNET UNIVERSAL (RAIO 5KM)
-local function runMagnet()
-    local itemsToGrab = {"Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire", "Washing Machine", "Old Car Engine"}
-    local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-    if not hrp then return end
+-- 2. MACHADO ADM / HIT KILL (Aumenta o Dano e Velocidade)
+RunService.Stepped:Connect(function()
+    local tool = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
     
-    for _, obj in pairs(workspace:GetDescendants()) do
-        if table.find(itemsToGrab, obj.Name) then
-            local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
-            if handle then
-                if (hrp.Position - handle.Position).Magnitude <= 5000 then
-                    -- Traz o item para a sua frente
-                    if obj:IsA("Model") then 
-                        obj:PivotTo(hrp.CFrame * CFrame.new(0, 3, -4)) 
-                    else 
-                        obj.CFrame = hrp.CFrame * CFrame.new(0, 3, -4)
-                    end
-                    -- Força o toque
-                    if firetouchinterest then
-                        firetouchinterest(hrp, handle, 0)
-                        firetouchinterest(hrp, handle, 1)
+    -- Verifica se é o Machado (Axe) ou qualquer arma de combate
+    if tool and (tool.Name:find("Axe") or tool.Name:find("Machado") or tool.Name:find("Sword")) then
+        
+        -- HIT KILL: Aumenta o dano se o valor existir
+        if tool:FindFirstChild("Damage") then tool.Damage.Value = 999999 end
+        if tool:FindFirstChild("HitDamage") then tool.HitDamage.Value = 999999 end
+        
+        -- SEM COOLDOWN: Bate super rápido
+        if tool:FindFirstChild("Cooldown") then tool.Cooldown.Value = 0 end
+        if tool:FindFirstChild("AttackSpeed") then tool.AttackSpeed.Value = 0 end
+        if tool:FindFirstChild("Delay") then tool.Delay.Value = 0 end
+        
+        -- ALCANCE LONGO (Bate de longe)
+        if tool:FindFirstChild("Handle") then
+            tool.Handle.Size = Vector3.new(10, 10, 10) -- Aumenta a área de corte
+            tool.Handle.CanCollide = false
+        end
+    end
+end)
+
+-- 3. MAGNET SIMPLIFICADO (Ativa Automático ao Equipar Machado)
+task.spawn(function()
+    while task.wait(1) do
+        local items = {"Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire", "Washing Machine", "Old Car Engine"}
+        local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+        
+        if hrp and LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
+            for _, obj in pairs(workspace:GetDescendants()) do
+                if table.find(items, obj.Name) then
+                    local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
+                    if handle and (hrp.Position - handle.Position).Magnitude <= 500 then
+                        obj:PivotTo(hrp.CFrame * CFrame.new(0, 3, -3))
                     end
                 end
             end
         end
     end
-end
-
--- 4. COMANDO DE ATIVAÇÃO (CONTROLE E TECLADO)
-UserInputService.InputBegan:Connect(function(input)
-    -- DPAD DOWN (Controle) ou SETA BAIXO (Teclado)
-    if input.KeyCode == Enum.KeyCode.Down or input.KeyCode == Enum.KeyCode.ButtonDpadDown then
-        runMagnet()
-    end
 end)
 
--- Notificação de Sucesso
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "BYPASS ATIVO",
-    Text = "God Mode & Fome Desativados. Seta Baixo = Magnet",
+    Title = "ADMIN AXE ON",
+    Text = "Machado com Hit Kill e Itens Infinitos!",
     Duration = 5
 })
