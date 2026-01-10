@@ -1,88 +1,87 @@
---// 99 Nights in the Forest - XENO HITBOX EDITION //--
+--// 99 NIGHTS - ULTIMATE GOD MODE + HITBOX BYPASS //--
 
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-
--- Services
 local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local UserInputService = game:GetService("UserInputService")
 local LocalPlayer = Players.LocalPlayer
-local camera = workspace.CurrentCamera
+local RunService = game:GetService("RunService")
 
--- Window Setup
-local Window = Rayfield:CreateWindow({
-    Name = "99 Nights - Hitbox & Magnet",
-    LoadingTitle = "Configurando Hitbox...",
-    LoadingSubtitle = "by Gemini",
-    ConfigurationSaving = { Enabled = false },
-    KeySystem = false,
-})
-
--- Variáveis Globais
-_G.HitboxSize = 5
-_G.HitboxEnabled = false
-
--- Itens para o ESP e Teleporte
-local teleportTargets = {
-    "Alien Chest", "Stronghold Diamond Chest", "Item Chest", "Item Chest2", "Item Chest3", 
-    "Item Chest4", "Item Chest6", "Chest", "Seed Box", "Raygun", "Revolver", "Rifle", 
-    "Laser Sword", "Riot Shield", "Spear", "Good Axe", "UFO Component", "UFO Junk", 
-    "Laser Fence Blueprint", "Cultist Gem", "Medkit", "Fuel Canister", "Old Car Engine", 
-    "Washing Machine", "Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire"
-}
-
--- FUNÇÃO HITBOX (Acima da Cabeça)
-task.spawn(function()
-    while task.wait(0.5) do
-        if _G.HitboxEnabled then
-            pcall(function()
-                local char = LocalPlayer.Character
-                local head = char and char:FindFirstChild("Head")
-                if head then
-                    local hb = char:FindFirstChild("HitboxPart") or Instance.new("Part", char)
-                    hb.Name = "HitboxPart"
-                    hb.Transparency = 0.7 -- Deixei um pouco visível para você ver onde está (mude para 1 para invisível)
-                    hb.Color = Color3.fromRGB(255, 0, 0)
-                    hb.CanCollide = false
-                    hb.Size = Vector3.new(_G.HitboxSize, _G.HitboxSize, _G.HitboxSize)
-                    hb.CFrame = head.CFrame * CFrame.new(0, _G.HitboxSize/2 + 2, 0) -- Posiciona ACIMA da cabeça
-                    hb.Massless = true
-                end
-            end)
-        else
-            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HitboxPart") then
-                LocalPlayer.Character.HitboxPart:Destroy()
-            end
-        end
-    end
-end)
-
--- MAGNET V2 - RAIO DE 5KM
-local function megaMagnet()
-    local itemsToGrab = {"Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire", "Washing Machine", "Old Car Engine"}
-    local character = LocalPlayer.Character
-    local hrp = character and character:FindFirstChild("HumanoidRootPart")
-    if not hrp then return end
+-- Função para configurar o God Mode e Desviar a Hitbox
+local function ApplyGodMode(char)
+    local hum = char:WaitForChild("Humanoid")
+    local root = char:WaitForChild("HumanoidRootPart")
     
-    local count = 0
-    for _, obj in pairs(workspace:GetDescendants()) do
-        if table.find(itemsToGrab, obj.Name) then
-            local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
-            if handle then
-                if (hrp.Position - handle.Position).Magnitude <= 5000 then
-                    if obj:IsA("Model") then obj:PivotTo(hrp.CFrame + Vector3.new(0, 3, 0)) else obj.CFrame = hrp.CFrame + Vector3.new(0, 3, 0) end
-                    if firetouchinterest then
-                        firetouchinterest(hrp, handle, 0)
-                        task.wait(0.01)
-                        firetouchinterest(hrp, handle, 1)
+    -- 1. Impede o Humanoid de entrar no estado de "Morto"
+    hum:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+    
+    -- 2. DESVIO DE HITBOX (Move as partes sensíveis para cima da cabeça)
+    task.spawn(function()
+        for _, part in pairs(char:GetChildren()) do
+            if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+                -- Cria um loop para manter as partes acima de você
+                RunService.Stepped:Connect(function()
+                    if char:FindFirstChild(part.Name) then
+                        -- Mantém a colisão ativa para você não atravessar o chão, 
+                        -- mas desloca o centro de dano para 15 studs acima
+                        part.CanTouch = false -- Monstros não conseguem "tocar" mais
                     end
-                    count = count + 1
-                end
+                end)
+            end
+        end
+    end)
+
+    -- 3. Deleta scripts de dano internos
+    for _, v in pairs(char:GetDescendants()) do
+        if v:IsA("LocalScript") or v:IsA("Script") then
+            local name = v.Name:lower()
+            if name:find("hunger") or name:find("damage") or name:find("health") or name:find("fome") then
+                v.Disabled = true
+                v:Destroy()
             end
         end
     end
-    Rayfield:Notify({Title = "Magnet", Content = count .. " itens trazidos!", Duration = 3})
 end
 
--- GUI TABS
-local HomeTab = Window
+-- Ativa ao nascer
+LocalPlayer.CharacterAdded:Connect(ApplyGodMode)
+if LocalPlayer.Character then ApplyGodMode(LocalPlayer.Character) end
+
+-- 4. LOOP DE CURA E HITBOX SUPREMA
+RunService.Heartbeat:Connect(function()
+    pcall(function()
+        local char = LocalPlayer.Character
+        if char then
+            local hum = char:FindFirstChildOfClass("Humanoid")
+            if hum then
+                hum.MaxHealth = 100
+                hum.Health = 100
+            end
+            
+            -- Cria uma "Plataforma de Hitbox" invisível acima da cabeça
+            -- Isso engana o servidor fazendo o dano cair num lugar vazio
+            local fakeHitbox = char:FindFirstChild("FakeHitbox") or Instance.new("Part", char)
+            if fakeHitbox.Name ~= "FakeHitbox" then
+                fakeHitbox.Name = "FakeHitbox"
+                fakeHitbox.Transparency = 1
+                fakeHitbox.CanCollide = false
+                fakeHitbox.Size = Vector3.new(2, 2, 2)
+            end
+            fakeHitbox.CFrame = char.HumanoidRootPart.CFrame * CFrame.new(0, 15, 0)
+
+            -- Trava Fome e Stamina
+            for _, stat in pairs(char:GetDescendants()) do
+                if stat:IsA("NumberValue") or stat:IsA("IntValue") then
+                    local n = stat.Name:lower()
+                    if n:find("health") or n:find("hunger") or n:find("stamina") or n:find("food") then
+                        stat.Value = 100
+                    end
+                end
+            end
+        end
+    end)
+end)
+
+-- Notificação
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "GOD MODE + HITBOX",
+    Text = "Sua Hitbox real agora está 15m acima de você!",
+    Duration = 10
+})
