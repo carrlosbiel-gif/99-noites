@@ -1,4 +1,4 @@
---// 99 Nights in the Forest - XENO OPTIMIZED //--
+--// 99 Nights in the Forest - XENO OPTIMIZED (RADIO & TIRE UPDATE) //--
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
@@ -9,12 +9,12 @@ local UserInputService = game:GetService("UserInputService")
 local LocalPlayer = Players.LocalPlayer
 local camera = workspace.CurrentCamera
 
--- Window Setup (Configurações simplificadas para evitar crash no Xeno)
+-- Window Setup
 local Window = Rayfield:CreateWindow({
     Name = "99 Nights - Premium",
-    LoadingTitle = "Carregando...",
+    LoadingTitle = "Carregando Itens...",
     LoadingSubtitle = "by Raygull & Gemini",
-    ConfigurationSaving = { Enabled = false }, -- Desativado para maior compatibilidade
+    ConfigurationSaving = { Enabled = false },
     KeySystem = false,
 })
 
@@ -24,12 +24,10 @@ local teleportTargets = {
     "Item Chest4", "Item Chest6", "Chest", "Seed Box", "Raygun", "Revolver", "Rifle", 
     "Laser Sword", "Riot Shield", "Spear", "Good Axe", "UFO Component", "UFO Junk", 
     "Laser Fence Blueprint", "Cultist Gem", "Medkit", "Fuel Canister", "Old Car Engine", 
-    "Washing Machine", "Coal", "Log", "Broken Fan", "Alien", "Alpha Wolf", "Wolf"
+    "Washing Machine", "Coal", "Log", "Broken Fan", "Alien", "Alpha Wolf", "Wolf",
+    "Radio", "Tire", "Old Tire"
 }
-local AimbotTargets = {"Alien", "Alpha Wolf", "Wolf", "Crossbow Cultist", "Cultist", "Bunny", "Bear", "Polar Bear"}
 local espEnabled = false
-local npcESPEnabled = false
-local minDistance = 10 
 local AutoTreeFarmEnabled = false
 
 -- Click simulation
@@ -39,9 +37,10 @@ function mouse1click()
     VirtualInputManager:SendMouseButtonEvent(0, 0, 0, false, game, 0)
 end
 
--- MAGNET V2: Traz o item e simula o toque para habilitar o botão de usar
+-- MAGNET V2 ATUALIZADO (Radio, Pneu, Log, etc)
 local function teleportItemsToMe()
-    local itemsToGrab = {"Coal", "Log", "Broken Fan"}
+    -- Lista de nomes exatos que o script vai procurar para puxar
+    local itemsToGrab = {"Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire"}
     local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
     if not hrp then return end
     
@@ -50,10 +49,14 @@ local function teleportItemsToMe()
         if table.find(itemsToGrab, obj.Name) then
             local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
             if handle then
-                -- Move para você
-                if obj:IsA("Model") then obj:PivotTo(hrp.CFrame) else obj.CFrame = hrp.CFrame end
+                -- Traz para a sua posição
+                if obj:IsA("Model") then 
+                    obj:PivotTo(hrp.CFrame + Vector3.new(0, 2, 0)) 
+                else 
+                    obj.CFrame = hrp.CFrame + Vector3.new(0, 2, 0)
+                end
                 
-                -- Simula o toque (Necessário para o botão de 'Usar' aparecer)
+                -- Simula o toque para habilitar o botão de usar (Engana o Servidor)
                 if firetouchinterest then
                     firetouchinterest(hrp, handle, 0)
                     task.wait(0.05)
@@ -65,8 +68,8 @@ local function teleportItemsToMe()
     end
     
     Rayfield:Notify({
-        Title = "Magnet Sucesso",
-        Content = count .. " itens trazidos! Se não conseguir usar, ande um pouco.",
+        Title = "Magnet v2",
+        Content = count .. " itens trazidos (Radio, Pneu, Log, etc).",
         Duration = 3
     })
 end
@@ -121,7 +124,7 @@ end
 local HomeTab = Window:CreateTab("🏠 Principal")
 
 HomeTab:CreateButton({
-    Name = "🔥 PUXAR ITENS (CARVÃO/MADEIRA/FAN)",
+    Name = "🧲 PUXAR TUDO (Radio, Pneu, Log, Fan, Coal)",
     Callback = teleportItemsToMe
 })
 
@@ -141,7 +144,6 @@ HomeTab:CreateToggle({
     Name = "Fly (Voo)",
     CurrentValue = false,
     Callback = function(v)
-        -- Chamar sua função fly simplificada
         local flying = v
         local hrp = LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
         if flying then
@@ -153,7 +155,7 @@ HomeTab:CreateToggle({
                 while flying do
                     bv.Velocity = camera.CFrame.LookVector * 60
                     task.wait()
-                    if not flying then bv:Destroy() break end
+                    if not flying then if bv then bv:Destroy() end break end
                 end
             end)
         else
@@ -177,4 +179,4 @@ for _, itemName in ipairs(teleportTargets) do
     })
 end
 
-Rayfield:Notify({Title = "Sucesso", Content = "Script carregado no Xeno!"})
+Rayfield:Notify({Title = "Sucesso", Content = "Script Atualizado para Xeno!"})
