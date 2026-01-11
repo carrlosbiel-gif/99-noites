@@ -1,53 +1,78 @@
---// 99 NIGHTS - PASSIVE SURVIVAL (AFK FARM) //--
+--// 99 NIGHTS - AUTO FARM (MADEIRA & COMIDA) //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
-local Lighting = game:GetService("Lighting")
+local RunService = game:GetService("RunService")
 
--- 1. MODO SEMPRE DIA (Para você monitorar melhor)
-Lighting.Brightness = 2
-Lighting.ClockTime = 14
-Lighting.FogEnd = 100000
-Lighting.GlobalShadows = false
+-- CONFIGURAÇÕES
+_G.AutoFarm = true
+local range = 20 -- Distância para bater
 
--- 2. ANTI-AFK (Impede que o Roblox te expulse por ficar parado)
-local VirtualUser = game:GetService("VirtualUser")
-LocalPlayer.Idled:Connect(function()
-    VirtualUser:CaptureController()
-    VirtualUser:ClickButton2(Vector2.new())
-end)
-
--- 3. AUTO-REGEN & ANTI-FOME (Para sobreviver sozinho)
+-- 1. FUNÇÃO DE ATAQUE AUTOMÁTICO
 task.spawn(function()
-    while task.wait(1) do
-        pcall(function()
-            local char = LocalPlayer.Character
-            if char then
-                -- Tenta manter a fome cheia para não perder vida
-                for _, v in pairs(char:GetDescendants()) do
-                    if v:IsA("ValueBase") and (v.Name:lower():find("hunger") or v.Name:lower():find("food")) then
-                        v.Value = 100
+    while task.wait(0.2) do
+        if not _G.AutoFarm then break end
+        
+        local char = LocalPlayer.Character
+        local tool = char and char:FindFirstChildWhichIsA("Tool")
+        local hrp = char and char:FindFirstChild("HumanoidRootPart")
+        
+        if tool and hrp then
+            -- Procura Animais e Árvores
+            for _, v in pairs(workspace:GetChildren()) do
+                -- Alvos: Modelos que tenham vida (Animais) ou partes de Madeira (Logs/Trees)
+                if v:IsA("Model") and v.Name ~= LocalPlayer.Name then
+                    local targetHrp = v:FindFirstChild("HumanoidRootPart") or v:FindFirstChildWhichIsA("BasePart")
+                    
+                    if targetHrp then
+                        local dist = (hrp.Position - targetHrp.Position).Magnitude
+                        if dist <= range then
+                            -- Ataca
+                            tool:Activate()
+                            
+                            -- Força o dano (Kill rápido)
+                            if firetouchinterest then
+                                firetouchinterest(targetHrp, tool.Handle, 0)
+                                firetouchinterest(targetHrp, tool.Handle, 1)
+                            end
+                        end
                     end
                 end
-                -- Cura automática se algo te bater
-                local hum = char:FindFirstChildOfClass("Humanoid")
-                if hum and hum.Health < hum.MaxHealth then
-                    hum.Health = hum.MaxHealth
-                end
             end
-        end)
+        end
     end
 end)
 
--- 4. ESP DO MONSTRO (Para você ver se ele está perto enquanto descansa)
+-- 2. MAGNET DE ITENS (PEGA TUDO QUE CAIR NO CHÃO)
 task.spawn(function()
-    while task.wait(5) do
-        for _, v in pairs(workspace:GetChildren()) do
-            if v:IsA("Model") and v:FindFirstChildOfClass("Humanoid") and not Players:GetPlayerFromCharacter(v) then
-                if not v:FindFirstChild("Highlight") then
-                    local h = Instance.new("Highlight", v)
-                    h.FillColor = Color3.fromRGB(255, 0, 0)
-                    h.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+    local items = {"Coal", "Log", "Meat", "Food", "Apple", "Berry"}
+    while task.wait(1) do
+        local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+        if hrp then
+            for _, obj in pairs(workspace:GetDescendants()) do
+                if table.find(items, obj.Name) then
+                    local part = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
+                    if part and (hrp.Position - part.Position).Magnitude <= 50 then
+                        obj:PivotTo(hrp.CFrame)
+                    end
+                end
+            end
+        end
+    end
+end)
+
+-- 3. ANTI-FOME E SEMPRE DIA
+task.spawn(function()
+    while task.wait(2) do
+        -- Mantém Claro
+        game:GetService("Lighting").ClockTime = 14
+        
+        -- Tenta travar status de fome se encontrar o valor
+        local char = LocalPlayer.Character
+        if char then
+            for _, v in pairs(char:GetDescendants()) do
+                if v:IsA("ValueBase") and (v.Name:lower():find("hunger") or v.Name:lower():find("stamina")) then
+                    v.Value = 100
                 end
             end
         end
@@ -55,7 +80,7 @@ task.spawn(function()
 end)
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "AFK FARM ATIVO",
-    Text = "O script tentará te manter vivo. Boa sorte nas 99 noites!",
-    Duration = 10
+    Title = "AUTO-FARM ATIVO",
+    Text = "Pegando Madeira e Matando Animais...",
+    Duration = 5
 })
