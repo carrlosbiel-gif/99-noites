@@ -1,4 +1,4 @@
---// 99 NIGHTS - LIGHT VERSION (NOCLIP NO R3) //--
+--// 99 NIGHTS - LIGHT VERSION (ATIVAR COM R2 + R3) //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
@@ -8,7 +8,7 @@ local Lighting = game:GetService("Lighting")
 
 _G.Noclip = false
 
--- 1. FULL BRIGHT (SEMPRE DIA)
+-- 1. FULL BRIGHT (MAPA CLARO)
 Lighting.Brightness = 2
 Lighting.ClockTime = 14
 Lighting.FogEnd = 100000
@@ -28,21 +28,29 @@ RunService.Stepped:Connect(function()
     end
 end)
 
--- 3. ATIVAÇÃO NO R3 (ANALÓGICO DIREITO)
+-- 3. ATIVAÇÃO COMBINADA (PRECISA DOS DOIS)
 UserInputService.InputBegan:Connect(function(input)
-    -- ButtonR3 é o clique do analógico direito do controle
-    if input.KeyCode == Enum.KeyCode.ButtonR3 or input.KeyCode == Enum.KeyCode.N then
-        _G.Noclip = not _G.Noclip
+    -- Verifica se o clique veio do R3
+    if input.KeyCode == Enum.KeyCode.ButtonR3 then
+        -- Só ativa se o gatilho R2 estiver sendo segurado ao mesmo tempo
+        local R2_Segurado = UserInputService:IsGamepadButtonDown(Enum.UserInputType.Gamepad1, Enum.KeyCode.ButtonR2)
         
-        game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "Noclip Status",
-            Text = _G.Noclip and "ATIVADO (R3)" or "DESATIVADO",
-            Duration = 2
-        })
+        if R2_Segurado then
+            _G.Noclip = not _G.Noclip
+            
+            game:GetService("StarterGui"):SetCore("SendNotification", {
+                Title = "Noclip Combinado",
+                Text = _G.Noclip and "ATIVADO (R2+R3)" or "DESATIVADO",
+                Duration = 2
+            })
+        end
+    -- Atalho para o Teclado (N) continua opcional
+    elseif input.KeyCode == Enum.KeyCode.N then
+        _G.Noclip = not _G.Noclip
     end
 end)
 
--- 4. MAGNET DE ITENS (OTIMIZADO)
+-- 4. MAGNET DE ITENS (ANTI-LAG)
 task.spawn(function()
     local items = {"Log", "Meat", "Wood", "Coal"}
     while task.wait(2) do
@@ -60,4 +68,4 @@ task.spawn(function()
     end
 end)
 
-print("Noclip no R3 carregado com sucesso!")
+print("Script Carregado: Use R2 + R3 para Noclip")
