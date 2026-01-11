@@ -1,29 +1,83 @@
---// 99 Nights - LASER EXTREME, ESP & GLOBAL MAGNET //--
+--// 99 NIGHTS - ULTIMATE SURVIVAL SCRIPT //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
+local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 
--- 1. LASER AUTOMÁTICO E INFINITO (FORÇADO)
+-- CONFIGURAÇÕES
+_G.AutoEat = true
+_G.GodMode = true
+_G.Noclip = false
+
+-- 1. SOBREVIVÊNCIA (VIDA, FOME E STAMINA)
 task.spawn(function()
-    while task.wait(0.05) do -- Loop ultra rápido para não deixar descarregar
+    while task.wait(0.5) do
+        pcall(function()
+            local char = LocalPlayer.Character
+            if char then
+                -- Trava Fome e Stamina (Recursos Essenciais)
+                for _, v in pairs(char:GetDescendants()) do
+                    if v:IsA("ValueBase") then
+                        local n = v.Name:lower()
+                        if n:find("hunger") or n:find("food") or n:find("stamina") or n:find("energy") then
+                            v.Value = 100
+                        end
+                    end
+                end
+                
+                -- Cura Forçada se tomar dano do monstro
+                local hum = char:FindFirstChildOfClass("Humanoid")
+                if hum and _G.GodMode then
+                    if hum.Health < hum.MaxHealth then
+                        hum.Health = hum.MaxHealth
+                    end
+                end
+            end
+        end)
+    end
+end)
+
+-- 2. ESP DO MONSTRO (WALL HACK)
+-- Faz o monstro brilhar em vermelho através das paredes para você saber onde ele está
+local function applyMonsterESP(obj)
+    if obj:IsA("Model") and obj:FindFirstChildOfClass("Humanoid") then
+        if not Players:GetPlayerFromCharacter(obj) and not obj:FindFirstChild("MonsterHighlight") then
+            local h = Instance.new("Highlight", obj)
+            h.Name = "MonsterHighlight"
+            h.FillColor = Color3.fromRGB(255, 0, 0)
+            h.OutlineColor = Color3.fromRGB(255, 255, 255)
+            h.FillAlpha = 0.5
+            h.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+        end
+    end
+end
+
+task.spawn(function()
+    while task.wait(2) do
+        for _, v in pairs(workspace:GetDescendants()) do
+            applyMonsterESP(v)
+        end
+    end
+end)
+
+-- 3. DEFESA AUTOMÁTICA (AUTO-ATTACK)
+-- Se o monstro chegar perto, o script ataca automaticamente com o que estiver na mão
+task.spawn(function()
+    while task.wait(0.1) do
         local char = LocalPlayer.Character
         local tool = char and char:FindFirstChildWhichIsA("Tool")
-        
-        if tool and (tool.Name:find("Laser") or tool.Name:find("Raygun") or tool.Name:find("Canhão")) then
-            -- Tenta forçar o disparo se você estiver segurando o botão
-            if UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) or UserInputService:IsGamepadButtonDown(Enum.GamepadKeyCode.ButtonR2) then
-                tool:Activate() -- Spamma a ativação para tiros seguidos
-            end
-            
-            -- Bypass de Recarga e Energia
-            for _, v in pairs(tool:GetDescendants()) do
-                if v:IsA("NumberValue") or v:IsA("IntValue") or v:IsA("StringValue") then
-                    local n = v.Name:lower()
-                    if n:find("energy") or n:find("charge") or n:find("ammo") or n:find("heat") then
-                        v.Value = 100 -- Mantém carregado
-                    elseif n:find("cooldown") or n:find("delay") or n:find("reload") then
-                        v.Value = 0 -- Remove o tempo entre tiros
+        if tool then
+            for _, v in pairs(workspace:GetDescendants()) do
+                if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and not Players:GetPlayerFromCharacter(v) then
+                    local dist = (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude
+                    if dist < 15 then -- Ataca se estiver a menos de 15 studs
+                        tool:Activate()
+                        -- Força o dano por toque
+                        if firetouchinterest then
+                            firetouchinterest(char.HumanoidRootPart, v.HumanoidRootPart, 0)
+                            firetouchinterest(char.HumanoidRootPart, v.HumanoidRootPart, 1)
+                        end
                     end
                 end
             end
@@ -31,60 +85,39 @@ task.spawn(function()
     end
 end)
 
--- 2. ESP DE ITENS (TODO O MAPA)
-local targets = {
-    "Alien Chest", "Stronghold Diamond Chest", "Item Chest", "Item Chest2", "Item Chest3", 
-    "Item Chest4", "Item Chest6", "Chest", "Seed Box", "Raygun", "Revolver", "Rifle", 
-    "Laser Sword", "Riot Shield", "Spear", "Good Axe", "UFO Component", "UFO Junk", 
-    "Laser Fence Blueprint", "Cultist Gem", "Medkit", "Fuel Canister", "Old Car Engine", 
-    "Washing Machine", "Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire"
-}
-
-local function applyESP(obj)
-    if table.find(targets, obj.Name) and not obj:FindFirstChild("ESP_Tag") then
-        local b = Instance.new("BillboardGui", obj)
-        b.Name = "ESP_Tag"; b.AlwaysOnTop = true; b.Size = UDim2.new(0, 100, 0, 30); b.StudsOffset = Vector3.new(0, 3, 0)
-        local l = Instance.new("TextLabel", b)
-        l.Size = UDim2.new(1, 0, 1, 0); l.Text = obj.Name; l.TextColor3 = Color3.fromRGB(0, 255, 255); l.BackgroundTransparency = 1; l.TextScaled = true
-    end
-end
-
-task.spawn(function()
-    while task.wait(2) do
-        for _, obj in pairs(workspace:GetDescendants()) do
-            applyESP(obj)
-        end
-    end
-end)
-
--- 3. MEGA MAGNET GLOBAL (SETABAIXO)
-local function runGlobalMagnet()
-    local itemsToGrab = {"Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire", "Washing Machine", "Old Car Engine"}
-    local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-    if not hrp then return end
-    
-    for _, obj in pairs(workspace:GetDescendants()) do
-        if table.find(itemsToGrab, obj.Name) then
-            local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
-            if handle then
-                if obj:IsA("Model") then obj:PivotTo(hrp.CFrame * CFrame.new(0, 5, -3)) else obj.CFrame = hrp.CFrame * CFrame.new(0, 5, -3) end
-                if firetouchinterest then
-                    firetouchinterest(hrp, handle, 0)
-                    firetouchinterest(hrp, handle, 1)
-                end
+-- 4. NOCLIP (PARA FUGIR PELAS PAREDES)
+RunService.Stepped:Connect(function()
+    if _G.Noclip then
+        if LocalPlayer.Character then
+            for _, part in pairs(LocalPlayer.Character:GetDescendants()) do
+                if part:IsA("BasePart") then part.CanCollide = false end
             end
         end
     end
-end
+end)
 
-UserInputService.InputBegan:Connect(function(input, processed)
-    if input.KeyCode == Enum.KeyCode.Down or input.KeyCode == Enum.KeyCode.ButtonDpadDown then
-        runGlobalMagnet()
+-- CONTROLES
+UserInputService.InputBegan:Connect(function(input)
+    -- Tecla N ou L3 para atravessar paredes (Fuga de emergência)
+    if input.KeyCode == Enum.KeyCode.N or input.KeyCode == Enum.KeyCode.ButtonL3 then
+        _G.Noclip = not _G.Noclip
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Noclip",
+            Text = _G.Noclip and "ATIVADO" or "DESATIVADO",
+            Duration = 2
+        })
     end
 end)
 
+-- 5. ILUMINAÇÃO (FULL BRIGHT)
+-- Para enxergar o monstro no escuro da noite
+game:GetService("Lighting").Brightness = 2
+game:GetService("Lighting").ClockTime = 14
+game:GetService("Lighting").FogEnd = 100000
+game:GetService("Lighting").GlobalShadows = false
+
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "LASER OVERDRIVE",
-    Text = "Segure para disparar sem parar!",
+    Title = "99 NOITES BYPASS",
+    Text = "GodMode, Auto-Eat e ESP Ativos!",
     Duration = 5
 })
