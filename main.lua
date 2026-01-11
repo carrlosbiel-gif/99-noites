@@ -1,75 +1,63 @@
---// 99 NIGHTS - XENO TELEPORT FARM (MADEIRA & COMIDA) //--
+--// 99 NIGHTS - LIGHT VERSION (NOCLIP NO R3) //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
-local VirtualUser = game:GetService("VirtualUser")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local Lighting = game:GetService("Lighting")
 
--- CONFIGURAÇÃO
-_G.FarmAtivo = true
-local alvos = {"Log", "Pig", "Deer", "Chicken", "Cow", "Tree", "Dead Tree"} -- Animais e Madeiras
+_G.Noclip = false
 
--- 1. FUNÇÃO DE CLICK REAL (Simula você tocando na tela)
-local function simulateClick()
-    VirtualUser:Button1Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
-    task.wait(0.1)
-    VirtualUser:Button1Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
-end
+-- 1. FULL BRIGHT (SEMPRE DIA)
+Lighting.Brightness = 2
+Lighting.ClockTime = 14
+Lighting.FogEnd = 100000
+Lighting.GlobalShadows = false
 
--- 2. LOOP DE FARM POR TELEPORTE
-task.spawn(function()
-    while _G.FarmAtivo do
+-- 2. FUNÇÃO NOCLIP
+RunService.Stepped:Connect(function()
+    if _G.Noclip then
         local char = LocalPlayer.Character
-        local hrp = char and char:FindFirstChild("HumanoidRootPart")
-        local tool = char and char:FindFirstChildWhichIsA("Tool")
-
-        if hrp and tool then
-            for _, obj in pairs(workspace:GetDescendants()) do
-                -- Verifica se o objeto é um dos nossos alvos
-                if table.find(alvos, obj.Name) or obj.Name:find("Tree") then
-                    local targetPart = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
-                    
-                    if targetPart and targetPart.Parent then
-                        -- Teleporta você para o lado do item/animal
-                        hrp.CFrame = targetPart.CFrame * CFrame.new(0, 0, 3)
-                        
-                        -- Bate 5 vezes antes de ir para o próximo
-                        for i = 1, 5 do
-                            if not _G.FarmAtivo then break end
-                            simulateClick()
-                            task.wait(0.3)
-                        end
-                    end
+        if char then
+            for _, part in pairs(char:GetChildren()) do
+                if part:IsA("BasePart") then
+                    part.CanCollide = false
                 end
-                if not _G.FarmAtivo then break end
             end
         end
-        task.wait(1)
     end
 end)
 
--- 3. SEMPRE DIA (Obrigatório para sobreviver)
-game:GetService("Lighting").ClockTime = 14
-game:GetService("Lighting").Brightness = 2
+-- 3. ATIVAÇÃO NO R3 (ANALÓGICO DIREITO)
+UserInputService.InputBegan:Connect(function(input)
+    -- ButtonR3 é o clique do analógico direito do controle
+    if input.KeyCode == Enum.KeyCode.ButtonR3 or input.KeyCode == Enum.KeyCode.N then
+        _G.Noclip = not _G.Noclip
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Noclip Status",
+            Text = _G.Noclip and "ATIVADO (R3)" or "DESATIVADO",
+            Duration = 2
+        })
+    end
+end)
 
--- 4. MAGNET DE ITENS (Puxa o que dropou)
+-- 4. MAGNET DE ITENS (OTIMIZADO)
 task.spawn(function()
-    while _G.FarmAtivo do
+    local items = {"Log", "Meat", "Wood", "Coal"}
+    while task.wait(2) do
         local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
         if hrp then
-            for _, item in pairs(workspace:GetDescendants()) do
-                if item.Name == "Meat" or item.Name == "Wood" or item.Name == "Coal" then
-                    if item:IsA("BasePart") then
-                        item.CFrame = hrp.CFrame
+            for _, obj in pairs(workspace:GetChildren()) do
+                if table.find(items, obj.Name) then
+                    local dist = (hrp.Position - obj:GetPivot().Position).Magnitude
+                    if dist < 40 then
+                        obj:PivotTo(hrp.CFrame)
                     end
                 end
             end
         end
-        task.wait(2)
     end
 end)
 
-game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "TELEPORT FARM",
-    Text = "Segure o MACHADO na mão!",
-    Duration = 5
-})
+print("Noclip no R3 carregado com sucesso!")
