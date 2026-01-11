@@ -1,26 +1,29 @@
---// 99 Nights - LASER BUFF, ESP & GLOBAL MAGNET //--
+--// 99 Nights - LASER EXTREME, ESP & GLOBAL MAGNET //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
-local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
 
--- 1. CANHÃO LASER INFINITO E RÁPIDO
+-- 1. LASER AUTOMÁTICO E INFINITO (FORÇADO)
 task.spawn(function()
-    while task.wait(0.1) do
+    while task.wait(0.05) do -- Loop ultra rápido para não deixar descarregar
         local char = LocalPlayer.Character
         local tool = char and char:FindFirstChildWhichIsA("Tool")
         
-        if tool then
-            -- Tenta encontrar qualquer valor de carga/energia na arma
+        if tool and (tool.Name:find("Laser") or tool.Name:find("Raygun") or tool.Name:find("Canhão")) then
+            -- Tenta forçar o disparo se você estiver segurando o botão
+            if UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) or UserInputService:IsGamepadButtonDown(Enum.GamepadKeyCode.ButtonR2) then
+                tool:Activate() -- Spamma a ativação para tiros seguidos
+            end
+            
+            -- Bypass de Recarga e Energia
             for _, v in pairs(tool:GetDescendants()) do
-                if v:IsA("NumberValue") or v:IsA("IntValue") then
-                    -- Trava energia e munição no máximo
-                    if v.Name:find("Energy") or v.Name:find("Charge") or v.Name:find("Ammo") then
-                        v.Value = 100
-                    end
-                    -- Zera o tempo de espera (Cooldown) para atirar várias vezes
-                    if v.Name:find("Cooldown") or v.Name:find("Delay") or v.Name:find("Rate") then
-                        v.Value = 0
+                if v:IsA("NumberValue") or v:IsA("IntValue") or v:IsA("StringValue") then
+                    local n = v.Name:lower()
+                    if n:find("energy") or n:find("charge") or n:find("ammo") or n:find("heat") then
+                        v.Value = 100 -- Mantém carregado
+                    elseif n:find("cooldown") or n:find("delay") or n:find("reload") then
+                        v.Value = 0 -- Remove o tempo entre tiros
                     end
                 end
             end
@@ -40,22 +43,12 @@ local targets = {
 local function applyESP(obj)
     if table.find(targets, obj.Name) and not obj:FindFirstChild("ESP_Tag") then
         local b = Instance.new("BillboardGui", obj)
-        b.Name = "ESP_Tag"
-        b.AlwaysOnTop = true
-        b.Size = UDim2.new(0, 100, 0, 30)
-        b.StudsOffset = Vector3.new(0, 3, 0)
-        
+        b.Name = "ESP_Tag"; b.AlwaysOnTop = true; b.Size = UDim2.new(0, 100, 0, 30); b.StudsOffset = Vector3.new(0, 3, 0)
         local l = Instance.new("TextLabel", b)
-        l.Size = UDim2.new(1, 0, 1, 0)
-        l.Text = obj.Name
-        l.TextColor3 = Color3.fromRGB(0, 255, 255) -- Ciano
-        l.BackgroundTransparency = 1
-        l.TextScaled = true
-        l.Font = Enum.Font.SourceSansBold
+        l.Size = UDim2.new(1, 0, 1, 0); l.Text = obj.Name; l.TextColor3 = Color3.fromRGB(0, 255, 255); l.BackgroundTransparency = 1; l.TextScaled = true
     end
 end
 
--- Scan inicial e contínuo para ESP
 task.spawn(function()
     while task.wait(2) do
         for _, obj in pairs(workspace:GetDescendants()) do
@@ -64,7 +57,7 @@ task.spawn(function()
     end
 end)
 
--- 3. MEGA MAGNET GLOBAL (PUXAR TUDO DO MAPA)
+-- 3. MEGA MAGNET GLOBAL (SETABAIXO)
 local function runGlobalMagnet()
     local itemsToGrab = {"Coal", "Log", "Broken Fan", "Radio", "Tire", "Old Tire", "Washing Machine", "Old Car Engine"}
     local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
@@ -74,14 +67,7 @@ local function runGlobalMagnet()
         if table.find(itemsToGrab, obj.Name) then
             local handle = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
             if handle then
-                -- Teleporta para o jogador (independente da distância)
-                if obj:IsA("Model") then 
-                    obj:PivotTo(hrp.CFrame * CFrame.new(0, 5, -3)) 
-                else 
-                    obj.CFrame = hrp.CFrame * CFrame.new(0, 5, -3)
-                end
-                
-                -- Simula toque para coletar
+                if obj:IsA("Model") then obj:PivotTo(hrp.CFrame * CFrame.new(0, 5, -3)) else obj.CFrame = hrp.CFrame * CFrame.new(0, 5, -3) end
                 if firetouchinterest then
                     firetouchinterest(hrp, handle, 0)
                     firetouchinterest(hrp, handle, 1)
@@ -91,16 +77,14 @@ local function runGlobalMagnet()
     end
 end
 
--- Ativar Magnet com a Seta para Baixo (Teclado/Controle)
-game:GetService("UserInputService").InputBegan:Connect(function(input, processed)
+UserInputService.InputBegan:Connect(function(input, processed)
     if input.KeyCode == Enum.KeyCode.Down or input.KeyCode == Enum.KeyCode.ButtonDpadDown then
         runGlobalMagnet()
     end
 end)
 
--- Notificação
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "ADMIN SYSTEM ON",
-    Text = "Laser Buffado | ESP Global | Seta Baixo = Magnet",
+    Title = "LASER OVERDRIVE",
+    Text = "Segure para disparar sem parar!",
     Duration = 5
 })
