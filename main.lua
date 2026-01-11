@@ -1,55 +1,48 @@
---// 99 NIGHTS - LIGHT VERSION (ANTI-LAG) //--
+--// 99 NIGHTS - PASSIVE SURVIVAL (AFK FARM) //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
-local RunService = game:GetService("RunService")
-local UserInputService = game:GetService("UserInputService")
 local Lighting = game:GetService("Lighting")
 
-_G.Noclip = false
+-- 1. MODO SEMPRE DIA (Para você monitorar melhor)
+Lighting.Brightness = 2
+Lighting.ClockTime = 14
+Lighting.FogEnd = 100000
+Lighting.GlobalShadows = false
 
--- 1. NOITE CLARA (FULL BRIGHT) - Executa apenas uma vez para não travar
-local function ForceDay()
-    Lighting.Brightness = 2
-    Lighting.ClockTime = 14
-    Lighting.FogEnd = 100000
-    Lighting.GlobalShadows = false
-    Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
-end
-ForceDay()
-
--- 2. NOCLIP OTIMIZADO (SETABAIXO / DPADDOWN)
-UserInputService.InputBegan:Connect(function(input)
-    if input.KeyCode == Enum.KeyCode.ButtonDpadDown or input.KeyCode == Enum.KeyCode.N then
-        _G.Noclip = not _G.Noclip
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "Noclip",
-            Text = _G.Noclip and "ATIVADO" or "DESATIVADO",
-            Duration = 2
-        })
-    end
+-- 2. ANTI-AFK (Impede que o Roblox te expulse por ficar parado)
+local VirtualUser = game:GetService("VirtualUser")
+LocalPlayer.Idled:Connect(function()
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
 end)
 
-RunService.Stepped:Connect(function()
-    if _G.Noclip then
-        local char = LocalPlayer.Character
-        if char then
-            for _, part in pairs(char:GetChildren()) do
-                if part:IsA("BasePart") then
-                    part.CanCollide = false
+-- 3. AUTO-REGEN & ANTI-FOME (Para sobreviver sozinho)
+task.spawn(function()
+    while task.wait(1) do
+        pcall(function()
+            local char = LocalPlayer.Character
+            if char then
+                -- Tenta manter a fome cheia para não perder vida
+                for _, v in pairs(char:GetDescendants()) do
+                    if v:IsA("ValueBase") and (v.Name:lower():find("hunger") or v.Name:lower():find("food")) then
+                        v.Value = 100
+                    end
+                end
+                -- Cura automática se algo te bater
+                local hum = char:FindFirstChildOfClass("Humanoid")
+                if hum and hum.Health < hum.MaxHealth then
+                    hum.Health = hum.MaxHealth
                 end
             end
-        end
+        end)
     end
 end)
 
--- 3. ESP DO MONSTRO (SIMPLIFICADO)
--- Procura o monstro a cada 5 segundos (mais lento para não dar lag)
+-- 4. ESP DO MONSTRO (Para você ver se ele está perto enquanto descansa)
 task.spawn(function()
     while task.wait(5) do
         for _, v in pairs(workspace:GetChildren()) do
-            -- Se for um modelo, não for jogador e tiver vida (provável monstro)
             if v:IsA("Model") and v:FindFirstChildOfClass("Humanoid") and not Players:GetPlayerFromCharacter(v) then
                 if not v:FindFirstChild("Highlight") then
                     local h = Instance.new("Highlight", v)
@@ -61,4 +54,8 @@ task.spawn(function()
     end
 end)
 
-print("Script Leve Carregado!")
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "AFK FARM ATIVO",
+    Text = "O script tentará te manter vivo. Boa sorte nas 99 noites!",
+    Duration = 10
+})
