@@ -1,8 +1,7 @@
---// 99 NIGHTS - SURVIVAL MENU (CURA E COMIDA - SEM OP) //--
+--// 99 NIGHTS - EXCLUSIVE MAGNET (FOGO, MACHADO, CURA) //--
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
-local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 local Lighting = game:GetService("Lighting")
 
@@ -18,11 +17,10 @@ MainFrame.Size = UDim2.new(0, 220, 0, 300)
 MainFrame.Position = UDim2.new(0.5, -110, 0.5, -150)
 MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 MainFrame.BorderSizePixel = 2
-MainFrame.Visible = true
 
 local Title = Instance.new("TextLabel", MainFrame)
 Title.Size = UDim2.new(1, 0, 0, 35)
-Title.Text = "99 NIGHTS SURVIVAL"
+Title.Text = "99 NIGHTS - SELETIVO"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 
@@ -47,7 +45,7 @@ local nBtn = CreateBtn("NOCLIP: OFF", UDim2.new(0, 10, 0, 95), function()
     _G.Noclip = not _G.Noclip
 end)
 
-local mBtn = CreateBtn("MAGNET CURA/FOOD: OFF", UDim2.new(0, 10, 0, 145), function()
+local mBtn = CreateBtn("MAGNET FILTRADO: OFF", UDim2.new(0, 10, 0, 145), function()
     _G.MagnetOP = not _G.MagnetOP
 end)
 
@@ -55,14 +53,14 @@ local fBtn = CreateBtn("AUTO FARM: OFF", UDim2.new(0, 10, 0, 195), function()
     _G.AutoFarm = not _G.AutoFarm
 end)
 
-CreateBtn("FECHAR (L1+R1)", UDim2.new(0, 10, 0, 245), function()
+CreateBtn("FECHAR MENU", UDim2.new(0, 10, 0, 245), function()
     MainFrame.Visible = false
 end)
 
--- LOOP NOCLIP
+-- ATUALIZAÇÃO DE TEXTO E NOCLIP
 RunService.Stepped:Connect(function()
     nBtn.Text = "NOCLIP: " .. (_G.Noclip and "ON" or "OFF")
-    mBtn.Text = "MAGNET CURA/FOOD: " .. (_G.MagnetOP and "ON" or "OFF")
+    mBtn.Text = "MAGNET FILTRADO: " .. (_G.MagnetOP and "ON" or "OFF")
     fBtn.Text = "AUTO FARM: " .. (_G.AutoFarm and "ON" or "OFF")
     
     if _G.Noclip and LocalPlayer.Character then
@@ -72,28 +70,50 @@ RunService.Stepped:Connect(function()
     end
 end)
 
--- MAGNET SELETIVO (APENAS CURA E COMIDA - SEM UVA / SEM OP)
+-- MAGNET EXCLUSIVO
 task.spawn(function()
-    -- Lista filtrada apenas para o básico e necessário
-    local listaSurvival = {
-        "Medkit", "Bandagem", "Kit", "Armor", "Shield", -- Cura e Defesa
-        "Meat", "Carne", "Apple", "Maca", "Berry", "Baga", "Bread", "Pao", "Food" -- Comida
+    -- APENAS os itens solicitados
+    local itensAlvo = {
+        "fire", "saco", "fogo",      -- Saco de Fogo
+        "heavy", "battle", "axe",    -- Machado Forte
+        "bandage", "bandagem",       -- Bandagem
+        "medkit", "kit", "medico"    -- Kit Médico
     }
     
-    while task.wait(3) do
+    while task.wait(1.5) do
         if _G.MagnetOP then
-            local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+            local char = LocalPlayer.Character
+            local hrp = char and char:FindFirstChild("HumanoidRootPart")
+            
             if hrp then
                 for _, obj in pairs(workspace:GetDescendants()) do
-                    local nome = obj.Name:lower()
-                    
-                    -- Filtro de exclusão: Ignora Uvas e Itens OP conhecidos
-                    local isBlacklisted = nome:find("uva") or nome:find("grape") or nome:find("raygun") or nome:find("shotgun") or nome:find("alien")
-                    
-                    if not isBlacklisted then
-                        for _, k in pairs(listaSurvival) do
-                            if nome:find(k:lower()) and not obj:IsDescendantOf(game.Players) then
-                                local h = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
-                                if h then 
-                                    h.CFrame = hrp.CFrame 
-                                    if firetouchinterest then firetouchinterest(hrp, h, 0); firetouchinterest(hrp, h,
+                    -- Verifica se o objeto é um item solto no mapa
+                    if (obj:IsA("Tool") or obj:IsA("Model") or obj:IsA("BasePart")) then
+                        local nome = obj.Name:lower()
+                        
+                        -- Ignora itens já equipados ou de outros players
+                        if not obj:IsDescendantOf(char) and not obj:IsDescendantOf(game.Players) then
+                            for _, alvo in pairs(itensAlvo) do
+                                if nome:find(alvo) then
+                                    local part = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart", true)
+                                    
+                                    if part then
+                                        part.CFrame = hrp.CFrame
+                                        
+                                        -- Simula o toque para coletar
+                                        if firetouchinterest then
+                                            firetouchinterest(hrp, part, 0)
+                                            task.wait(0.05)
+                                            firetouchinterest(hrp, part, 1)
+                                        end
+                                    end
+                                    break -- Sai do loop de nomes se já achou o item
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
