@@ -1,1 +1,4845 @@
-local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function() return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...) local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30) if (v1(v30,2)==81) then local v88=0;while true do if (v88==0) then v19=v0(v3(v30,1,1));return "";end end else local v89=v2(v0(v30,16));if v19 then local v111=v5(v89,v19);v19=nil;return v111;else return v89;end end end);local function v20(v31,v32,v33) if v33 then local v90=0;local v91;while true do if (v90==(927 -(214 + 713))) then v91=(v31/((5 -(1 + 2))^(v32-(1 + 0))))%(((122 -(32 + 85)) -3)^(((v33-(1 + 0)) -(v32-(1 -0))) + (2 -1))) ;return v91-(v91%(1 + 0)) ;end end else local v92=(621 -(555 + 64))^(v32-(932 -(857 + 74))) ;return (((v31%(v92 + v92))>=v92) and (1271 -(226 + 1024 + 20))) or (568 -(367 + 201)) ;end end local function v21() local v34=v1(v16,v18,v18);v18=v18 + 1 ;return v34;end local function v22() local v35,v36=v1(v16,v18,v18 + (959 -(892 + 65)) );v18=v18 + 2 ;return (v36 * (472 -216)) + v35 ;end local function v23() local v37=0;local v38;local v39;local v40;local v41;while true do if (v37==(3 -2)) then return (v41 * ((30801068 -(802 + 150)) -14022900)) + (v40 * (65886 -(87 + 263))) + (v39 * (436 -(67 + 113))) + v38 ;end if (v37==(0 + 0)) then v38,v39,v40,v41=v1(v16,v18,v18 + (7 -4) );v18=v18 + 3 + 1 ;v37=1;end end end local function v24() local v42=v23();local v43=v23();local v44=2 -1 ;local v45=(v20(v43,1 -0 ,15 + 5 ) * ((7 -5)^(474 -(416 + 26)))) + v42 ;local v46=v20(v43,(3716 -2698) -(915 + 82) ,87 -56 );local v47=((v20(v43,32)==(1 + 0)) and  -(1 -0)) or (1188 -(1069 + 118)) ;if (v46==(0 -0)) then if (v45==(1486 -(998 + (1732 -1244)))) then return v47 * ((859 -(814 + 45)) + 0) ;else v46=1 + 0 ;v44=(0 -0) -0 ;end elseif (v46==(356 + 1691)) then return ((v45==((0 + 0) -0)) and (v47 * ((1 + 0)/(0 + 0)))) or (v47 * NaN) ;end return v8(v47,v46-(2161 -(116 + 1022)) ) * (v44 + (v45/((793 -(368 + 423))^(31 + 21)))) ;end local function v25(v48) local v49=(2434 -1549) -(261 + (2447 -1823)) ;local v50;local v51;while true do if (v49==(1 -0)) then v50=v3(v16,v18,(v18 + v48) -((9 + 1072) -(1020 + 60)) );v18=v18 + v48 ;v49=1425 -(630 + 793) ;end if (v49==(3 + 0)) then return v6(v51);end if (v49==(0 -(0 + 0))) then v50=nil;if  not v48 then local v119=0 -(1055 -(87 + 968)) ;while true do if (v119==(0 + 0)) then v48=v23();if (v48==(0 -0)) then return "";end break;end end end v49=1748 -(760 + 987) ;end if (v49==2) then v51={};for v112=1914 -(1789 + 124) , #v50 do v51[v112]=v2(v1(v3(v50,v112,v112)));end v49=769 -(745 + 21) ;end end end local v26=v23;local function v27(...) return {...},v12("#",...);end local function v28() local v52=(function() return function(v93,v94,v95,v96,v97,v98,v99,v100,v101) local v102=(function() return 0;end)();local v93=(function() return;end)();local v94=(function() return;end)();while true do if (v102==(0 -0)) then local v120=(function() return 867 -(550 + 317) ;end)();while true do if (v120==(812 -(569 + 242))) then v102=(function() return 1;end)();break;end if (v120~=(0 -0)) then else local v124=(function() return 0 -0 ;end)();while true do if (v124~=(1 -0)) then else v120=(function() return 2 -1 ;end)();break;end if (v124~=(1024 -(706 + 318))) then else v93=(function() return 285 -(134 + 151) ;end)();v94=(function() return nil;end)();v124=(function() return 1;end)();end end end end end if (v102==(1666 -(970 + 695))) then local v121=(function() return 0 -0 ;end)();while true do if (v121==(1271 -(945 + 326))) then while true do if (v93==(1990 -(582 + 1408))) then v94=(function() return v95();end)();if (v96(v94, #"]", #"[")==(0 -0)) then local v127=(function() return 0 -0 ;end)();local v128=(function() return;end)();local v129=(function() return;end)();local v130=(function() return;end)();while true do if (v127~=(0 -0)) then else local v146=(function() return 0 + 0 ;end)();while true do if (v146==(1824 -(1195 + 629))) then v128=(function() return v96(v94,2, #"19(");end)();v129=(function() return v96(v94, #"0836",7 -1 );end)();v146=(function() return 1;end)();end if (v146==(242 -(187 + 54))) then v127=(function() return 1501 -(1408 + 92) ;end)();break;end end end if (v127~=(782 -(162 + 618))) then else if (v96(v129, #"~", #"{")== #"/") then v130[2 + 0 ]=(function() return v99[v130[2 + 0 ]];end)();end if (v96(v129,3 -1 ,2 -0 )== #"}") then v130[ #"-19"]=(function() return v99[v130[ #"gha"]];end)();end v127=(function() return 3;end)();end if (v127~=(1 + 0)) then else local v147=(function() return 1636 -(1373 + 263) ;end)();while true do if (v147~=(1172 -(418 + 753))) then else v127=(function() return 1002 -(451 + 549) ;end)();break;end if (v147==(0 + 0)) then local v409=(function() return 0;end)();while true do if ((1 + 0)==v409) then v147=(function() return 1 -0 ;end)();break;end if (v409==0) then v130=(function() return {v97(),v97(),nil,nil};end)();if (v128==0) then local v522=(function() return 529 -(406 + 123) ;end)();local v523=(function() return;end)();while true do if (v522==(1384 -(746 + 638))) then v523=(function() return 1769 -(1749 + 20) ;end)();while true do if (v523==(0 + 0)) then v130[ #"xnx"]=(function() return v97();end)();v130[ #".dev"]=(function() return v97();end)();break;end end break;end end elseif (v128== #" ") then v130[ #"nil"]=(function() return v98();end)();elseif (v128==(1 + 1)) then v130[ #"91("]=(function() return v98() -((2 -0)^(1338 -(1249 + 73))) ;end)();elseif (v128~= #"asd") then else local v538=(function() return 341 -(218 + 123) ;end)();local v539=(function() return;end)();while true do if (v538==(1581 -(1535 + 46))) then v539=(function() return 1145 -(466 + 679) ;end)();while true do if ((0 -0)==v539) then v130[ #"19("]=(function() return v98() -(2^(16 + 0)) ;end)();v130[ #".dev"]=(function() return v97();end)();break;end end break;end end end v409=(function() return 1;end)();end end end end end if (v127~=(8 -5)) then else if (v96(v129, #"asd", #"xnx")== #"[") then v130[ #"asd1"]=(function() return v99[v130[ #"0836"]];end)();end v100[v101]=(function() return v130;end)();break;end end end break;end end return v93,v94,v95,v96,v97,v98,v99,v100,v101;end end end end end;end)();local v53=(function() return function(v103,v104,v105) local v106=(function() return 1900 -(106 + 1794) ;end)();local v107=(function() return;end)();while true do if (v106==(0 + 0)) then v107=(function() return 0;end)();while true do if (v107~=(0 + 0)) then else local v125=(function() return 0 -0 ;end)();while true do if (v125==0) then v103[v104-#"/" ]=(function() return v105();end)();return v103,v104,v105;end end end end break;end end end;end)();local v54=(function() return {};end)();local v55=(function() return {};end)();local v56=(function() return {};end)();local v57=(function() return {v54,v55,nil,v56};end)();local v58=(function() return v23();end)();local v59=(function() return {};end)();for v67= #"\\",v58 do local v68=(function() return 0;end)();local v69=(function() return;end)();local v70=(function() return;end)();local v71=(function() return;end)();while true do if (v68~=0) then else local v114=(function() return 114 -(4 + 110) ;end)();while true do if (v114==(1 + 0)) then v68=(function() return 1428 -(41 + 1386) ;end)();break;end if (v114==(0 -0)) then v69=(function() return 1467 -(899 + 568) ;end)();v70=(function() return nil;end)();v114=(function() return 1 + 0 ;end)();end end end if (v68==1) then v71=(function() return nil;end)();while true do if ((0 -0)~=v69) then else local v122=(function() return 603 -(268 + 335) ;end)();while true do if (v122~=(290 -(60 + 230))) then else v70=(function() return v21();end)();v71=(function() return nil;end)();v122=(function() return 573 -(426 + 146) ;end)();end if (v122~=1) then else v69=(function() return 1 + 0 ;end)();break;end end end if (v69~=(1 -0)) then else if (v70== #" ") then v71=(function() return v21()~=(1456 -(282 + 1174)) ;end)();elseif (v70==(5 -3)) then v71=(function() return v24();end)();elseif (v70== #"91(") then v71=(function() return v25();end)();end v59[v67]=(function() return v71;end)();break;end end break;end end end v57[ #"-19"]=(function() return v21();end)();for v72= #".",v23() do FlatIdent_25011,Descriptor,v21,v20,v22,v23,v59,v54,v72=(function() return v52(FlatIdent_25011,Descriptor,v21,v20,v22,v23,v59,v54,v72);end)();end for v73= #",",v23() do v55,v73,v28=(function() return v53(v55,v73,v28);end)();end return v57;end local function v29(v61,v62,v63) local v64=v61[167 -(122 + 44) ];local v65=v61[2 -0 ];local v66=v61[9 -6 ];return function(...) local v74=v64;local v75=v65;local v76=v66;local v77=v27;local v78=1 + 0 ;local v79= -((1 -0) + 0);local v80={};local v81={...};local v82=v12("#",...) -(66 -(30 + 35)) ;local v83={};local v84={};for v108=0 + 0 ,v82 do if ((1403<=3066) and (v108>=v76)) then v80[v108-v76 ]=v81[v108 + (1258 -(1043 + 214)) ];else v84[v108]=v81[v108 + (3 -2) ];end end local v85=(v82-v76) + 1 + 0 ;local v86;local v87;while true do v86=v74[v78];v87=v86[1213 -(323 + 889) ];if (v87<=58) then if (v87<=(75 -47)) then if (v87<=(752 -(396 + 343))) then if ((v87<=(586 -(32 + 329 + 219))) or (3281>=3662)) then if (v87<=((1799 -(29 + 1448)) -(53 + 267))) then if (v87<=(0 + 0)) then if (v84[v86[415 -(15 + 398) ]] or (2284==2632)) then v78=v78 + ((2372 -(135 + 1254)) -((67 -49) + 964)) ;else v78=v86[11 -8 ];end elseif ((v87>(1 + 0)) or (1155==4872)) then for v351=v86[2 + 0 ],v86[(3982 -3129) -(20 + 830) ] do v84[v351]=nil;end elseif (v84[v86[2 + 0 ]]==v84[v86[4]]) then v78=v78 + (127 -(116 + 10)) ;else v78=v86[1 + 2 ];end elseif ((v87<=4) or (3998>=4246)) then if ((2860==2860) and (v87==((494 + 247) -(542 + 196)))) then v84[v86[1529 -(389 + 1138) ]]=v62[v86[3]];else v78=v86[6 -(577 -(102 + 472)) ];end elseif (v87==(2 + 3)) then local v153=v86[2 + 0 ];v84[v153](v13(v84,v153 + 1 ,v86[2 + 1 ]));else v84[v86[2]]=v86[3]/v84[v86[2 + 2 ]] ;end elseif (v87<=(23 -14)) then if (v87<=(17 -10)) then local v131=v86[1553 -(1126 + 425) ];local v132={};for v143=406 -(66 + 52 + 268 + 19) , #v83 do local v144=0;local v145;while true do if (v144==(0 -0)) then v145=v83[v143];for v410=0, #v145 do local v411=v145[v410];local v412=v411[1122 -(118 + 1003) ];local v413=v411[5 -3 ];if (((v412==v84) and (v413>=v131)) or (1086>4449)) then v132[v413]=v412[v413];v411[378 -(142 + 235) ]=v132;end end break;end end end elseif (v87==8) then local v155=v86[2];v84[v155]=v84[v155]();elseif ((4981>546) and (v84[v86[9 -7 ]]~=v84[v86[1 + 3 ]])) then v78=v78 + (1546 -(320 + 1225)) ;else v78=v86[5 -2 ];end elseif (v87<=(988 -(553 + 424))) then if (v87>(18 -(5 + 3))) then do return;end else local v157=v86[2];local v158={v84[v157](v13(v84,v157 + 1 + 0 ,v79))};local v159=0 + 0 ;for v353=v157,v86[3 + 1 ] do v159=v159 + (1465 -(157 + 1307)) + 0 ;v84[v353]=v158[v159];end end elseif (v87>12) then v62[v86[2 + 1 ]]=v84[v86[4 -2 ]];else local v162=0 -0 ;local v163;while true do if ((0 -0)==v162) then v163=v86[1 + 1 ];v84[v163](v13(v84,v163 + (4 -3) ,v79));break;end end end elseif ((v87<=(773 -(239 + 514))) or (2366<=8)) then if (v87<=(6 + 10)) then if (v87<=(1343 -(797 + 532))) then v84[v86[(1861 -(821 + 1038)) + 0 ]]=v84[v86[2 + 1 ]] + v84[v86[4]] ;elseif (v87>(34 -19)) then v84[v86[4 -2 ]]=v63[v86[1205 -(373 + 829) ]];else local v166=v86[733 -(476 + 255) ];local v167=v84[v86[1133 -(369 + 761) ]];v84[v166 + 1 ]=v167;v84[v166]=v167[v84[v86[4]]];end elseif ((v87<=(11 + 7)) or (2590==2864)) then if (v87>17) then local v171=0 -0 ;local v172;while true do if (v171==0) then v172=v86[3 -1 ];v84[v172](v13(v84,v172 + 1 ,v79));break;end end elseif  not v84[v86[240 -(64 + 174) ]] then v78=v78 + 1 ;else v78=v86[1 + 2 ];end elseif (v87>(27 -(1 + 7))) then local v173=v86[2];local v174={v84[v173](v13(v84,v173 + (217 -(42 + 174)) ,v86[3 + 0 ]))};local v175=0;for v356=v173,v86[4 + 0 ] do local v357=0 + 0 ;while true do if ((1504 -(363 + 1141))==v357) then v175=v175 + 1 ;v84[v356]=v174[v175];break;end end end else v84[v86[1582 -(1183 + 397) ]]=v86[2 + 1 ]/v84[v86[11 -7 ]] ;end elseif (v87<=(18 + 6)) then if (v87<=(17 + 5)) then if (v87>(1996 -(1913 + 62))) then v84[v86[2 + 0 ]]=v84[v86[7 -4 ]]%v86[1937 -(565 + (3390 -2022)) ] ;elseif (v84[v86[7 -(1031 -(834 + 192)) ]]==v86[1665 -(1477 + 184) ]) then v78=v78 + ((1 + 0) -(0 + 0)) ;else v78=v86[3 + 0 ];end elseif (v87>23) then local v178=856 -(564 + 292) ;local v179;local v180;local v181;while true do if ((0 -0)==v178) then v179=v75[v86[1 + 2 ]];v180=nil;v178=1 -0 ;end if (v178==(2 -1)) then v181={};v180=v10({},{__index=function(v445,v446) local v447=304 -(244 + 60) ;local v448;while true do if (v447==0) then v448=v181[v446];return v448[1 + 0 ][v448[2]];end end end,__newindex=function(v449,v450,v451) local v452=v181[v450];v452[477 -(41 + 435) ][v452[1003 -(938 + 63) ]]=v451;end});v178=2 + 0 ;end if (v178==(1127 -(936 + 189))) then for v454=1,v86[2 + (306 -(300 + 4)) ] do v78=v78 + 1 ;local v455=v74[v78];if (v455[1614 -(1565 + 48) ]==(18 + 47 + 40)) then v181[v454-(2 -1) ]={v84,v455[3]};else v181[v454-((364 -(112 + 250)) -1) ]={v62,v455[1095 -(975 + 117) ]};end v83[ #v83 + 1 + 0 ]=v181;end v84[v86[1877 -((393 -236) + 1718) ]]=v29(v179,v180,v63);break;end end else v84[v86[2]]=v84[v86[3 + 0 + 0 ]] + v84[v86[4]] ;end elseif ((v87<=(92 -66)) or (2624>4149)) then if (v87>(85 -60)) then if (v84[v86[1020 -(697 + 321) ]]<v84[v86[10 -6 ]]) then v78=v78 + (1 -0) ;else v78=v86[6 -3 ];end else local v183=v86[1 + 1 ];v84[v183]=v84[v183](v13(v84,v183 + ((1 + 0) -0) ,v79));end elseif (v87==(72 -45)) then local v185=1227 -(322 + 905) ;local v186;local v187;local v188;while true do if (v185==(612 -(602 + 9))) then v188=v84[v186] + v187 ;v84[v186]=v188;v185=1191 -(449 + 554 + 186) ;end if (v185==(874 -(410 + 416 + 46))) then if ((v187>(947 -(245 + 702))) or (2618>=4495)) then if ((v188<=v84[v186 + (3 -(2 + 0)) ]) or (2485>=3131)) then v78=v86[1 + 2 ];v84[v186 + (1901 -(260 + 1638)) ]=v188;end elseif (v188>=v84[v186 + (441 -(382 + (1472 -(1001 + 413)))) ]) then v78=v86[3];v84[v186 + 3 ]=v188;end break;end if ((v185==(0 -0)) or (2804<=2785)) then v186=v86[2];v187=v84[v186 + 2 + 0 ];v185=1;end end else local v189=0;local v190;while true do if (v189==(0 -0)) then v190=v86[5 -3 ];do return v13(v84,v190,v79);end break;end end end elseif ((v87<=43) or (4571==3415)) then if (v87<=35) then if (v87<=31) then if ((v87<=(1234 -(902 + (675 -372)))) or (4441>4787)) then local v134=v86[3 -1 ];v84[v134]=v84[v134](v13(v84,v134 + (2 -1) ,v86[1 + 2 ]));elseif (v87>(1720 -(1121 + 569))) then local v191=214 -((904 -(244 + 638)) + (885 -(627 + 66))) ;local v192;local v193;while true do if (v191==1) then for v457=684 -(483 + 200) , #v83 do local v458=v83[v457];for v493=1463 -(1404 + 59) , #v458 do local v494=0 -0 ;local v495;local v496;local v497;while true do if (v494==(0 -(0 -0))) then v495=v458[v493];v496=v495[1];v494=(1368 -(512 + 90)) -(468 + 297) ;end if (v494==(563 -(334 + 228))) then v497=v495[6 -(1910 -(1665 + 241)) ];if ((v496==v84) and (v497>=v192)) then v193[v497]=v496[v497];v495[1]=v193;end break;end end end end break;end if (v191==(0 -0)) then v192=v86[2];v193={};v191=1;end end else v84[v86[2 -0 ]]={};end elseif (v87<=(10 + (740 -(373 + 344)))) then if ((1920==1920) and (v87>(268 -(64 + 77 + 95)))) then if ((v86[2 + 0 ]==v84[v86[9 -5 ]]) or (647==4477)) then v78=v78 + (2 -1) ;else v78=v86[1 + 2 ];end elseif  not v84[v86[5 -3 ]] then v78=v78 + 1 + 0 ;else v78=v86[3];end elseif (v87>(18 + 5 + 11)) then v84[v86[2 -0 ]]=v86[2 + 1 ] + v84[v86[167 -(92 + 71) ]] ;else v84[v86[1 + 1 ]]=v84[v86[4 -1 ]] * v86[769 -(574 + 191) ] ;end elseif (v87<=(33 + 6)) then if (v87<=37) then if (v87>(89 -53)) then v84[v86[2 + 0 ]]= not v84[v86[852 -(254 + (1569 -974)) ]];elseif (v84[v86[128 -(55 + 71) ]]~=v84[v86[5 -1 ]]) then v78=v78 + ((3030 -1239) -((1672 -(35 + 1064)) + 1217)) ;else v78=v86[8 -5 ];end elseif (v87>(3 + 35)) then v84[v86[2]]=v84[v86[4 -1 ]]%v84[v86[943 -(520 + 194 + 225) ]] ;else v84[v86[(10 -5) -(1 + 2) ]]=v86[3 -0 ]~=(0 + 0) ;end elseif ((3819==3819) and (v87<=(59 -18))) then if (v87==(846 -(118 + 688))) then v84[v86[2]]=v86[3];else v84[v86[50 -(25 + 23) ]][v84[v86[3]]]=v84[v86[1 + 3 ]];end elseif ((v87>(1928 -(927 + 959))) or (1466>4360)) then local v204=0 -0 ;local v205;while true do if (v204==(732 -(16 + 716))) then v205=v86[2];do return v84[v205](v13(v84,v205 + (1 -(1236 -(298 + 938))) ,v86[100 -(11 + (1345 -(233 + 1026))) ]));end break;end end else v84[v86[4 -2 ]][v86[3]]=v86[289 -(175 + 110) ];end elseif (v87<=((1792 -(636 + 1030)) -76)) then if (v87<=(226 -180)) then if (v87<=44) then v84[v86[1798 -(503 + 1293) ]]=v84[v86[8 -5 ]]/v86[3 + 1 ] ;elseif ((v87==(33 + 12)) or (14>994)) then local v208=1061 -(810 + 251) ;local v209;while true do if ((401<=734) and (v208==(0 + 0))) then v209=v86[2];v84[v209]=v84[v209]();break;end end else local v210=0 + 0 ;local v211;local v212;local v213;while true do if (v210==1) then v213=0 + 0 ;for v459=v211,v86[537 -(43 + 0 + 490) ] do local v460=(218 + 515) -(711 + 22) ;while true do if (v460==(0 -0)) then v213=v213 + (860 -(240 + 42 + 577)) ;v84[v459]=v212[v213];break;end end end break;end if ((v210==((221 -(55 + 166)) + 0 + 0)) or (2167>=3426)) then v211=v86[2 -(0 + 0) ];v212={v84[v211](v84[v211 + (1745 -(1344 + 400)) ])};v210=406 -((973 -718) + (447 -(36 + 261))) ;end end end elseif ((764<3285) and (v87<=(38 + 10))) then if ((2499==2499) and (v87==(26 + 21))) then v84[v86[8 -(9 -3) ]]=v84[v86[9 -6 ]][v84[v86[1743 -(404 + 1335) ]]];else v62[v86[409 -(183 + 223) ]]=v84[v86[2 -0 ]];end elseif (v87==((1401 -(34 + 1334)) + 16)) then v84[v86[2]]= #v84[v86[3]];else local v219=v86[1 + 1 + 0 ];local v220,v221=v77(v84[v219](v13(v84,v219 + (338 -(10 + 327)) ,v86[3 + 0 ])));v79=(v221 + v219) -(339 -(118 + 220)) ;local v222=0 + 0 + 0 ;for v358=v219,v79 do local v359=1283 -(1035 + 248) ;while true do if (0==v359) then v222=v222 + (450 -(108 + 341)) ;v84[v358]=v220[v222];break;end end end end elseif ((v87<=(25 + 29)) or (692>=4933)) then if (v87<=(219 -167)) then if (v87>(1544 -((732 -(20 + 1)) + 408 + 374))) then v84[v86[3 -1 ]]=v84[v86[322 -(134 + 185) ]] -v84[v86[4]] ;else v84[v86[(1604 -(549 + 584)) -(270 + 199) ]]=v84[v86[(686 -(314 + 371)) + 2 ]] * v86[1823 -(580 + 1239) ] ;end elseif (v87==53) then local v225=v86[5 -3 ];local v226=v84[v86[3 + 0 ]];v84[v225 + 1 ]=v226;v84[v225]=v226[v84[v86[1 + 3 ]]];else local v230=v86[2];local v231=v84[v230];local v232=v86[2 + 1 ];for v360=3 -2 ,v232 do v231[v360]=v84[v230 + v360 ];end end elseif (v87<=56) then if (v87>(143 -(1056 -(478 + 490)))) then v84[v86[2 + 0 ]]=v62[v86[1170 -(645 + 522) ]];else local v235=v86[2];do return v84[v235](v13(v84,v235 + ((949 + 842) -(1010 + 780)) ,v86[3 + 0 ]));end end elseif ((v87>((1443 -(786 + 386)) -214)) or (3154<=2260)) then local v236=0 -0 ;local v237;local v238;local v239;while true do if (v236==((1379 -(1055 + 324)) -(1340 -(1093 + 247)))) then v237=v86[1838 -(1045 + 791) ];v238=v84[v237 + (4 -2) ];v236=(1 + 0) -(0 + 0) ;end if (v236==(507 -(351 + 154))) then if ((v238>(1574 -(1281 + 293))) or (2637>3149)) then if ((v239<=v84[v237 + 1 ]) or (3992<2407)) then v78=v86[269 -((111 -83) + 238) ];v84[v237 + (6 -3) ]=v239;end elseif (v239>=v84[v237 + (1560 -((4686 -3305) + 178)) ]) then local v513=0;while true do if (v513==0) then v78=v86[3 + 0 ];v84[v237 + 3 + 0 ]=v239;break;end end end break;end if ((v236==1) or (2902>4859)) then v239=v84[v237] + v238 ;v84[v237]=v239;v236=1 + 1 ;end end else v84[v86[5 -3 ]]=v84[v86[10 -7 ]]%v86[3 + 1 ] ;end elseif ((1679<4359) and (v87<=88)) then if (v87<=(543 -(381 + 89))) then if (v87<=(58 + 7)) then if (v87<=(42 + 19)) then if ((1913<4670) and (v87<=59)) then local v137=0 -0 ;local v138;while true do if (v137==(1156 -(1074 + 82))) then v138=v86[2];do return v13(v84,v138,v138 + v86[6 -3 ] );end break;end end elseif ((v87>(1844 -(214 + 1570))) or (2846<879)) then v84[v86[1457 -(990 + 465) ]][v84[v86[7 -4 ]]]=v86[2 + 2 ];else local v243=v86[1 + 1 + 0 ];local v244=v84[v86[11 -8 ]];v84[v243 + 1 + 0 ]=v244;v84[v243]=v244[v86[4]];end elseif ((4588==4588) and (v87<=((851 -604) -184))) then if (v87==(1788 -(1668 + 58))) then local v248=v86[(474 + 154) -(512 + 114) ];v84[v248](v84[v248 + 1 ]);else local v249=v86[5 -3 ];v84[v249]=v84[v249](v13(v84,v249 + (1 -(0 -0)) ,v86[10 -7 ]));end elseif ((v87>(30 + 34)) or (347==2065)) then local v251=v86[1 + 1 ];local v252,v253=v77(v84[v251](v84[v251 + 1 ]));v79=(v253 + v251) -1 ;local v254=0 + 0 ;for v364=v251,v79 do v254=v254 + (3 -2) ;v84[v364]=v252[v254];end else do return;end end elseif (v87<=(2063 -(109 + 1885))) then if (v87<=(1536 -(1269 + 200))) then if ((v87==(126 -60)) or (1311>2697)) then local v255=v86[817 -(98 + 717) ];local v256=v86[830 -(802 + 24) ];local v257=v255 + (2 -(688 -(364 + 324))) ;local v258={v84[v255](v84[v255 + 1 ],v84[v257])};for v367=1 -0 ,v256 do v84[v257 + v367 ]=v258[v367];end local v259=v258[1 + 0 ];if v259 then local v401=0 + 0 ;while true do if (v401==((0 -0) + 0)) then v84[v257]=v259;v78=v86[1 + 2 ];break;end end else v78=v78 + (2 -1) ;end else local v260=0 -0 ;local v261;local v262;local v263;while true do if (((2 -1) + 0)==v260) then v263=v84[v261 + 1 + 1 ];if (v263>(0 + 0)) then if (v262>v84[v261 + 1 + 0 ]) then v78=v86[2 + 1 ];else v84[v261 + (1436 -(265 + 532 + 636)) ]=v262;end elseif (v262<v84[v261 + (4 -3) ]) then v78=v86[1622 -(1427 + 192) ];else v84[v261 + (8 -6) + 1 ]=v262;end break;end if ((v260==0) or (2717>3795)) then v261=v86[4 -2 ];v262=v84[v261];v260=1 + 0 ;end end end elseif ((v87==(31 + 37)) or (1081<391)) then if ((v84[v86[328 -(192 + 134) ]]==v84[v86[1280 -(316 + 960) ]]) or (121>3438)) then v78=v78 + 1 + 0 ;else v78=v86[3 + 0 ];end else v84[v86[(2 -0) + 0 ]]=v84[v86[11 -8 ]];end elseif (v87<=(622 -(83 + 468))) then if (v87==70) then local v266=v86[2];v84[v266]=v84[v266](v84[v266 + (1807 -(1202 + (1834 -1230))) ]);else v84[v86[2]][v84[v86[13 -10 ]]]=v86[6 -(1270 -(1249 + 19)) ];end elseif (v87==(199 -127)) then if v84[v86[327 -(45 + 253 + 27) ]] then v78=v78 + 1 + (0 -0) ;else v78=v86[3 + 0 ];end else local v270=0 + 0 ;local v271;local v272;local v273;local v274;while true do if (2==v270) then for v463=v271,v79 do v274=v274 + 1 + 0 ;v84[v463]=v272[v274];end break;end if (v270==0) then v271=v86[(1087 -(686 + 400)) + 1 ];v272,v273=v77(v84[v271](v13(v84,v271 + (1 -0) ,v79)));v270=1912 -(340 + 1571) ;end if ((71<1949) and (v270==(1 + 0))) then v79=(v273 + v271) -(1 + 0) ;v274=1772 -(1733 + 39) ;v270=5 -3 ;end end end elseif (v87<=(1114 -(125 + 909))) then if (v87<=(2024 -(1096 + 852))) then if (v87<=(34 + 40)) then if (v86[(231 -(73 + 156)) -(0 + 0) ]<v84[v86[(815 -(721 + 90)) + 0 ]]) then v78=v78 + (513 -(409 + 103)) ;else v78=v86[(3 + 236) -(46 + 190) ];end elseif (v87==(170 -(51 + 44))) then local v276=v86[2];local v277=v84[v276];local v278=v84[v276 + 1 + 1 ];if ((4254==4254) and (v278>(1317 -(1114 + 203)))) then if (v277>v84[v276 + (727 -(228 + 498)) ]) then v78=v86[3];else v84[v276 + 3 ]=v277;end elseif ((3196>=2550) and (v277<v84[v276 + 1 + 0 ])) then v78=v86[2 + 1 ];else v84[v276 + (666 -(174 + 489)) ]=v277;end else v84[v86[5 -3 ]]=v84[v86[1908 -((2694 -1864) + 1075) ]][v86[474 -(224 + 246) ]];end elseif (v87<=((974 -372) -(303 + 221))) then if (v87>77) then do return v84[v86[1271 -(231 + 1038) ]];end else local v281=v86[2];do return v13(v84,v281,v79);end end elseif ((2456<4176) and (v87>(66 + 13))) then v84[v86[1164 -(171 + 991) ]]=v84[v86[12 -9 ]] + v86[10 -6 ] ;else v84[v86[4 -2 ]]=v86[3 + 0 ]~=(0 -0) ;end elseif (v87<=84) then if ((v87<=(236 -154)) or (1150==3452)) then if ((1875<2258) and (v87==((239 -109) -49))) then v84[v86[2]]=v84[v86[3]]/v86[4] ;else local v285=v86[6 -(1 + 3) ];local v286={v84[v285](v84[v285 + (159 -(91 + 67)) ])};local v287=(0 + 0) -0 ;for v370=v285,v86[4] do v287=v287 + 1 + 0 + 0 ;v84[v370]=v286[v287];end end elseif ((1173>41) and (v87==(606 -(423 + 100)))) then v84[v86[1 + 1 ]]=v86[7 -4 ];else local v290=v86[2];local v291,v292=v77(v84[v290](v13(v84,v290 + 1 + 0 ,v86[774 -(326 + 445) ])));v79=(v292 + v290) -((7 -3) -3) ;local v293=0 -0 ;for v373=v290,v79 do local v374=0 -0 ;while true do if (v374==((513 -(203 + 310)) -0)) then v293=v293 + (712 -(530 + 181)) ;v84[v373]=v291[v293];break;end end end end elseif (v87<=(967 -(614 + 267))) then if (v87==((2110 -(1238 + 755)) -(19 + 13))) then v84[v86[2 -0 ]][v86[6 -3 ]]=v84[v86[11 -7 ]];else local v296=v86[2];v84[v296](v84[v296 + 1 + 0 ]);end elseif (v87>(152 -65)) then local v297=0 -(0 + 0) ;local v298;local v299;local v300;while true do if ((v297==((3347 -(709 + 825)) -(1293 + 519))) or (56>=3208)) then v300=0 -0 ;for v472=v298,v86[9 -5 ] do local v473=0 -0 ;while true do if ((4313>3373) and (v473==0)) then v300=v300 + (4 -3) ;v84[v472]=v299[v300];break;end end end break;end if ((v297==0) or (4493==2225)) then v298=v86[4 -2 ];v299={v84[v298](v13(v84,v298 + 1 + 0 ,v86[6 -3 ]))};v297=1;end end else for v375=v86[1 + 1 ],v86[1 + 2 ] do v84[v375]=nil;end end elseif (v87<=(65 + 38)) then if (v87<=95) then if ((3104>=3092) and (v87<=((2187 -1000) -(709 + 387)))) then if ((3548>3098) and (v87<=(1947 -(673 + 1185)))) then v84[v86[5 -3 ]][v84[v86[9 -6 ]]]=v84[v86[6 -2 ]];elseif ((v87==(65 + 25)) or (3252==503)) then local v301=v86[2 + 0 ];local v302=v84[v301];local v303=v86[3 -0 ];for v377=1 + 0 ,v303 do v302[v377]=v84[v301 + v377 ];end else local v304=0 -(0 -0) ;local v305;local v306;local v307;while true do if (v304==((867 -(196 + 668)) -1)) then for v474=1,v86[1884 -(446 + 1434) ] do local v475=1283 -(1040 + 243) ;local v476;while true do if (v475==(2 -1)) then if (v476[1848 -(559 + 1288) ]==(2036 -(609 + 1322))) then v307[v474-(455 -(13 + 441)) ]={v84,v476[14 -11 ]};else v307[v474-(1 + 0) ]={v62,v476[2 + 1 ]};end v83[ #v83 + (2 -1) ]=v307;break;end if ((4733>2066) and (v475==(0 + 0))) then v78=v78 + (1 -0) ;v476=v74[v78];v475=(3 -2) + 0 ;end end end v84[v86[2 + 0 ]]=v29(v305,v306,v63);break;end if (v304==(1 + 0)) then v307={};v306=v10({},{__index=function(v477,v478) local v479=v307[v478];return v479[1 + 0 ][v479[2]];end,__newindex=function(v480,v481,v482) local v483=v307[v481];v483[1 -0 ][v483[2 + 0 ]]=v482;end});v304=435 -(153 + 280) ;end if ((3549>=916) and (v304==(0 -0))) then v305=v75[v86[3 + 0 ]];v306=nil;v304=1 + 0 ;end end end elseif (v87<=93) then if ((v87>(49 + 43)) or (2189<=245)) then local v308=v86[2 + 0 ];local v309=v84[v308];for v380=v308 + 1 ,v86[3 + (833 -(171 + 662)) ] do v7(v309,v84[v380]);end else v84[v86[2 -0 ]]=v86[2 + 1 ] + v84[v86[671 -(89 + 578) ]] ;end elseif (v87==(68 + 26)) then v84[v86[2]]=v84[v86[5 -(95 -(4 + 89)) ]]%v84[v86[1053 -(572 + 477) ]] ;else v84[v86[1 + 1 ]]=v84[v86[2 + 1 ]] + v86[1 + (10 -7) ] ;end elseif ((v87<=99) or (1389>3925)) then if (v87<=(183 -(84 + 2))) then if (v87==(157 -61)) then v84[v86[2 + 0 ]]= not v84[v86[845 -(497 + 345) ]];else v84[v86[1 + 1 ]]=v63[v86[1 + 2 ]];end elseif ((4169>=3081) and (v87==((522 + 909) -(605 + 728)))) then v84[v86[2 + 0 ]]=v84[v86[6 -3 ]][v86[(4 -3) + 3 ]];else v84[v86[7 -5 ]]={};end elseif (v87<=101) then if (v87>(91 + 9)) then local v319=0 -0 ;local v320;local v321;local v322;while true do if ((349<=894) and (v319==(1 + 0))) then v322=0;for v485=v320,v86[493 -(457 + 32) ] do v322=v322 + 1 ;v84[v485]=v321[v322];end break;end if ((0 + 0)==v319) then v320=v86[2];v321={v84[v320](v13(v84,v320 + 1 + 0 ,v79))};v319=1 + 0 ;end end elseif (v84[v86[1 + 1 ]]==v86[13 -9 ]) then v78=v78 + 1 + 0 ;else v78=v86[799 -(588 + 208) ];end elseif (v87>(274 -172)) then local v323=v86[1802 -(884 + 916) ];local v324=v86[4];local v325=v323 + 2 ;local v326={v84[v323](v84[v323 + (1 -0) ],v84[v325])};for v381=1,v324 do v84[v325 + v381 ]=v326[v381];end local v327=v326[1];if v327 then local v405=0 + 0 ;while true do if (v405==0) then v84[v325]=v327;v78=v86[656 -(232 + 421) ];break;end end else v78=v78 + (1890 -((3055 -(35 + 1451)) + 320)) ;end else local v328=v86[1 + (1454 -(28 + 1425)) ];v84[v328](v13(v84,v328 + (1994 -(941 + 1052)) ,v86[1 + 2 ]));end elseif (v87<=((355 + 15) -260)) then if (v87<=(711 -(316 + 289))) then if ((731<=2978) and (v87<=(271 -167))) then local v141=v86[(1515 -(822 + 692)) + 1 ];v84[v141]=v84[v141](v84[v141 + 1 ]);elseif (v87>(1558 -(666 + 787))) then v84[v86[427 -(360 + 65) ]][v86[3 + 0 ]]=v86[258 -(79 + 175) ];else v84[v86[2]]=v84[v86[4 -1 ]];end elseif ((v87<=(85 + 23)) or (892>3892)) then if (v87==107) then v78=v86[8 -5 ];else local v334=v86[(3 -0) -1 ];local v335,v336=v77(v84[v334](v84[v334 + ((424 + 476) -(503 + (693 -(45 + 252)))) ]));v79=(v336 + v334) -(182 -(92 + 0 + 89)) ;local v337=0 -0 ;for v384=v334,v79 do local v385=0 + 0 ;while true do if (v385==((0 -0) + 0)) then v337=v337 + 1 + (433 -(114 + 319)) ;v84[v384]=v335[v337];break;end end end end elseif (v87==(426 -317)) then if ((v86[1 + 1 ]<v84[v86[8 -4 ]]) or (4466==900)) then v78=v78 + (1 -0) + (0 -0) ;else v78=v86[2 + 1 ];end else v84[v86[5 -3 ]]=v84[v86[3]][v84[v86[4]]];end elseif ((v87<=(15 + 99)) or (2084>=2888)) then if ((479<1863) and (v87<=(170 -58))) then if ((v87==111) or (2428>=4038)) then do return v84[v86[(795 + 451) -(485 + 759) ]];end elseif (v84[v86[4 -2 ]]<v84[v86[(1777 -584) -(442 + 747) ]]) then v78=v78 + 1 ;else v78=v86[1138 -(832 + 303) ];end elseif (v87==(1059 -(88 + 858))) then local v340=v86[1 + 1 ];v84[v340]=v84[v340](v13(v84,v340 + 1 + 0 ,v79));elseif (v86[1 + 1 ]==v84[v86[793 -(766 + (47 -24)) ]]) then v78=v78 + 1 ;else v78=v86[14 -(1974 -(556 + 1407)) ];end elseif (v87<=(157 -41)) then if ((v87>115) or (2878>2897)) then local v342=v86[4 -2 ];local v343,v344=v77(v84[v342](v13(v84,v342 + (3 -(1208 -(741 + 465))) ,v79)));v79=(v344 + v342) -1 ;local v345=1073 -(1036 + 37) ;for v386=v342,v79 do v345=v345 + 1 + 0 ;v84[v386]=v343[v345];end else v84[v86[3 -(466 -(170 + 295)) ]]=v84[v86[3 + 0 + 0 ]] -v84[v86[1484 -(589 + 52 + 839) ]] ;end elseif (v87==(1030 -(910 + 3))) then v84[v86[4 -2 ]]= #v84[v86[1687 -(1466 + 218) ]];else local v348=(0 -0) + 0 ;local v349;local v350;while true do if (v348==0) then v349=v86[1150 -(556 + 592) ];v350=v84[v86[3]];v348=1 + 0 ;end if ((v348==(809 -(273 + 56 + 479))) or (2469>3676)) then v84[v349 + (855 -(174 + 680)) ]=v350;v84[v349]=v350[v86[(9 + 4) -9 ]];break;end end end v78=v78 + 1 ;end end;end return v29(v28(),{},v17)(...);end return v15("LOL!36012Q0003063Q00737472696E6703043Q006368617203043Q00627974652Q033Q0073756203053Q0062697433322Q033Q0062697403043Q0062786F7203053Q007461626C6503063Q00636F6E63617403063Q00696E73657274025Q00A0724003063Q002006B342B2E903083Q00C96269C736DD8477025Q005072402Q033Q003BA93D03063Q00886FC64D1F87025Q0010714003103Q00DB64FB0D1E45FA75C4031F5EC370E41803063Q002A9311966C70025Q00A06F40030B3Q0036EC9E75E42E2D1AE3855403073Q00597B8DE6318D5D025Q00806F40030D3Q00E37FAA43A1C76DA6028BCD7BE803053Q00E5AE1ED263025Q00606F40030A3Q00A22Q6E11B6405C27915203043Q004EE42138025Q00406F4003043Q000BE169B103073Q00E04DAE3F8B26AF025Q00206F40030A3Q00FDFE18630C5EC9D2225903063Q0037BBB14E3C4F026Q006F4003083Q00B7C90FAE7F17E7B203073Q00A8E4A160D95F51025Q00E06E4003063Q00ECEE10F915D903053Q007AAD877D9B025Q00C06E40030D3Q001008DFB6F7C4FD1C00C1A0FDC203073Q00DD5161B2D498B0025Q00A06E4003073Q0020213172BE7B0503063Q00147240581CDC025Q00806E4003073Q00F31304FB007FAE03073Q00D9A1726D956210025Q00606E40030B3Q006E78720C7FA24358467C0F03073Q002D3D16137C13CB025Q00406E4003093Q00035D41FFED3A5D5CAC03053Q0099532Q3296025Q00206E4003083Q008DFA02558FB7FA0603053Q00E3DE946325026Q006E4003083Q00F7C512D451FFA6C103073Q00C8A4AB73A43D96025Q00E06D402Q033Q0037CE0503053Q0016729D5554025Q00C06D402Q033Q00D19E8603073Q003994CDD6B4C836025Q00A06D4003063Q0097BCEBD2B9A103043Q00B0D6D586025Q00806D402Q033Q009FBE9803043Q00B2DAEDC8025Q00606D4003083Q00AD2CB860ADB64BB303083Q00D4D943CB142QDF25025Q00206D40030A3Q00683F01457C1133735B2Q03043Q001A2E7057025Q00C06C4003063Q006645DA613F4903053Q0050242AAE15025Q00A06C402Q033Q00D62DF703073Q00A68242873C1B11025Q00806C4003063Q0030D08C2QEFD503063Q00A773B5E29B8A025Q00E06B4003083Q0004AB5FB3238C79AE03043Q00DC51E21C025Q00606B40030A3Q006800D8BB00CD4811CFA103063Q00B83C65A0CF42025Q00206B40030E3Q00F18E03EC3AEB6BC38F05DC36E25C03073Q0038A2E1769E598E025Q00806A4003093Q0001B193E6F634B68EFE03053Q00BA55D4EB92025Q00406A4003043Q00D1C812C103063Q00D79DAD74B52E025Q0060694003083Q002A30EAE52C36F7F603043Q00915E5F99025Q00606840030A3Q00DC0841EAF9F7963AE72Q03083Q004E886D399EBB82E2025Q00E0674003053Q00E75033DB0003053Q0065A12252B6025Q00A0674003083Q00B09B10045A408C9703073Q00E9E5D2536B282E025Q00C0664003083Q00D4E111F5FD3EF95003083Q002281A8529A8F509C025Q0060654003083Q0082CC5AFAFBC5B2F703063Q00ABD785199589025Q00606440030A3Q0011D4424E9130C54E55BD03053Q00D345B12Q3A025Q00806340030E3Q001921C049292BE65A243DF754262A03043Q003B4A4EB5025Q00C0624003093Q00B9D47C3316487382FA03073Q001AEC9D2C52722C025Q0040624003093Q00C2DA0CD3F3F735DCF003043Q00B297935C026Q00624003063Q00A3A2C9EF52ED03063Q009FE0C7A79B37025Q00806140030C3Q00C158D9A43639ABF568FAB83103073Q00E7941195CD454D025Q0040614003063Q00E8722A40F82103073Q00A8AB1744349D53025Q00C06040030C3Q00D22BD6C0F416D6C8FE0DEFDD03043Q00A987629A026Q00604003053Q001149DE248503073Q003E573BBF49E036025Q00805E4003053Q0083B822131603083Q0031C5CA437E7364A7026Q005E4003083Q0099078844D5592Q1B03083Q0069CC4ECB2BA7377E026Q005C4003053Q00272007375803053Q003D6152665A026Q005B4003093Q00D1584C48DF4BE9EA7603073Q008084111C29BB2F025Q00805A4003063Q0073BFCFAF55A803043Q00DB30DAA1025Q00805940030C3Q0047685B8CED9F5E406E8AEB9F03063Q00EB122117E59E026Q00594003083Q001EA513A3BBB3333903073Q00564BEC50CCC9DD026Q00574003053Q00680530A5F403083Q003A2E7751C891D025025Q00405640030E3Q00895BA352B9518541B447944FB65003043Q0020DA34D6025Q00C0554003043Q006282E53903043Q004D2EE783026Q00544003123Q00F36818F4DF5ABE2000FDDD1BA57941AD9E0B03063Q003BD3486F9CB0025Q0080534003093Q0024539B9FAA2FAFF51C03083Q00907036E3EBE64ECD026Q00534003083Q006E0797595F552BA603053Q002D3B4ED436025Q0080504003053Q001C04F5B83F03043Q00D55A7694026Q00504003093Q00B525AA4BD16D148C3803073Q0071E24DC52ABC20026Q004F4003093Q004B843C127D8909027103043Q007718E74E026Q004D4003093Q00E817FB1D37F21AFA0903053Q005ABF7F947C026Q00424003103Q00D5A65D4472D0F4B7624A73CBCDB2425103063Q00BF9DD330251C026Q003D4003043Q00103807BE03083Q00555C5169DB798B41026Q003B4003043Q000E5139DD03073Q0086423857B8BE74026Q003A4003063Q0099D918CAD7A603083Q0081CAA86DABA5C3B7026Q0038402Q033Q009A2D6603073Q008FD8421E7E449B026Q00354003063Q006DA2C27123C603083Q00C42ECBB0124FA32D026Q003340030B3Q00835D2B1F2622BA5D3D382A03063Q0051CE3C535B4F026Q003240030A3Q0027C87E604100E3414A6003053Q00136187283F026Q003140030A3Q009BF616739ED0324FB1DC03043Q002CDDB940026Q00304003063Q006ADAB54E146903063Q001D2BB3D82C7B026Q002E4003073Q00B34DEA77AD8E5B03053Q00CFE12C8319026Q002C4003063Q0032F0B7C8CB6A03073Q00EB7195D9BCAE18026Q002A40030B3Q00B4F4CE968BF3C183B7F5DC03043Q00E6E79AAF026Q00284003083Q00382Q575BF18A055C03063Q00E36B39362B9D026Q0026402Q033Q00C0656A03043Q00A885363A026Q00204003093Q004DDB92F749C481FF5F03043Q009C3AB4E0026Q001C4003103Q0045FE454A094060F8546B255C66E4435D03063Q002E108D203840026Q00144003073Q00E2CD28CB95432Q03083Q0092A1A25AAED2366A026Q000840030A3Q00F7D8AF4DE3D7DBA87DE303053Q0086A5ADC11E026Q00F03F03073Q0048B58155A86AAA03053Q00CD18D9E02C03043Q0067616D65030A3Q004765745365727669636503023Q005F47030D3Q0043752Q72656E7443616D657261030B3Q004C6F63616C506C61796572026Q003E40026Q00694003073Q0044726177696E672Q033Q006E6577030E3Q0046696E6446697273744368696C6403093Q0057686F616D4D656E7503073Q0044657374726F7903083Q00496E7374616E636503043Q004E616D6503043Q0053697A6503053Q005544696D32028Q00025Q00C07740025Q0060734003083Q00506F736974696F6E026Q00E03F025Q00C067C0025Q006063C003103Q004261636B67726F756E64436F6C6F723303063Q00436F6C6F723303073Q0066726F6D52474203063Q0041637469766503093Q004472612Q6761626C6503043Q0054657874025Q0080414003163Q004261636B67726F756E645472616E73706172656E6379030A3Q0054657874436F6C6F7233030E3Q005465787458416C69676E6D656E7403043Q00466F6E7403083Q005465787453697A65026Q004440025Q00607040026Q00394003073Q0050612Q64696E6703043Q005544696D03133Q00486F72697A6F6E74616C416C69676E6D656E74030A3Q0050612Q64696E67546F70026Q002440025Q00606340026Q00344003073Q0056697369626C65030D3Q0052656E6465725374652Q70656403073Q00436F2Q6E65637403053Q007061697273030A3Q00476574506C6179657273030B3Q00506C61796572412Q64656400D8033Q001E7Q001261000100013Q002062000100010002001261000200013Q002062000200020003001261000300013Q002062000300030004001261000400053Q0006110004000B00010001002Q043Q000B0001001261000400063Q002062000500040007001261000600083Q002062000600060009001261000700083Q00206200070007000A00065B00083Q000100062Q00693Q00074Q00693Q00014Q00693Q00054Q00693Q00024Q00693Q00034Q00693Q00064Q0045000900083Q001228000A000C3Q001228000B000D4Q001D0009000B00020010553Q000B00092Q0045000900083Q001228000A000F3Q001228000B00104Q001D0009000B00020010553Q000E00092Q0045000900083Q001228000A00123Q001228000B00134Q001D0009000B00020010553Q001100092Q0045000900083Q001228000A00153Q001228000B00164Q001D0009000B00020010553Q001400092Q0045000900083Q001228000A00183Q001228000B00194Q001D0009000B00020010553Q001700092Q0045000900083Q001228000A001B3Q001228000B001C4Q001D0009000B00020010553Q001A00092Q0045000900083Q001228000A001E3Q001228000B001F4Q001D0009000B00020010553Q001D00092Q0045000900083Q001228000A00213Q001228000B00224Q001D0009000B00020010553Q002000092Q0045000900083Q001228000A00243Q001228000B00254Q001D0009000B00020010553Q002300092Q0045000900083Q001228000A00273Q001228000B00284Q001D0009000B00020010553Q002600092Q0045000900083Q001228000A002A3Q001228000B002B4Q001D0009000B00020010553Q002900092Q0045000900083Q001228000A002D3Q001228000B002E4Q001D0009000B00020010553Q002C00092Q0045000900083Q001228000A00303Q001228000B00314Q001D0009000B00020010553Q002F00092Q0045000900083Q001228000A00333Q001228000B00344Q001D0009000B00020010553Q003200092Q0045000900083Q001228000A00363Q001228000B00374Q001D0009000B00020010553Q003500092Q0045000900083Q001228000A00393Q001228000B003A4Q001D0009000B00020010553Q003800092Q0045000900083Q001228000A003C3Q001228000B003D4Q001D0009000B00020010553Q003B00092Q0045000900083Q001228000A003F3Q001228000B00404Q001D0009000B00020010553Q003E00092Q0045000900083Q001228000A00423Q001228000B00434Q001D0009000B00020010553Q004100092Q0045000900083Q001228000A00453Q001228000B00464Q001D0009000B00020010553Q004400092Q0045000900083Q001228000A00483Q001228000B00494Q001D0009000B00020010553Q004700092Q0045000900083Q001228000A004B3Q001228000B004C4Q001D0009000B00020010553Q004A00092Q0045000900083Q001228000A004E3Q001228000B004F4Q001D0009000B00020010553Q004D00092Q0045000900083Q001228000A00513Q001228000B00524Q001D0009000B00020010553Q005000092Q0045000900083Q001228000A00543Q001228000B00554Q001D0009000B00020010553Q005300092Q0045000900083Q001228000A00573Q001228000B00584Q001D0009000B00020010553Q005600092Q0045000900083Q001228000A005A3Q001228000B005B4Q001D0009000B00020010553Q005900092Q0045000900083Q001228000A005D3Q001228000B005E4Q001D0009000B00020010553Q005C00092Q0045000900083Q001228000A00603Q001228000B00614Q001D0009000B00020010553Q005F00092Q0045000900083Q001228000A00633Q001228000B00644Q001D0009000B00020010553Q006200092Q0045000900083Q001228000A00663Q001228000B00674Q001D0009000B00020010553Q006500092Q0045000900083Q001228000A00693Q001228000B006A4Q001D0009000B00020010553Q006800092Q0045000900083Q001228000A006C3Q001228000B006D4Q001D0009000B00020010553Q006B00092Q0045000900083Q001228000A006F3Q001228000B00704Q001D0009000B00020010553Q006E00092Q0045000900083Q001228000A00723Q001228000B00734Q001D0009000B00020010553Q007100092Q0045000900083Q001228000A00753Q001228000B00764Q001D0009000B00020010553Q007400092Q0045000900083Q001228000A00783Q001228000B00794Q001D0009000B00020010553Q007700092Q0045000900083Q001228000A007B3Q001228000B007C4Q001D0009000B00020010553Q007A00092Q0045000900083Q001228000A007E3Q001228000B007F4Q001D0009000B00020010553Q007D00092Q0045000900083Q001228000A00813Q001228000B00824Q001D0009000B00020010553Q008000092Q0045000900083Q001228000A00843Q001228000B00854Q001D0009000B00020010553Q008300092Q0045000900083Q001228000A00873Q001228000B00884Q001D0009000B00020010553Q008600092Q0045000900083Q001228000A008A3Q001228000B008B4Q001D0009000B00020010553Q008900092Q0045000900083Q001228000A008D3Q001228000B008E4Q001D0009000B00020010553Q008C00092Q0045000900083Q001228000A00903Q001228000B00914Q001D0009000B00020010553Q008F00092Q0045000900083Q001228000A00933Q001228000B00944Q001D0009000B00020010553Q009200092Q0045000900083Q001228000A00963Q001228000B00974Q001D0009000B00020010553Q009500092Q0045000900083Q001228000A00993Q001228000B009A4Q001D0009000B00020010553Q009800092Q0045000900083Q001228000A009C3Q001228000B009D4Q001D0009000B00020010553Q009B00092Q0045000900083Q001228000A009F3Q001228000B00A04Q001D0009000B00020010553Q009E00092Q0045000900083Q001228000A00A23Q001228000B00A34Q001D0009000B00020010553Q00A100092Q0045000900083Q001228000A00A53Q001228000B00A64Q001D0009000B00020010553Q00A400092Q0045000900083Q001228000A00A83Q001228000B00A94Q001D0009000B00020010553Q00A700092Q0045000900083Q001228000A00AB3Q001228000B00AC4Q001D0009000B00020010553Q00AA00092Q0045000900083Q001228000A00AE3Q001228000B00AF4Q001D0009000B00020010553Q00AD00092Q0045000900083Q001228000A00B13Q001228000B00B24Q001D0009000B00020010553Q00B000092Q0045000900083Q001228000A00B43Q001228000B00B54Q001D0009000B00020010553Q00B300092Q0045000900083Q001228000A00B73Q001228000B00B84Q001D0009000B00020010553Q00B600092Q0045000900083Q001228000A00BA3Q001228000B00BB4Q001D0009000B00020010553Q00B900092Q0045000900083Q001228000A00BD3Q001228000B00BE4Q001D0009000B00020010553Q00BC00092Q0045000900083Q001228000A00C03Q001228000B00C14Q001D0009000B00020010553Q00BF00092Q0045000900083Q001228000A00C33Q001228000B00C44Q001D0009000B00020010553Q00C200092Q0045000900083Q001228000A00C63Q001228000B00C74Q001D0009000B00020010553Q00C500092Q0045000900083Q001228000A00C93Q001228000B00CA4Q001D0009000B00020010553Q00C800092Q0045000900083Q001228000A00CC3Q001228000B00CD4Q001D0009000B00020010553Q00CB00092Q0045000900083Q001228000A00CF3Q001228000B00D04Q001D0009000B00020010553Q00CE00092Q0045000900083Q001228000A00D23Q001228000B00D34Q001D0009000B00020010553Q00D100092Q0045000900083Q001228000A00D53Q001228000B00D64Q001D0009000B00020010553Q00D400092Q0045000900083Q001228000A00D83Q001228000B00D94Q001D0009000B00020010553Q00D700092Q0045000900083Q001228000A00DB3Q001228000B00DC4Q001D0009000B00020010553Q00DA00092Q0045000900083Q001228000A00DE3Q001228000B00DF4Q001D0009000B00020010553Q00DD00092Q0045000900083Q001228000A00E13Q001228000B00E24Q001D0009000B00020010553Q00E000092Q0045000900083Q001228000A00E43Q001228000B00E54Q001D0009000B00020010553Q00E300092Q0045000900083Q001228000A00E73Q001228000B00E84Q001D0009000B00020010553Q00E600092Q0045000900083Q001228000A00EA3Q001228000B00EB4Q001D0009000B00020010553Q00E900092Q0045000900083Q001228000A00ED3Q001228000B00EE4Q001D0009000B00020010553Q00EC00092Q0045000900083Q001228000A00F03Q001228000B00F14Q001D0009000B00020010553Q00EF00092Q0045000900083Q001228000A00F33Q001228000B00F44Q001D0009000B00020010553Q00F200092Q0045000900083Q001228000A00F63Q001228000B00F74Q001D0009000B00020010553Q00F500092Q0045000900083Q001228000A00F93Q001228000B00FA4Q001D0009000B00020010553Q00F800092Q0045000900083Q001228000A00FC3Q001228000B00FD4Q001D0009000B00020010553Q00FB00092Q0045000900083Q001228000A00FF3Q001228000B2Q00013Q001D0009000B00020010553Q00FE00090012280009002Q013Q0045000A00083Q001228000B0002012Q001228000C0003013Q001D000A000C00022Q00593Q0009000A00126100090004012Q001228000B0005013Q003500090009000B001228000B002Q013Q002F000B3Q000B2Q001D0009000B0002001261000A0004012Q001228000C0005013Q0035000A000A000C001228000C00FE4Q002F000C3Q000C2Q001D000A000C0002001261000B0004012Q001228000D0005013Q0035000B000B000D001228000D00FB4Q002F000D3Q000D2Q001D000B000D0002001261000C0004012Q001228000E0005013Q0035000C000C000E001228000E00F84Q002F000E3Q000E2Q001D000C000E0002001261000D0006012Q001228000E00F54Q002F000E3Q000E2Q002F000D000D000E001228000E0007013Q002F000D000D000E001228000E0008013Q002F000E0009000E2Q001E000F3Q0008001228001000F24Q002F00103Q00102Q002600116Q0059000F00100011001228001000EF4Q002F00103Q00102Q002600116Q0059000F00100011001228001000EC4Q002F00103Q0010001228001100E94Q002F00113Q00112Q0059000F00100011001228001000E64Q002F00103Q00102Q002600116Q0059000F00100011001228001000E34Q002F00103Q00102Q002600116Q0059000F00100011001228001000E04Q002F00103Q00102Q002600116Q0059000F00100011001228001000DD4Q002F00103Q001000122800110009013Q0059000F00100011001228001000DA4Q002F00103Q00100012280011000A013Q0059000F001000112Q001E00105Q0012610011000B012Q0012280012000C013Q002F001100110012001228001200D74Q002F00123Q00122Q004600110002000200065B00120001000100022Q00693Q00104Q00697Q00065B00130002000100052Q00693Q00094Q00693Q000E4Q00698Q00693Q000D4Q00693Q000F3Q0012280016000D013Q00350014000B0016001228001600C54Q002F00163Q00162Q001D0014001600020006480014001502013Q002Q043Q001502010012280014000E013Q002F0014000B00140012280016000F013Q00350014001400162Q005600140002000100126100140010012Q0012280015000C013Q002F001400140015001228001500C24Q002F00153Q00152Q00450016000B4Q001D00140016000200122800150011012Q001228001600BF4Q002F00163Q00162Q005900140015001600126100150010012Q0012280016000C013Q002F001500150016001228001600BC4Q002F00163Q00162Q0045001700144Q001D00150017000200122800160012012Q00126100170013012Q0012280018000C013Q002F00170017001800122800180014012Q00122800190015012Q001228001A0014012Q001228001B0016013Q001D0017001B00022Q005900150016001700122800160017012Q00126100170013012Q0012280018000C013Q002F00170017001800122800180018012Q00122800190019012Q001228001A0018012Q001228001B001A013Q001D0017001B00022Q00590015001600170012280016001B012Q0012610017001C012Q0012280018001D013Q002F001700170018001228001800E63Q001228001900E63Q001228001A00E64Q001D0017001A00022Q00590015001600170012280016001E013Q0026001700014Q00590015001600170012280016001F013Q0026001700014Q005900150016001700126100160010012Q0012280017000C013Q002F001600160017001228001700B94Q002F00173Q00172Q0045001800154Q000500160018000100126100160010012Q0012280017000C013Q002F001600160017001228001700B64Q002F00173Q00172Q0045001800154Q001D00160018000200122800170020012Q001228001800B34Q002F00183Q00182Q005900160017001800122800170012012Q00126100180013012Q0012280019000C013Q002F0018001800190012280019002Q012Q001228001A0014012Q001228001B0014012Q001228001C0021013Q001D0018001C00022Q005900160017001800122800170022012Q0012280018002Q013Q005900160017001800122800170023012Q0012610018001C012Q0012280019000C013Q002F0018001800190012280019002Q012Q001228001A002Q012Q001228001B002Q013Q001D0018001B00022Q005900160017001800122800170024012Q001228001800B04Q002F00183Q00182Q005900160017001800122800170025012Q001228001800AD4Q002F00183Q00182Q005900160017001800122800170026012Q001228001800DD4Q005900160017001800126100170010012Q0012280018000C013Q002F001700170018001228001800AA4Q002F00183Q00182Q0045001900154Q001D00170019000200122800180017012Q00126100190013012Q001228001A000C013Q002F00190019001A001228001A0014012Q001228001B00F53Q001228001C0014012Q001228001D0027013Q001D0019001D00022Q005900170018001900122800180012012Q00126100190013012Q001228001A000C013Q002F00190019001A001228001A0014012Q001228001B00893Q001228001C0014012Q001228001D0028013Q001D0019001D00022Q00590017001800190012280018001B012Q0012610019001C012Q001228001A001D013Q002F00190019001A001228001A0029012Q001228001B0029012Q001228001C0029013Q001D0019001C00022Q005900170018001900126100180010012Q0012280019000C013Q002F001800180019001228001900A74Q002F00193Q00192Q0045001A00174Q00050018001A000100126100180010012Q0012280019000C013Q002F001800180019001228001900A44Q002F00193Q00192Q0045001A00174Q001D0018001A00020012280019002A012Q001261001A002B012Q001228001B000C013Q002F001A001A001B001228001B0014012Q001228001C00F54Q001D001A001C00022Q005900180019001A0012280019002C012Q001228001A00A14Q002F001A3Q001A2Q005900180019001A00126100190010012Q001228001A000C013Q002F00190019001A001228001A009E4Q002F001A3Q001A2Q0045001B00174Q001D0019001B0002001228001A002D012Q001261001B002B012Q001228001C000C013Q002F001B001B001C001228001C0014012Q001228001D002E013Q001D001B001D00022Q00590019001A001B00126100190010012Q001228001A000C013Q002F00190019001A001228001A009B4Q002F001A3Q001A2Q0045001B00154Q001D0019001B0002001228001A0017012Q001261001B0013012Q001228001C000C013Q002F001B001B001C001228001C0014012Q001228001D002F012Q001228001E0014012Q001228001F0027013Q001D001B001F00022Q00590019001A001B001228001A0012012Q001261001B0013012Q001228001C000C013Q002F001B001B001C001228001C0014012Q001228001D005F3Q001228001E0014012Q001228001F0028013Q001D001B001F00022Q00590019001A001B001228001A001B012Q001261001B001C012Q001228001C001D013Q002F001B001B001C001228001C0030012Q001228001D0030012Q001228001E0030013Q001D001B001E00022Q00590019001A001B001261001A0010012Q001228001B000C013Q002F001A001A001B001228001B00984Q002F001B3Q001B2Q0045001C00194Q0005001A001C0001001261001A0010012Q001228001B000C013Q002F001A001A001B001228001B00954Q002F001B3Q001B2Q0045001C00194Q001D001A001C0002001228001B0012012Q001261001C0013012Q001228001D000C013Q002F001C001C001D001228001D002Q012Q001228001E0014012Q001228001F002Q012Q00122800200014013Q001D001C002000022Q0059001A001B001C001228001B0022012Q001228001C002Q013Q0059001A001B001C001228001B0031013Q0026001C00014Q0059001A001B001C001261001B0010012Q001228001C000C013Q002F001B001B001C001228001C00924Q002F001C3Q001C2Q0045001D00194Q001D001B001D0002001228001C0012012Q001261001D0013012Q001228001E000C013Q002F001D001D001E001228001E002Q012Q001228001F0014012Q0012280020002Q012Q00122800210014013Q001D001D002100022Q0059001B001C001D001228001C0022012Q001228001D002Q013Q0059001B001C001D001228001C0031013Q0026001D6Q0059001B001C001D001261001C0010012Q001228001D000C013Q002F001C001C001D001228001D008F4Q002F001D3Q001D2Q0045001E001A4Q001D001C001E0002001228001D002A012Q001261001E002B012Q001228001F000C013Q002F001E001E001F001228001F0014012Q001228002000F54Q001D001E002000022Q0059001C001D001E001228001D002C012Q001228001E008C4Q002F001E3Q001E2Q0059001C001D001E001261001D0010012Q001228001E000C013Q002F001D001D001E001228001E00894Q002F001E3Q001E2Q0045001F001B4Q001D001D001F0002001228001E002A012Q001261001F002B012Q0012280020000C013Q002F001F001F002000122800200014012Q001228002100F54Q001D001F002100022Q0059001D001E001F001228001E002C012Q001228001F00864Q002F001F3Q001F2Q0059001D001E001F001261001E0010012Q001228001F000C013Q002F001E001E001F001228001F00834Q002F001F3Q001F2Q00450020001A4Q001D001E00200002001228001F002D012Q0012610020002B012Q0012280021000C013Q002F00200020002100122800210014012Q0012280022002E013Q001D0020002200022Q0059001E001F0020001261001E0010012Q001228001F000C013Q002F001E001E001F001228001F00804Q002F001F3Q001F2Q00450020001B4Q001D001E00200002001228001F002D012Q0012610020002B012Q0012280021000C013Q002F00200020002100122800210014012Q0012280022002E013Q001D0020002200022Q0059001E001F002000065B001E0003000100042Q00698Q00693Q001A4Q00693Q001B4Q00693Q00173Q00065B001F0004000100022Q00693Q000F4Q00697Q00065B00200005000100022Q00698Q00693Q000F4Q00450021001E3Q001228002200474Q002F00223Q00222Q00450023001A4Q00050021002300012Q00450021001E3Q001228002200444Q002F00223Q00222Q00450023001B4Q00050021002300012Q00450021001F3Q001228002200414Q002F00223Q00220012280023003E4Q002F00233Q00232Q00450024001A4Q00050021002400012Q00450021001F3Q0012280022003B4Q002F00223Q0022001228002300384Q002F00233Q00232Q00450024001A4Q00050021002400012Q0045002100203Q001228002200354Q002F00223Q0022001228002300324Q002F00233Q00232Q00450024001A4Q0026002500014Q00050021002500012Q00450021001F3Q0012280022002F4Q002F00223Q00220012280023002C4Q002F00233Q00232Q00450024001A4Q00050021002400012Q00450021001F3Q001228002200294Q002F00223Q0022001228002300264Q002F00233Q00232Q00450024001B4Q00050021002400012Q00450021001F3Q001228002200234Q002F00223Q0022001228002300204Q002F00233Q00232Q00450024001B4Q00050021002400012Q0045002100203Q0012280022001D4Q002F00223Q00220012280023001A4Q002F00233Q00232Q00450024001B4Q002600256Q00050021002500012Q0045002100203Q001228002200174Q002F00223Q0022001228002300144Q002F00233Q00232Q00450024001B4Q002600256Q000500210025000100122800210032013Q002F0021000A002100122800230033013Q003500210021002300065B00230006000100082Q00693Q000F4Q00693Q00114Q00693Q000D4Q00693Q00104Q00698Q00693Q000E4Q00693Q000C4Q00693Q00134Q000500210023000100126100210034012Q00122800240035013Q00350022000900242Q006C002200234Q000A00213Q0023002Q043Q00CE03012Q0045002600124Q0045002700254Q0056002600020001000667002100CB03010002002Q043Q00CB030100122800210036013Q002F00210009002100122800230033013Q00350021002100232Q0045002300124Q00050021002300012Q000700096Q00403Q00013Q00073Q00023Q00026Q00F03F026Q00704002264Q001E00025Q001228000300014Q003100045Q001228000500013Q00044B0003002100012Q000300076Q0045000800024Q0003000900014Q0003000A00024Q0003000B00034Q0003000C00044Q0045000D6Q0045000E00063Q002050000F000600012Q0032000C000F4Q0071000B3Q00022Q0003000C00034Q0003000D00044Q0045000E00014Q0031000F00014Q0027000F0006000F00105C000F0001000F2Q0031001000014Q002700100006001000105C0010000100100020500010001000012Q0032000D00104Q0074000C6Q0071000A3Q0002002039000A000A00022Q006C0009000A4Q001200073Q000100043A0003000500012Q0003000300054Q0045000400024Q0037000300044Q001C00036Q00403Q00017Q000C3Q00028Q00026Q00F03F03043Q004C696E6503093Q00546869636B6E652Q73026Q00384003073Q0044726177696E672Q033Q006E6577026Q003A40026Q003B40026Q003D402Q033Q00426F78027Q0040012E4Q000300016Q002F000100013Q0006110001002D00010001002Q043Q002D0001001228000100014Q0057000200023Q0026640001000D00010002002Q043Q000D000100206200030002000300302A0003000400022Q000300036Q005900033Q0002002Q043Q002D00010026640001000600010001002Q043Q00060001001228000300013Q0026640003002700010001002Q043Q002700012Q001E00043Q00022Q0003000500013Q002062000500050005001261000600063Q0020620006000600072Q0003000700013Q0020620007000700082Q00460006000200022Q00590004000500062Q0003000500013Q002062000500050009001261000600063Q0020620006000600072Q0003000700013Q00206200070007000A2Q00460006000200022Q00590004000500062Q0045000200043Q00206200040002000B00302A00040004000C001228000300023Q0026640003001000010002002Q043Q00100001001228000100023Q002Q043Q00060001002Q043Q00100001002Q043Q000600012Q00403Q00017Q00133Q00028Q00026Q00F03F03053Q007061697273030A3Q00476574506C617965727303093Q00436861726163746572030E3Q0046696E6446697273744368696C64026Q00424003073Q00566563746F72322Q033Q006E6577030C3Q0056696577706F727453697A6503013Q0058027Q004003013Q005903093Q004D61676E697475646503103Q0048756D616E6F6964522Q6F745061727403083Q00506F736974696F6E030B3Q004D617844697374616E636503143Q00576F726C64546F56696577706F7274506F696E74030A3Q00464F565F52616469757300743Q0012283Q00014Q0057000100023Q0026643Q006400010002002Q043Q00640001001228000300013Q0026640003000500010001002Q043Q00050001001261000400034Q000300055Q0020760005000500042Q006C000500064Q000A00043Q0006002Q043Q006000012Q0003000900013Q0006240008006000010009002Q043Q006000010020620009000800050006480009006000013Q002Q043Q006000010020620009000800050020760009000900062Q0003000B00023Q002062000B000B00072Q001D0009000B00020006480009006000013Q002Q043Q00600001001228000900014Q0057000A000C3Q0026640009005400010002002Q043Q00540001000648000C006000013Q002Q043Q00600001001228000D00014Q0057000E00103Q002664000D004000010001002Q043Q00400001001228001100013Q0026640011003B00010001002Q043Q003B0001001261001200083Q0020620012001200092Q0003001300033Q00206200130013000A00206200130013000B00205100130013000C2Q0003001400033Q00206200140014000A00206200140014000D00205100140014000C2Q001D0012001400022Q0045000E00123Q001261001200083Q0020620012001200090020620013000B000B0020620014000B000D2Q001D0012001400022Q007300120012000E002062000F0012000E001228001100023Q0026640011002500010002002Q043Q00250001001228000D00023Q002Q043Q00400001002Q043Q00250001002664000D002200010002002Q043Q002200012Q0003001100013Q00206200110011000500206200110011000F0020620011001100100020620012000A00102Q007300110011001200206200100011000E000670000F006000010002002Q043Q006000012Q0003001100043Q0020620011001100110006700010006000010011002Q043Q006000012Q00450001000A4Q00450002000F3Q002Q043Q00600001002Q043Q00220001002Q043Q006000010026640009001C00010001002Q043Q001C0001002062000D00080005002062000A000D000F2Q0003000D00033Q002076000D000D0012002062000F000A00102Q0058000D000F000E2Q0045000C000E4Q0045000B000D3Q001228000900023Q002Q043Q001C00010006670004000D00010002002Q043Q000D00012Q004E000100023Q002Q043Q000500010026643Q000200010001002Q043Q00020001001228000300013Q000E720002006B00010003002Q043Q006B00010012283Q00023Q002Q043Q000200010026640003006700010001002Q043Q006700012Q0057000100014Q0003000400043Q002062000200040013001228000300023Q002Q043Q00670001002Q043Q000200012Q00403Q00017Q00193Q00028Q00027Q0040030A3Q0054657874436F6C6F723303063Q00436F6C6F72332Q033Q006E6577026Q00F03F03043Q00466F6E74025Q00806340026Q000840026Q00104003113Q004D6F75736542752Q746F6E31436C69636B03073Q00436F2Q6E65637403083Q00496E7374616E6365025Q0060644003043Q0053697A6503053Q005544696D3202CD5QCCEC3F025Q0080464003103Q004261636B67726F756E64436F6C6F723303073Q0066726F6D524742025Q0080414003043Q005465787403083Q005465787453697A65026Q003040025Q0060654002423Q001228000200014Q0057000300033Q000E720002000F00010002002Q043Q000F0001001261000400043Q002062000400040005001228000500063Q001228000600063Q001228000700064Q001D0004000700020010550003000300042Q000300045Q002062000400040008001055000300070004001228000200093Q002664000200190001000A002Q043Q0019000100206200040003000B00207600040004000C00065B00063Q000100032Q00383Q00014Q00383Q00024Q00693Q00014Q0005000400060001002Q043Q004100010026640002002B00010001002Q043Q002B00010012610004000D3Q0020620004000400052Q000300055Q00206200050005000E2Q0003000600034Q001D0004000600022Q0045000300043Q001261000400103Q002062000400040005001228000500113Q001228000600013Q001228000700013Q001228000800124Q001D0004000800020010550003000F0004001228000200063Q0026640002003600010006002Q043Q00360001001261000400043Q002062000400040014001228000500153Q001228000600153Q001228000700154Q001D000400070002001055000300130004001055000300163Q001228000200023Q000E720009000200010002002Q043Q0002000100302A0003001700180012610004000D3Q0020620004000400052Q000300055Q0020620005000500192Q0045000600034Q00050004000600010012280002000A3Q002Q043Q000200012Q00403Q00013Q00013Q00053Q00028Q0003073Q0056697369626C650100026Q00F03F2Q01000F3Q0012283Q00013Q0026643Q000800010001002Q043Q000800012Q000300015Q00302A0001000200032Q0003000100013Q00302A0001000200030012283Q00043Q0026643Q000100010004002Q043Q000100012Q0003000100023Q00302A000100020005002Q043Q000E0001002Q043Q000100012Q00403Q00017Q001E3Q00028Q00026Q00F03F03043Q0054657874030A3Q0054657874436F6C6F723303063Q00436F6C6F72332Q033Q006E657703083Q005465787453697A65026Q002C40027Q0040026Q00084003083Q00506F736974696F6E03053Q005544696D32026Q003CC0026Q00E03F026Q0022C003103Q004261636B67726F756E64436F6C6F723303083Q00496E7374616E6365025Q00C06640026Q00104003113Q004D6F75736542752Q746F6E31436C69636B03073Q00436F2Q6E656374025Q00A06740025Q00E0674003043Q0053697A65026Q003240025Q0060684002CD5QCCEC3F026Q00434003073Q0066726F6D524742026Q003E40037F3Q001228000300014Q0057000400053Q0026640003001600010002002Q043Q00160001001228000600013Q0026640006001000010001002Q043Q00100001001055000400033Q001261000700053Q002062000700070006001228000800023Q001228000900023Q001228000A00024Q001D0007000A0002001055000400040007001228000600023Q0026640006000500010002002Q043Q0005000100302A000400070008001228000300093Q002Q043Q00160001002Q043Q000500010026640003003A0001000A002Q043Q003A00010012610006000C3Q002062000600060006001228000700023Q0012280008000D3Q0012280009000E3Q001228000A000F4Q001D0006000A00020010550005000B00062Q000300066Q002F0006000600010006480006002C00013Q002Q043Q002C0001001261000600053Q002062000600060006001228000700013Q001228000800023Q001228000900014Q001D0006000900020006110006003200010001002Q043Q00320001001261000600053Q002062000600060006001228000700023Q001228000800013Q001228000900014Q001D000600090002001055000500100006001261000600113Q0020620006000600062Q0003000700013Q0020620007000700122Q0045000800054Q0005000600080001001228000300133Q000E720013004400010003002Q043Q0044000100206200060004001400207600060006001500065B00083Q000100032Q00388Q00693Q00014Q00693Q00054Q0005000600080001002Q043Q007E00010026640003005C00010009002Q043Q005C0001001261000600113Q0020620006000600062Q0003000700013Q0020620007000700162Q0045000800044Q0005000600080001001261000600113Q0020620006000600062Q0003000700013Q0020620007000700172Q0045000800044Q001D0006000800022Q0045000500063Q0012610006000C3Q002062000600060006001228000700013Q001228000800193Q001228000900013Q001228000A00194Q001D0006000A00020010550005001800060012280003000A3Q000E720001000200010003002Q043Q00020001001228000600013Q0026640006007100010001002Q043Q00710001001261000700113Q0020620007000700062Q0003000800013Q00206200080008001A2Q0045000900024Q001D0007000900022Q0045000400073Q0012610007000C3Q0020620007000700060012280008001B3Q001228000900013Q001228000A00013Q001228000B001C4Q001D0007000B0002001055000400180007001228000600023Q000E720002005F00010006002Q043Q005F0001001261000700053Q00206200070007001D0012280008001E3Q0012280009001E3Q001228000A001E4Q001D0007000A0002001055000400100007001228000300023Q002Q043Q00020001002Q043Q005F0001002Q043Q000200012Q00403Q00013Q00013Q00053Q00028Q0003103Q004261636B67726F756E64436F6C6F723303063Q00436F6C6F72332Q033Q006E6577026Q00F03F00283Q0012283Q00014Q0057000100013Q0026643Q000200010001002Q043Q00020001001228000100013Q0026640001000500010001002Q043Q000500012Q000300026Q0003000300014Q000300046Q0003000500014Q002F0004000400052Q0025000400044Q00590002000300042Q0003000200024Q000300036Q0003000400014Q002F0003000300040006480003001C00013Q002Q043Q001C0001001261000300033Q002062000300030004001228000400013Q001228000500053Q001228000600014Q001D0003000600020006110003002200010001002Q043Q00220001001261000300033Q002062000300030004001228000400053Q001228000500013Q001228000600014Q001D000300060002001055000200020003002Q043Q00270001002Q043Q00050001002Q043Q00270001002Q043Q000200012Q00403Q00017Q00213Q00028Q00026Q00084003103Q004261636B67726F756E64436F6C6F723303063Q00436F6C6F723303073Q0066726F6D524742026Q003E4003043Q005465787403023Q005F47025Q00606940030A3Q0054657874436F6C6F72332Q033Q006E6577026Q00F03F026Q001040030E3Q005465787458416C69676E6D656E74025Q00406A40027Q004003083Q00496E7374616E6365025Q00806A4003043Q0053697A6503053Q005544696D3202CD5QCCEC3F026Q002E4003163Q004261636B67726F756E645472616E73706172656E637903043Q00466F6E74025Q00206B40025Q00606B40026Q004340025Q00E06B4003113Q004D6F75736542752Q746F6E31436C69636B03073Q00436F2Q6E656374025Q00806C40025Q00A06C40025Q00C06C4004953Q001228000400014Q0057000500063Q000E720002001B00010004002Q043Q001B0001001261000700043Q002062000700070005001228000800063Q001228000900063Q001228000A00064Q001D0007000A0002001055000600030007001261000700084Q000300085Q0020620008000800092Q002F0007000700082Q0003000800014Q002F0008000800012Q0046000700020002001055000600070007001261000700043Q00206200070007000B0012280008000C3Q0012280009000C3Q001228000A000C4Q001D0007000A00020010550006000A00070012280004000D3Q000E72000C002900010004002Q043Q00290001001055000500073Q001261000700043Q00206200070007000B0012280008000C3Q0012280009000C3Q001228000A000C4Q001D0007000A00020010550005000A00072Q000300075Q00206200070007000F0010550005000E0007001228000400103Q0026640004003C00010001002Q043Q003C0001001261000700113Q00206200070007000B2Q000300085Q0020620008000800122Q0045000900024Q001D0007000900022Q0045000500073Q001261000700143Q00206200070007000B001228000800153Q001228000900013Q001228000A00013Q001228000B00164Q001D0007000B000200105500050013000700302A00050017000C0012280004000C3Q0026640004005100010010002Q043Q005100012Q000300075Q002062000700070019001055000500180007001261000700113Q00206200070007000B2Q000300085Q00206200080008001A2Q0045000900024Q001D0007000900022Q0045000600073Q001261000700143Q00206200070007000B001228000800153Q001228000900013Q001228000A00013Q001228000B001B4Q001D0007000B0002001055000600130007001228000400023Q002664000400020001000D002Q043Q00020001001261000700113Q00206200070007000B2Q000300085Q00206200080008001C2Q0045000900064Q00050007000900010006480003008A00013Q002Q043Q008A0001001228000700014Q00570008000A3Q002664000700820001000C002Q043Q008200012Q0057000A000A3Q0026640008006B0001000C002Q043Q006B0001002062000B0006001D002076000B000B001E00065B000D3Q000100042Q00693Q00064Q00693Q00094Q00693Q000A4Q00383Q00014Q0005000B000D0001002Q043Q00880001000E720001006000010008002Q043Q00600001001228000B00013Q002664000B007B00010001002Q043Q007B00012Q001E000C00034Q0003000D5Q002062000D000D001F2Q0003000E5Q002062000E000E00202Q0003000F5Q002062000F000F00212Q0036000C000300012Q00450009000C3Q001228000A000C3Q001228000B000C3Q002664000B006E0001000C002Q043Q006E00010012280008000C3Q002Q043Q00600001002Q043Q006E0001002Q043Q00600001002Q043Q008800010026640007005D00010001002Q043Q005D0001001228000800014Q0057000900093Q0012280007000C3Q002Q043Q005D00012Q000700075Q002Q043Q0094000100206200070006001D00207600070007001E00065B00090001000100042Q00383Q00014Q00693Q00014Q00388Q00693Q00064Q0005000700090001002Q043Q00940001002Q043Q000200012Q00403Q00013Q00023Q00043Q00028Q00026Q00F03F03043Q0054657874030B3Q00536E61706C696E65506F7300193Q0012283Q00013Q0026643Q000900010002002Q043Q000900012Q000300016Q0003000200014Q0003000300024Q002F000200020003001055000100030002002Q043Q001800010026643Q000100010001002Q043Q000100012Q0003000100024Q0003000200014Q0031000200024Q00270001000100020020500001000100022Q0030000100024Q0003000100034Q0003000200014Q0003000300024Q002F0002000200030010550001000400020012283Q00023Q002Q043Q000100012Q00403Q00017Q00073Q00025Q00206D40026Q002440026Q004940025Q00407F4003043Q005465787403023Q005F47025Q00606D4000234Q00038Q0003000100014Q000300026Q0003000300014Q002F0002000200032Q0003000300014Q0003000400023Q0020620004000400010006010003000D00010004002Q043Q000D0001001228000300023Q0006110003000E00010001002Q043Q000E0001001228000300034Q000E0002000200032Q00593Q000100022Q00038Q0003000100014Q002F5Q0001000E4A0004001800013Q002Q043Q001800012Q00038Q0003000100013Q0020473Q000100022Q00033Q00033Q001261000100064Q0003000200023Q0020620002000200072Q002F0001000100022Q000300026Q0003000300014Q002F0002000200032Q00460001000200020010553Q000500012Q00403Q00017Q00303Q0003073Q005261696E626F7703063Q00436F6C6F723303073Q0066726F6D48535603043Q007469636B026Q00E03F026Q00F03F2Q033Q006E657703073Q0056697369626C65030A3Q00464F565F436972636C6503063Q00526164697573030A3Q00464F565F52616469757303083Q00506F736974696F6E03073Q00566563746F7232030C3Q0056696577706F727453697A6503013Q0058027Q004003013Q005903053Q00436F6C6F7203053Q00706169727303093Q00436861726163746572030E3Q0046696E6446697273744368696C64025Q00107140028Q002Q033Q0045535003083Q00536E61706C696E6503043Q004C696E652Q0103043Q0046726F6D03023Q00546F030B3Q00536E61706C696E65506F73025Q00507240025Q00A0724001002Q033Q00426F7803013Q005A025Q00407F40025Q0070874003043Q0053697A65025Q00408F40025Q0070974003103Q0048756D616E6F6964522Q6F745061727403143Q00576F726C64546F56696577706F7274506F696E7403063Q0041696D626F7403143Q0049734D6F75736542752Q746F6E5072652Q73656403043Q00456E756D030D3Q0055736572496E70757454797065030C3Q004D6F75736542752Q746F6E3203063Q00434672616D65000B013Q00037Q0020625Q00010006483Q000F00013Q002Q043Q000F00010012613Q00023Q0020625Q0003001261000100044Q002D000100010002002033000100010005002039000100010006001228000200063Q001228000300064Q001D3Q000300020006113Q001500010001002Q043Q001500010012613Q00023Q0020625Q0007001228000100063Q001228000200063Q001228000300064Q001D3Q000300022Q0003000100014Q000300025Q0020620002000200090010550001000800022Q0003000100014Q000300025Q00206200020002000B0010550001000A00022Q0003000100013Q0012610002000D3Q0020620002000200072Q0003000300023Q00206200030003000E00206200030003000F0020510003000300102Q0003000400023Q00206200040004000E0020620004000400110020510004000400102Q001D0002000400020010550001000C00022Q0003000100013Q001055000100123Q001261000100134Q0003000200034Q002E000100020003002Q043Q00E80001002062000600040014000648000600D900013Q002Q043Q00D900010020620006000400140020760006000600152Q0003000800043Q0020620008000800162Q001D000600080002000648000600D900013Q002Q043Q00D900012Q0003000600053Q000624000400D900010006002Q043Q00D90001001228000600174Q0057000700093Q002664000600C400010006002Q043Q00C40001000648000900BA00013Q002Q043Q00BA00012Q0003000A5Q002062000A000A0018000648000A00BA00013Q002Q043Q00BA0001001228000A00173Q002664000A009800010010002Q043Q009800012Q0003000B5Q002062000B000B0019000648000B009500013Q002Q043Q00950001001228000B00174Q0057000C000C3Q002664000B005700010006002Q043Q00570001002062000D0005001A00302A000D0008001B002062000D0005001A001055000D001C000C001228000B00103Q002664000B006300010010002Q043Q00630001002062000D0005001A001261000E000D3Q002062000E000E0007002062000F0008000F0020620010000800112Q001D000E00100002001055000D001D000E002062000D0005001A001055000D00123Q002Q043Q00E80001002664000B005000010017002Q043Q00500001001261000D000D3Q002062000D000D00072Q0003000E00023Q002062000E000E000E002062000E000E000F002051000E000E00102Q0003000F00023Q002062000F000F000E002062000F000F0011002051000F000F00102Q001D000D000F00022Q0045000C000D4Q0003000D5Q002062000D000D001E2Q0003000E00043Q002062000E000E001F000601000D00810001000E002Q043Q00810001001261000D000D3Q002062000D000D00072Q0003000E00023Q002062000E000E000E002062000E000E000F002051000E000E0010001228000F00174Q001D000D000F00022Q0045000C000D3Q002Q043Q009200012Q0003000D5Q002062000D000D001E2Q0003000E00043Q002062000E000E0020000601000D00920001000E002Q043Q00920001001261000D000D3Q002062000D000D00072Q0003000E00023Q002062000E000E000E002062000E000E000F002051000E000E00102Q0003000F00023Q002062000F000F000E002062000F000F00112Q001D000D000F00022Q0045000C000D3Q001228000B00063Q002Q043Q00500001002Q043Q00E80001002062000B0005001A00302A000B00080021002Q043Q00E80001002664000A009F00010017002Q043Q009F0001002062000B0005002200302A000B0008001B002062000B00050022001055000B00123Q001228000A00063Q002664000A004800010006002Q043Q00480001002062000B00050022001261000C000D3Q002062000C000C0007002062000D0008000F002062000E00080023001006000E0024000E2Q0073000D000D000E002062000E00080011002062000F00080023001006000F0025000F2Q0073000E000E000F2Q001D000C000E0002001055000B000C000C002062000B00050022001261000C000D3Q002062000C000C0007002062000D00080023001006000D0027000D002062000E00080023001006000E0028000E2Q001D000C000E0002001055000B0026000C001228000A00103Q002Q043Q00480001002Q043Q00E80001001228000A00173Q002664000A00BB00010017002Q043Q00BB0001002062000B0005002200302A000B00080021002062000B0005001A00302A000B00080021002Q043Q00E80001002Q043Q00BB0001002Q043Q00E800010026640006003F00010017002Q043Q003F0001001228000A00173Q002664000A00D200010017002Q043Q00D20001002062000B000400140020620007000B00292Q0003000B00023Q002076000B000B002A002062000D0007000C2Q0058000B000D000C2Q00450009000C4Q00450008000B3Q001228000A00063Q000E72000600C70001000A002Q043Q00C70001001228000600063Q002Q043Q003F0001002Q043Q00C70001002Q043Q003F0001002Q043Q00E80001001228000600174Q0057000700073Q002664000600DB00010017002Q043Q00DB0001001228000700173Q002664000700DE00010017002Q043Q00DE000100206200080005002200302A00080008002100206200080005001A00302A000800080021002Q043Q00E80001002Q043Q00DE0001002Q043Q00E80001002Q043Q00DB00010006670001003000010002002Q043Q003000012Q000300015Q00206200010001002B0006480001000A2Q013Q002Q043Q000A2Q012Q0003000100063Q00207600010001002C0012610003002D3Q00206200030003002E00206200030003002F2Q001D0001000300020006480001000A2Q013Q002Q043Q000A2Q01001228000100174Q0057000200023Q002664000100F800010017002Q043Q00F800012Q0003000300074Q002D0003000100022Q0045000200033Q0006480002000A2Q013Q002Q043Q000A2Q012Q0003000300023Q001261000400303Q0020620004000400072Q0003000500023Q00206200050005003000206200050005000C00206200060002000C2Q001D000400060002001055000300300004002Q043Q000A2Q01002Q043Q00F800012Q00403Q00017Q00",v9(),...);
+/**
+ * SISREG - VISUALIZADOR DE OFERTAS [VERSÃO COM CONTROLE DE ACESSO]
+ * Arquivo: Code.gs
+ * Descrição: Backend do Google Apps Script com:
+ * - CONTROLE DE ACESSO POR EMAIL
+ * - Separação de agenda local/não local
+ * - Filtros cascata (prestador → categorias)
+ * - Filtro de grupo (procedimento_nome)
+ * - Número da escala
+ * - Detecção de escalas compartilhadas
+ */
+
+// ============================================
+// CONFIGURAÇÕES GLOBAIS
+// ============================================
+
+const CONFIG = {
+  SHEET_NAME: 'Dados Brutos HISTOCON',
+  PERMISSOES_SHEET: 'Permissoes',  // NOVA ABA DE PERMISSÕES
+  APP_NAME: 'SISREG - Visualizador de Ofertas',
+  CACHE_DURATION: 300
+};
+
+const DIAS_SEMANA = {
+  'SEG': 'Segunda-feira',
+  'TER': 'Terça-feira',
+  'QUA': 'Quarta-feira',
+  'QUI': 'Quinta-feira',
+  'SEX': 'Sexta-feira',
+  'SAB': 'Sábado',
+  'DOM': 'Domingo'
+};
+
+// ============================================
+// SISTEMA DE CACHE
+// ============================================
+
+/**
+ * Gera uma chave de cache única por usuário
+ */
+function getCacheKey(tipo) {
+  var email = getUsuarioAtual() || 'anonimo';
+  return tipo + '_' + email.replace(/[^a-zA-Z0-9]/g, '_');
+}
+
+/**
+ * Obtém dados do cache
+ */
+function getFromCache(tipo) {
+  try {
+    var cache = CacheService.getScriptCache();
+    var dados = cache.get(getCacheKey(tipo));
+    if (dados) {
+      Logger.log('>>> Cache HIT para: ' + tipo);
+      return JSON.parse(dados);
+    }
+    Logger.log('>>> Cache MISS para: ' + tipo);
+    return null;
+  } catch (e) {
+    Logger.log('>>> Erro ao ler cache: ' + e.toString());
+    return null;
+  }
+}
+
+/**
+ * Salva dados no cache
+ * Nota: CacheService tem limite de 100KB por item
+ */
+function saveToCache(tipo, dados, duracaoSegundos) {
+  try {
+    var cache = CacheService.getScriptCache();
+    var jsonStr = JSON.stringify(dados);
+    
+    // Verifica se cabe no cache (limite ~100KB)
+    if (jsonStr.length > 90000) {
+      Logger.log('>>> Dados muito grandes para cache: ' + tipo + ' (' + jsonStr.length + ' chars)');
+      return false;
+    }
+    
+    cache.put(getCacheKey(tipo), jsonStr, duracaoSegundos || CONFIG.CACHE_DURATION);
+    Logger.log('>>> Cache SALVO para: ' + tipo);
+    return true;
+  } catch (e) {
+    Logger.log('>>> Erro ao salvar cache: ' + e.toString());
+    return false;
+  }
+}
+
+/**
+ * Limpa o cache do usuário
+ */
+function limparCache() {
+  try {
+    var cache = CacheService.getScriptCache();
+    var tipos = ['dados_iniciais', 'calendario', 'estatisticas'];
+    tipos.forEach(function(tipo) {
+      cache.remove(getCacheKey(tipo));
+    });
+    Logger.log('>>> Cache limpo');
+    return { sucesso: true };
+  } catch (e) {
+    return { sucesso: false, mensagem: e.toString() };
+  }
+}
+
+// ============================================
+// CARREGAMENTO CONSOLIDADO (OTIMIZADO)
+// ============================================
+
+/**
+ * FUNÇÃO PRINCIPAL OTIMIZADA
+ * Lê a planilha UMA ÚNICA VEZ e retorna todos os dados necessários
+ * para o carregamento inicial da aplicação
+ */
+function carregarDadosIniciais() {
+  try {
+    Logger.log('>>> carregarDadosIniciais: INÍCIO');
+    var inicio = new Date().getTime();
+    
+    // 1. Verifica permissão
+    var permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return { 
+        erro: true, 
+        mensagem: permissao.mensagem,
+        permissao: permissao
+      };
+    }
+    
+    // 2. Tenta obter do cache
+    var dadosCache = getFromCache('dados_iniciais');
+    if (dadosCache) {
+      dadosCache.permissao = permissao;
+      dadosCache.doCache = true;
+      Logger.log('>>> carregarDadosIniciais: Retornando do CACHE');
+      return dadosCache;
+    }
+    
+    // 3. Lê a planilha UMA ÚNICA VEZ
+    var dados = lerDadosComPermissao();
+    Logger.log('>>> Dados lidos: ' + dados.length + ' registros');
+    
+    if (!dados || dados.length === 0) {
+      return {
+        erro: false,
+        permissao: permissao,
+        estatisticas: criarEstatisticasVazias(permissao.perfil),
+        prestadores: [],
+        categorias: [],
+        grupos: [],
+        calendarioSemanal: {},
+        ultimaAtualizacao: null,
+        relacaoPrestadorCategoria: {}
+      };
+    }
+    
+    // 4. Processa tudo em UMA ÚNICA PASSAGEM
+    var resultado = processarDadosConsolidados(dados, permissao.perfil);
+    resultado.permissao = permissao;
+    resultado.erro = false;
+    
+    // 5. Salva no cache
+    saveToCache('dados_iniciais', resultado, CONFIG.CACHE_DURATION);
+    
+    var fim = new Date().getTime();
+    Logger.log('>>> carregarDadosIniciais: FIM em ' + (fim - inicio) + 'ms');
+    
+    return resultado;
+    
+  } catch (error) {
+    Logger.log('>>> ERRO em carregarDadosIniciais: ' + error.toString());
+    return {
+      erro: true,
+      mensagem: 'Erro ao carregar dados: ' + error.toString()
+    };
+  }
+}
+
+// ============================================
+// CARREGAMENTO MASTER - TUDO DE UMA VEZ
+// ============================================
+
+/**
+ * FUNÇÃO MASTER: Carrega TODOS os dados necessários em UMA ÚNICA leitura
+ * Retorna dados para: Ofertas, Distribuição, FPO e Teto
+ */
+function carregarTodosDados() {
+  try {
+    Logger.log('>>> carregarTodosDados: INÍCIO');
+    var inicio = new Date().getTime();
+    
+    // 1. Verifica permissão
+    var permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return { 
+        erro: true, 
+        mensagem: permissao.mensagem,
+        permissao: permissao
+      };
+    }
+    
+    // 2. Lê a planilha principal UMA ÚNICA VEZ
+    var dadosBrutos = lerDadosPlanilha();
+    Logger.log('>>> Dados brutos lidos: ' + dadosBrutos.length + ' registros');
+    
+    // 3. Aplica filtro de permissão se necessário
+    var dados = dadosBrutos;
+    if (permissao.perfil === 'parcial') {
+      dados = dadosBrutos.filter(function(d) {
+        var local = d.Local;
+        if (!local) return true;
+        var localUpper = local.toString().toUpperCase().trim();
+        return localUpper === 'NÃO' || localUpper === 'NAO';
+      });
+    }
+    
+    // 4. Lê dados auxiliares (FPO, DePara, Teto) - são pequenos, não impactam muito
+    var dadosFpo = lerDadosFPO();
+    var dePara = lerDePara();
+    var tabelaTeto = lerTabelaTeto();
+    
+    // 5. Processa TUDO em uma única passagem otimizada
+    var resultado = processarTodosDadosConsolidados(dados, dadosBrutos, dadosFpo, dePara, tabelaTeto, permissao);
+    
+    var fim = new Date().getTime();
+    Logger.log('>>> carregarTodosDados: FIM em ' + (fim - inicio) + 'ms');
+    
+    return resultado;
+    
+  } catch (error) {
+    Logger.log('>>> ERRO em carregarTodosDados: ' + error.toString());
+    return {
+      erro: true,
+      mensagem: 'Erro ao carregar dados: ' + error.toString()
+    };
+  }
+}
+
+/**
+ * Processa todos os dados em uma única passagem
+ */
+function processarTodosDadosConsolidados(dados, dadosBrutos, dadosFpo, dePara, tabelaTeto, permissao) {
+  
+  // ============ ESTRUTURAS COMPARTILHADAS ============
+  var prestadoresSet = new Set();
+  var categoriasSet = new Set();
+  var gruposSet = new Set();
+  var medicosSet = new Set();
+  var relacaoPrestadorCategoria = {};
+  var ultimaData = null;
+  
+  // Mapa de escalas para detectar compartilhadas
+  var escalasMap = {};
+  var escalasCompartilhadas = {};
+  
+  // ============ ESTRUTURAS PARA OFERTAS ============
+  var stats = {
+    totalOfertas: 0,
+    vagasRede: 0,
+    vagasRetorno: 0,
+    vagasReserva: 0,
+    agendaLocal: 0,
+    agendaNaoLocal: 0,
+    totalPrestadores: 0,
+    totalCategorias: 0,
+    totalMedicos: 0,
+    perfil: permissao.perfil
+  };
+  var calendarioSemanal = {};
+  
+  // ============ ESTRUTURAS PARA DISTRIBUIÇÃO ============
+  var distribuicaoMap = {};
+  
+  // ============ PRIMEIRA PASSAGEM: Coleta escalas ============
+  for (var i = 0; i < dados.length; i++) {
+    var d = dados[i];
+    var escalaCodigo = d.escala_codigo;
+    if (escalaCodigo) {
+      if (!escalasMap[escalaCodigo]) {
+        escalasMap[escalaCodigo] = [];
+      }
+      escalasMap[escalaCodigo].push(d.item_nome);
+    }
+  }
+  
+  // Identifica escalas compartilhadas
+  var codigosEscala = Object.keys(escalasMap);
+  for (var j = 0; j < codigosEscala.length; j++) {
+    var codigo = codigosEscala[j];
+    if (escalasMap[codigo].length > 1) {
+      escalasCompartilhadas[codigo] = true;
+    }
+  }
+  
+  // ============ SEGUNDA PASSAGEM: Processa tudo ============
+  for (var k = 0; k < dados.length; k++) {
+    var row = dados[k];
+    
+    // Extrai valores uma vez
+    var status = (row.escala_status || '').toString().toLowerCase().trim();
+    var isAtivo = (status === 'ativo' || status === 'ativa');
+    var unidadeNome = row.unidade_nome || '';
+    var itemNome = row.item_nome || '';
+    var procedimentoNome = row.procedimento_nome || '';
+    var nomeMedico = row['Nome Médico'] || '';
+    var diaSemana = row.escala_dia_semana || '';
+    var local = (row.Local || '').toString().toUpperCase().trim();
+    var isLocal = (local === 'SIM');
+    
+    var rede = parseFloat(row['Rede'] || 0);
+    var retorno = parseFloat(row['Retorno '] || row['Retorno'] || 0);
+    var reserva = parseFloat(row['Reserva'] || 0);
+    var totalVagas = rede + retorno + reserva;
+    
+    // Coleta listas únicas
+    if (unidadeNome) prestadoresSet.add(unidadeNome);
+    if (itemNome) categoriasSet.add(itemNome);
+    if (procedimentoNome) gruposSet.add(procedimentoNome);
+    if (nomeMedico) medicosSet.add(nomeMedico);
+    
+    // Relação prestador -> categorias
+    if (unidadeNome && itemNome) {
+      if (!relacaoPrestadorCategoria[unidadeNome]) {
+        relacaoPrestadorCategoria[unidadeNome] = new Set();
+      }
+      relacaoPrestadorCategoria[unidadeNome].add(itemNome);
+    }
+    
+    // Data de extração
+    var dataExtracao = row.data_extracao;
+    if (dataExtracao) {
+      var dataObj = parseDataExtracao(dataExtracao);
+      if (dataObj && (!ultimaData || dataObj > ultimaData)) {
+        ultimaData = dataObj;
+      }
+    }
+    
+    // ============ PROCESSA APENAS ATIVOS ============
+    if (!isAtivo) continue;
+    
+    // --- ESTATÍSTICAS ---
+    stats.vagasRede += rede;
+    stats.vagasRetorno += retorno;
+    stats.vagasReserva += reserva;
+    stats.totalOfertas += totalVagas;
+    
+    if (isLocal) {
+      stats.agendaLocal += totalVagas;
+    } else {
+      stats.agendaNaoLocal += totalVagas;
+    }
+    
+    // --- DISTRIBUIÇÃO ---
+    if (unidadeNome) {
+      if (!distribuicaoMap[unidadeNome]) {
+        distribuicaoMap[unidadeNome] = { nome: unidadeNome, local: 0, naoLocal: 0, total: 0 };
+      }
+      distribuicaoMap[unidadeNome].total += totalVagas;
+      if (isLocal) {
+        distribuicaoMap[unidadeNome].local += totalVagas;
+      } else {
+        distribuicaoMap[unidadeNome].naoLocal += totalVagas;
+      }
+    }
+    
+    // --- CALENDÁRIO ---
+    if (diaSemana) {
+      if (!calendarioSemanal[diaSemana]) {
+        calendarioSemanal[diaSemana] = {
+          diaSemana: diaSemana,
+          diaExtenso: DIAS_SEMANA[diaSemana] || diaSemana,
+          totalOfertas: 0,
+          totalBloqueios: 0,
+          agendaLocal: { total: 0, categorias: {} },
+          agendaNaoLocal: { total: 0, categorias: {} }
+        };
+      }
+      
+      var cal = calendarioSemanal[diaSemana];
+      cal.totalOfertas += totalVagas;
+      
+      var temBloqueio = (row.tem_afastamento_ativo || '').toString().toUpperCase().trim() === 'SIM';
+      if (temBloqueio) {
+        cal.totalBloqueios += 1;
+      }
+      
+      var tipoAgenda = isLocal ? 'agendaLocal' : 'agendaNaoLocal';
+      cal[tipoAgenda].total += totalVagas;
+      
+      if (itemNome) {
+        if (!cal[tipoAgenda].categorias[itemNome]) {
+          cal[tipoAgenda].categorias[itemNome] = {
+            nome: itemNome,
+            quantidade: 0,
+            prestadores: {}
+          };
+        }
+        
+        var catObj = cal[tipoAgenda].categorias[itemNome];
+        catObj.quantidade += totalVagas;
+        
+        if (unidadeNome) {
+          if (!catObj.prestadores[unidadeNome]) {
+            catObj.prestadores[unidadeNome] = {
+              nome: unidadeNome,
+              quantidade: 0,
+              vagasRede: 0,
+              vagasRetorno: 0,
+              vagasReserva: 0,
+              medicosTexto: ''
+            };
+          }
+          
+          var prestObj = catObj.prestadores[unidadeNome];
+          prestObj.quantidade += totalVagas;
+          prestObj.vagasRede += rede;
+          prestObj.vagasRetorno += retorno;
+          prestObj.vagasReserva += reserva;
+          
+          if (nomeMedico) {
+            var horario = formatarHorario(row.escala_horario);
+            var escCodigo = row.escala_codigo || 'S/N';
+            var isCompartilhada = escalasCompartilhadas[escCodigo] || false;
+            var bloqueioMark = temBloqueio ? ' 🚫 BLOQUEADA' : '';
+            var compartilhadoMark = isCompartilhada ? ' ⚠️ AGRUPADA' : '';
+            
+            var medicoInfo = 'Escala ' + escCodigo + compartilhadoMark + bloqueioMark + ' | ' + nomeMedico + ' - ' + horario + ' (R:' + rede + ', Ret:' + retorno + ', Res:' + reserva + ')';
+            
+            if (prestObj.medicosTexto) {
+              prestObj.medicosTexto += ' | ' + medicoInfo;
+            } else {
+              prestObj.medicosTexto = medicoInfo;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // ============ FINALIZA ESTRUTURAS ============
+  
+  // Converte Sets para arrays ordenados
+  var prestadoresArray = Array.from(prestadoresSet).sort();
+  var categoriasArray = Array.from(categoriasSet).sort();
+  var gruposArray = Array.from(gruposSet).sort();
+  
+  stats.totalPrestadores = prestadoresArray.length;
+  stats.totalCategorias = categoriasArray.length;
+  stats.totalMedicos = medicosSet.size;
+  
+  // Arredonda estatísticas
+  stats.totalOfertas = Math.round(stats.totalOfertas);
+  stats.vagasRede = Math.round(stats.vagasRede);
+  stats.vagasRetorno = Math.round(stats.vagasRetorno);
+  stats.vagasReserva = Math.round(stats.vagasReserva);
+  stats.agendaLocal = Math.round(stats.agendaLocal);
+  stats.agendaNaoLocal = Math.round(stats.agendaNaoLocal);
+  
+  // Converte calendário
+  var calendarioFinal = converterCalendarioParaArrays(calendarioSemanal);
+  
+  // Converte relação prestador->categorias
+  var relacaoFinal = {};
+  var prestKeys = Object.keys(relacaoPrestadorCategoria);
+  for (var p = 0; p < prestKeys.length; p++) {
+    var prestNome = prestKeys[p];
+    relacaoFinal[prestNome] = Array.from(relacaoPrestadorCategoria[prestNome]).sort();
+  }
+  
+  // Formata última atualização
+  var ultimaAtualizacaoStr = null;
+  if (ultimaData) {
+    var dia = String(ultimaData.getDate()).padStart(2, '0');
+    var mes = String(ultimaData.getMonth() + 1).padStart(2, '0');
+    var ano = ultimaData.getFullYear();
+    ultimaAtualizacaoStr = dia + '/' + mes + '/' + ano;
+  }
+  
+  // Converte distribuição para array
+  var distribuicaoArray = Object.values(distribuicaoMap)
+    .filter(function(p) { return p.total > 0; })
+    .map(function(p) {
+      return {
+        nome: p.nome,
+        local: Math.round(p.local),
+        naoLocal: Math.round(p.naoLocal),
+        total: Math.round(p.total)
+      };
+    })
+    .sort(function(a, b) { return a.nome.localeCompare(b.nome); });
+  
+  // ============ RETORNA TUDO ============
+  return {
+    erro: false,
+    permissao: permissao,
+    
+    // Dados para aba Ofertas
+    estatisticas: stats,
+    prestadores: prestadoresArray,
+    categorias: categoriasArray,
+    grupos: gruposArray,
+    calendarioSemanal: calendarioFinal,
+    ultimaAtualizacao: ultimaAtualizacaoStr,
+    relacaoPrestadorCategoria: relacaoFinal,
+    
+    // Dados para aba Distribuição
+    distribuicao: distribuicaoArray,
+    
+    // Flags para indicar que dados auxiliares estão disponíveis
+    temDadosFpo: dadosFpo.length > 0,
+    temDadosTeto: Object.keys(tabelaTeto).length > 0
+  };
+}
+
+
+/**
+ * Processa todos os dados em uma única passagem
+ */
+function processarDadosConsolidados(dados, perfil) {
+  // Sets para listas únicas
+  var prestadoresSet = new Set();
+  var categoriasSet = new Set();
+  var gruposSet = new Set();
+  
+  // Mapa para relação prestador -> categorias
+  var relacaoPrestadorCategoria = {};
+  
+  // Estatísticas
+  var stats = {
+    totalOfertas: 0,
+    vagasRede: 0,
+    vagasRetorno: 0,
+    vagasReserva: 0,
+    agendaLocal: 0,
+    agendaNaoLocal: 0,
+    totalPrestadores: 0,
+    totalCategorias: 0,
+    totalMedicos: 0,
+    perfil: perfil
+  };
+  
+  // Calendário semanal
+  var calendarioSemanal = {};
+  
+  // Mapa de escalas para detectar compartilhadas
+  var escalasMap = {};
+  
+  // Mapa de médicos únicos
+  var medicosSet = new Set();
+  
+  // Última atualização
+  var ultimaData = null;
+  
+  // PRIMEIRA PASSAGEM: Coleta escalas para detectar compartilhadas
+  for (var i = 0; i < dados.length; i++) {
+    var d = dados[i];
+    var escalaCodigo = d.escala_codigo;
+    if (escalaCodigo) {
+      if (!escalasMap[escalaCodigo]) {
+        escalasMap[escalaCodigo] = [];
+      }
+      escalasMap[escalaCodigo].push(d.item_nome);
+    }
+  }
+  
+  // Identifica escalas compartilhadas
+  var escalasCompartilhadas = {};
+  var codigosEscala = Object.keys(escalasMap);
+  for (var j = 0; j < codigosEscala.length; j++) {
+    var codigo = codigosEscala[j];
+    if (escalasMap[codigo].length > 1) {
+      escalasCompartilhadas[codigo] = true;
+    }
+  }
+  
+  // SEGUNDA PASSAGEM: Processa tudo
+  for (var k = 0; k < dados.length; k++) {
+    var row = dados[k];
+    
+    // Extrai valores uma vez
+    var status = (row.escala_status || '').toString().toLowerCase().trim();
+    var isAtivo = (status === 'ativo' || status === 'ativa');
+    var unidadeNome = row.unidade_nome || '';
+    var itemNome = row.item_nome || '';
+    var procedimentoNome = row.procedimento_nome || '';
+    var nomeMedico = row['Nome Médico'] || '';
+    var diaSemana = row.escala_dia_semana || '';
+    var local = (row.Local || '').toString().toUpperCase().trim();
+    var isLocal = (local === 'SIM');
+    
+    var rede = parseFloat(row['Rede'] || 0);
+    var retorno = parseFloat(row['Retorno '] || row['Retorno'] || 0);
+    var reserva = parseFloat(row['Reserva'] || 0);
+    var totalVagas = rede + retorno + reserva;
+    
+    // Coleta listas únicas (todos os registros, não só ativos)
+    if (unidadeNome) prestadoresSet.add(unidadeNome);
+    if (itemNome) categoriasSet.add(itemNome);
+    if (procedimentoNome) gruposSet.add(procedimentoNome);
+    if (nomeMedico) medicosSet.add(nomeMedico);
+    
+    // Monta relação prestador -> categorias
+    if (unidadeNome && itemNome) {
+      if (!relacaoPrestadorCategoria[unidadeNome]) {
+        relacaoPrestadorCategoria[unidadeNome] = new Set();
+      }
+      relacaoPrestadorCategoria[unidadeNome].add(itemNome);
+    }
+    
+    // Verifica data de extração
+    var dataExtracao = row.data_extracao;
+    if (dataExtracao) {
+      var dataObj = parseDataExtracao(dataExtracao);
+      if (dataObj && (!ultimaData || dataObj > ultimaData)) {
+        ultimaData = dataObj;
+      }
+    }
+    
+    // Processa apenas ativos para estatísticas e calendário
+    if (!isAtivo) continue;
+    
+    // Estatísticas
+    stats.vagasRede += rede;
+    stats.vagasRetorno += retorno;
+    stats.vagasReserva += reserva;
+    stats.totalOfertas += totalVagas;
+    
+    if (isLocal) {
+      stats.agendaLocal += totalVagas;
+    } else {
+      stats.agendaNaoLocal += totalVagas;
+    }
+    
+    // Calendário semanal
+    if (diaSemana) {
+      if (!calendarioSemanal[diaSemana]) {
+        calendarioSemanal[diaSemana] = {
+          diaSemana: diaSemana,
+          diaExtenso: DIAS_SEMANA[diaSemana] || diaSemana,
+          totalOfertas: 0,
+          totalBloqueios: 0,
+          agendaLocal: { total: 0, categorias: {} },
+          agendaNaoLocal: { total: 0, categorias: {} }
+        };
+      }
+      
+      var cal = calendarioSemanal[diaSemana];
+      cal.totalOfertas += totalVagas;
+      
+      // Bloqueios
+      var temBloqueio = (row.tem_afastamento_ativo || '').toString().toUpperCase().trim() === 'SIM';
+      if (temBloqueio) {
+        cal.totalBloqueios += 1;
+      }
+      
+      // Tipo de agenda
+      var tipoAgenda = isLocal ? 'agendaLocal' : 'agendaNaoLocal';
+      cal[tipoAgenda].total += totalVagas;
+      
+      // Categorias dentro do dia
+      if (itemNome) {
+        if (!cal[tipoAgenda].categorias[itemNome]) {
+          cal[tipoAgenda].categorias[itemNome] = {
+            nome: itemNome,
+            quantidade: 0,
+            prestadores: {}
+          };
+        }
+        
+        var catObj = cal[tipoAgenda].categorias[itemNome];
+        catObj.quantidade += totalVagas;
+        
+        // Prestadores dentro da categoria
+        if (unidadeNome) {
+          if (!catObj.prestadores[unidadeNome]) {
+            catObj.prestadores[unidadeNome] = {
+              nome: unidadeNome,
+              quantidade: 0,
+              vagasRede: 0,
+              vagasRetorno: 0,
+              vagasReserva: 0,
+              medicosTexto: ''
+            };
+          }
+          
+          var prestObj = catObj.prestadores[unidadeNome];
+          prestObj.quantidade += totalVagas;
+          prestObj.vagasRede += rede;
+          prestObj.vagasRetorno += retorno;
+          prestObj.vagasReserva += reserva;
+          
+          // Médico
+          if (nomeMedico) {
+            var horario = formatarHorario(row.escala_horario);
+            var escCodigo = row.escala_codigo || 'S/N';
+            var isCompartilhada = escalasCompartilhadas[escCodigo] || false;
+            var bloqueioMark = temBloqueio ? ' 🚫 BLOQUEADA' : '';
+            var compartilhadoMark = isCompartilhada ? ' ⚠️ AGRUPADA' : '';
+            
+            var medicoInfo = 'Escala ' + escCodigo + compartilhadoMark + bloqueioMark + ' | ' + nomeMedico + ' - ' + horario + ' (R:' + rede + ', Ret:' + retorno + ', Res:' + reserva + ')';
+            
+            if (prestObj.medicosTexto) {
+              prestObj.medicosTexto += ' | ' + medicoInfo;
+            } else {
+              prestObj.medicosTexto = medicoInfo;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Converte Sets para arrays ordenados
+  var prestadoresArray = Array.from(prestadoresSet).sort();
+  var categoriasArray = Array.from(categoriasSet).sort();
+  var gruposArray = Array.from(gruposSet).sort();
+  
+  // Atualiza contadores
+  stats.totalPrestadores = prestadoresArray.length;
+  stats.totalCategorias = categoriasArray.length;
+  stats.totalMedicos = medicosSet.size;
+  
+  // Arredonda valores
+  stats.totalOfertas = Math.round(stats.totalOfertas);
+  stats.vagasRede = Math.round(stats.vagasRede);
+  stats.vagasRetorno = Math.round(stats.vagasRetorno);
+  stats.vagasReserva = Math.round(stats.vagasReserva);
+  stats.agendaLocal = Math.round(stats.agendaLocal);
+  stats.agendaNaoLocal = Math.round(stats.agendaNaoLocal);
+  
+  // Converte calendário para formato final
+  var calendarioFinal = converterCalendarioParaArrays(calendarioSemanal);
+  
+  // Converte relação para formato serializável (Set -> Array)
+  var relacaoFinal = {};
+  var prestKeys = Object.keys(relacaoPrestadorCategoria);
+  for (var p = 0; p < prestKeys.length; p++) {
+    var prestNome = prestKeys[p];
+    relacaoFinal[prestNome] = Array.from(relacaoPrestadorCategoria[prestNome]).sort();
+  }
+  
+  // Formata última atualização
+  var ultimaAtualizacaoStr = null;
+  if (ultimaData) {
+    var dia = String(ultimaData.getDate()).padStart(2, '0');
+    var mes = String(ultimaData.getMonth() + 1).padStart(2, '0');
+    var ano = ultimaData.getFullYear();
+    ultimaAtualizacaoStr = dia + '/' + mes + '/' + ano;
+  }
+  
+  return {
+    estatisticas: stats,
+    prestadores: prestadoresArray,
+    categorias: categoriasArray,
+    grupos: gruposArray,
+    calendarioSemanal: calendarioFinal,
+    ultimaAtualizacao: ultimaAtualizacaoStr,
+    relacaoPrestadorCategoria: relacaoFinal
+  };
+}
+
+/**
+ * Converte o calendário de objetos para arrays (para serialização)
+ */
+function converterCalendarioParaArrays(calendario) {
+  var resultado = {};
+  var dias = Object.keys(calendario);
+  
+  for (var i = 0; i < dias.length; i++) {
+    var dia = dias[i];
+    var calDia = calendario[dia];
+    
+    // Arredonda totais
+    calDia.totalOfertas = Math.round(calDia.totalOfertas);
+    calDia.agendaLocal.total = Math.round(calDia.agendaLocal.total);
+    calDia.agendaNaoLocal.total = Math.round(calDia.agendaNaoLocal.total);
+    
+    // Converte categorias de objeto para array
+    calDia.agendaLocal.categorias = converterCategoriasParaArray(calDia.agendaLocal.categorias);
+    calDia.agendaNaoLocal.categorias = converterCategoriasParaArray(calDia.agendaNaoLocal.categorias);
+    
+    resultado[dia] = calDia;
+  }
+  
+  return resultado;
+}
+
+/**
+ * Converte objeto de categorias para array
+ */
+function converterCategoriasParaArray(categoriasObj) {
+  var resultado = [];
+  var catNomes = Object.keys(categoriasObj);
+  
+  for (var i = 0; i < catNomes.length; i++) {
+    var catNome = catNomes[i];
+    var cat = categoriasObj[catNome];
+    
+    // Converte prestadores para array
+    var prestadoresArray = [];
+    var prestNomes = Object.keys(cat.prestadores);
+    
+    for (var j = 0; j < prestNomes.length; j++) {
+      var prestNome = prestNomes[j];
+      var prest = cat.prestadores[prestNome];
+      
+      prestadoresArray.push({
+        nome: prest.nome,
+        quantidade: Math.round(prest.quantidade),
+        vagasRede: Math.round(prest.vagasRede),
+        vagasRetorno: Math.round(prest.vagasRetorno),
+        vagasReserva: Math.round(prest.vagasReserva),
+        medicosTexto: prest.medicosTexto || 'Nenhum médico informado'
+      });
+    }
+    
+    resultado.push({
+      nome: cat.nome,
+      quantidade: Math.round(cat.quantidade),
+      prestadores: prestadoresArray
+    });
+  }
+  
+  return resultado;
+}
+
+/**
+ * Cria objeto de estatísticas vazio
+ */
+function criarEstatisticasVazias(perfil) {
+  return {
+    totalOfertas: 0,
+    vagasRede: 0,
+    vagasRetorno: 0,
+    vagasReserva: 0,
+    totalPrestadores: 0,
+    totalCategorias: 0,
+    totalMedicos: 0,
+    agendaLocal: 0,
+    agendaNaoLocal: 0,
+    perfil: perfil
+  };
+}
+
+/**
+ * Parse de data de extração
+ */
+function parseDataExtracao(dataExtracao) {
+  try {
+    if (typeof dataExtracao === 'string') {
+      var partesDateTime = dataExtracao.split(' ');
+      var partesData = partesDateTime[0].split('-');
+      if (partesData.length === 3) {
+        return new Date(partesData[0], partesData[1] - 1, partesData[2]);
+      }
+    } else if (dataExtracao instanceof Date) {
+      return dataExtracao;
+    }
+  } catch (e) {
+    // Ignora erros de parsing
+  }
+  return null;
+}
+
+
+// ============================================
+// FUNÇÕES DE CONTROLE DE ACESSO
+// ============================================
+
+/**
+ * Obtém o email do usuário atual
+ */
+function getUsuarioAtual() {
+  try {
+    const email = Session.getActiveUser().getEmail();
+    Logger.log('>>> Email do usuário: ' + email);
+    return email ? email.toLowerCase().trim() : '';
+  } catch (error) {
+    Logger.log('>>> ERRO ao obter email: ' + error.toString());
+    return '';
+  }
+}
+
+/**
+ * Verifica as permissões do usuário atual
+ * Retorna: { autorizado: boolean, perfil: 'total'|'parcial'|null, nome: string, email: string }
+ */
+function verificarPermissao() {
+  try {
+    Logger.log('>>> verificarPermissao: INÍCIO');
+    
+    const emailUsuario = getUsuarioAtual();
+    Logger.log('>>> Email do usuário: ' + emailUsuario);
+    
+    if (!emailUsuario) {
+      Logger.log('>>> ERRO: Não foi possível obter o email do usuário');
+      return {
+        autorizado: false,
+        perfil: null,
+        nome: '',
+        email: '',
+        mensagem: 'Não foi possível identificar seu email. Verifique se você está logado com uma conta Google.'
+      };
+    }
+    
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const sheetPermissoes = ss.getSheetByName(CONFIG.PERMISSOES_SHEET);
+    
+    if (!sheetPermissoes) {
+      Logger.log('>>> ERRO: Aba de permissões não encontrada!');
+      return {
+        autorizado: false,
+        perfil: null,
+        nome: '',
+        email: emailUsuario,
+        mensagem: 'Sistema de permissões não configurado. Entre em contato com o administrador.'
+      };
+    }
+    
+    const dados = sheetPermissoes.getDataRange().getValues();
+    Logger.log('>>> Permissões carregadas: ' + (dados.length - 1) + ' registros');
+    
+    // Pula o cabeçalho (primeira linha)
+    for (let i = 1; i < dados.length; i++) {
+      const emailCadastrado = (dados[i][0] || '').toString().toLowerCase().trim();
+      const perfil = (dados[i][1] || '').toString().toLowerCase().trim();
+      const nome = (dados[i][2] || '').toString().trim();
+      
+      if (emailCadastrado === emailUsuario) {
+        Logger.log('>>> Usuário encontrado! Perfil: ' + perfil);
+        return {
+          autorizado: true,
+          perfil: perfil === 'total' ? 'total' : 'parcial',
+          nome: nome || emailUsuario,
+          email: emailUsuario,
+          mensagem: ''
+        };
+      }
+    }
+    
+    // Usuário não encontrado na lista
+    Logger.log('>>> Usuário NÃO encontrado na lista de permissões');
+    return {
+      autorizado: false,
+      perfil: null,
+      nome: '',
+      email: emailUsuario,
+      mensagem: 'Seu email (' + emailUsuario + ') não está autorizado a acessar este sistema. Entre em contato com o administrador.'
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO em verificarPermissao: ' + error.toString());
+    return {
+      autorizado: false,
+      perfil: null,
+      nome: '',
+      email: '',
+      mensagem: 'Erro ao verificar permissões: ' + error.toString()
+    };
+  }
+}
+
+/**
+ * Retorna informações do usuário para o frontend
+ */
+function getInfoUsuario() {
+  return verificarPermissao();
+}
+
+// ============================================
+// FUNÇÕES DE INTERFACE WEB
+// ============================================
+
+function doGet() {
+  return HtmlService.createTemplateFromFile('Index')
+    .evaluate()
+    .setTitle(CONFIG.APP_NAME)
+    .setFaviconUrl('https://img.icons8.com/color/48/000000/calendar.png')
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1')
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+function include(filename) {
+  return HtmlService.createHtmlOutputFromFile(filename).getContent();
+}
+
+// ============================================
+// FUNÇÕES UTILITÁRIAS
+// ============================================
+
+/**
+ * Formata um valor de horário para o formato HH:MM
+ * Lida com objetos Date do Google Sheets e strings
+ */
+function formatarHorario(valor) {
+  if (!valor) {
+    return 'Não informado';
+  }
+  
+  if (valor instanceof Date) {
+    return Utilities.formatDate(valor, Session.getScriptTimeZone(), 'HH:mm');
+  }
+  
+  if (typeof valor === 'string') {
+    valor = valor.trim();
+    if (/^\d{1,2}:\d{2}$/.test(valor)) {
+      return valor;
+    }
+    if (/^\d{1,2}:\d{2}:\d{2}$/.test(valor)) {
+      return valor.substring(0, 5);
+    }
+    try {
+      const data = new Date(valor);
+      if (!isNaN(data.getTime())) {
+        const horas = String(data.getHours()).padStart(2, '0');
+        const minutos = String(data.getMinutes()).padStart(2, '0');
+        return horas + ':' + minutos;
+      }
+    } catch (e) {
+    }
+    return valor;
+  }
+  
+  if (typeof valor === 'number') {
+    const totalMinutos = Math.round(valor * 24 * 60);
+    const horas = Math.floor(totalMinutos / 60) % 24;
+    const minutos = totalMinutos % 60;
+    return String(horas).padStart(2, '0') + ':' + String(minutos).padStart(2, '0');
+  }
+  
+  return String(valor);
+}   // <-- FECHA AQUI formatarHorario
+
+/**
+ * Formata uma data de bloqueio para exibição
+ */
+function formatarDataBloqueio(valor) {   // <-- COMEÇA AQUI como função SEPARADA
+  if (!valor) return '';
+  
+  if (valor instanceof Date) {
+    return Utilities.formatDate(valor, Session.getScriptTimeZone(), 'dd/MM/yyyy');
+  }
+  
+  if (typeof valor === 'string') {
+    valor = valor.trim();
+    if (/^\d{2}\/\d{2}\/\d{4}$/.test(valor)) {
+      return valor;
+    }
+    if (/^\d{4}-\d{2}-\d{2}/.test(valor)) {
+      const partes = valor.substring(0, 10).split('-');
+      return partes[2] + '/' + partes[1] + '/' + partes[0];
+    }
+    return valor;
+  }
+  
+  if (typeof valor === 'number') {
+    const data = new Date((valor - 25569) * 86400 * 1000);
+    const dia = String(data.getDate()).padStart(2, '0');
+    const mes = String(data.getMonth() + 1).padStart(2, '0');
+    const ano = data.getFullYear();
+    return dia + '/' + mes + '/' + ano;
+  }
+  
+  return String(valor);
+}
+
+// ============================================
+// FUNÇÕES DE LEITURA DE DADOS
+// ============================================
+
+function lerDadosPlanilha() {
+  try {
+    Logger.log('>>> lerDadosPlanilha: INÍCIO');
+    
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const sheet = ss.getSheetByName(CONFIG.SHEET_NAME);
+    
+    if (!sheet) {
+      throw new Error(`Aba "${CONFIG.SHEET_NAME}" não encontrada!`);
+    }
+    
+    const range = sheet.getDataRange();
+    const values = range.getValues();
+    const displayValues = range.getDisplayValues();
+    
+    Logger.log('>>> lerDadosPlanilha: ' + values.length + ' linhas (incluindo cabeçalho)');
+    
+    if (values.length <= 1) {
+      Logger.log('>>> lerDadosPlanilha: SEM DADOS!');
+      return [];
+    }
+    
+    const headers = values[0];
+    Logger.log('>>> lerDadosPlanilha: Cabeçalhos = ' + headers.join(', '));
+    
+    const dados = [];
+    for (let i = 1; i < values.length; i++) {
+      const row = {};
+      for (let j = 0; j < headers.length; j++) {
+        // Se for a coluna escala_horario, usa o valor de exibição
+        if (headers[j] === 'escala_horario') {
+          row[headers[j]] = displayValues[i][j];
+        } else {
+          row[headers[j]] = values[i][j];
+        }
+      }
+      dados.push(row);
+    }
+    
+    Logger.log('>>> lerDadosPlanilha: FIM - ' + dados.length + ' registros');
+    return dados;
+  } catch (error) {
+    Logger.log('>>> lerDadosPlanilha: ERRO - ' + error.toString());
+    throw error;
+  }
+}
+
+/**
+ * NOVA FUNÇÃO: Lê dados aplicando filtro de permissão
+ * Se perfil = 'parcial', retorna apenas dados de Agenda NÃO Local
+ */
+function lerDadosComPermissao() {
+  try {
+    const permissao = verificarPermissao();
+    
+    if (!permissao.autorizado) {
+      Logger.log('>>> Usuário não autorizado!');
+      return [];
+    }
+    
+    let dados = lerDadosPlanilha();
+    
+    // Se perfil é parcial, filtra apenas Agenda Não Local
+    if (permissao.perfil === 'parcial') {
+      Logger.log('>>> Aplicando filtro de perfil PARCIAL (somente Agenda Não Local)');
+      dados = dados.filter(d => {
+        const local = d.Local;
+        if (!local) return true; // Se não tem informação, inclui
+        const localUpper = local.toString().toUpperCase().trim();
+        return localUpper === 'NÃO' || localUpper === 'NAO';
+      });
+      Logger.log('>>> Dados após filtro de permissão: ' + dados.length);
+    }
+    
+    return dados;
+  } catch (error) {
+    Logger.log('>>> ERRO em lerDadosComPermissao: ' + error.toString());
+    return [];
+  }
+}
+
+// ============================================
+// FUNÇÕES DE ESTATÍSTICAS
+// ============================================
+
+function getEstatisticas() {
+  try {
+    Logger.log('>>> getEstatisticas: INÍCIO');
+    
+    const permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return { erro: true, mensagem: permissao.mensagem };
+    }
+    
+    const dados = lerDadosComPermissao();
+    Logger.log('>>> getEstatisticas: Total de dados = ' + dados.length);
+    
+    if (dados.length === 0) {
+      return {
+        totalOfertas: 0,
+        vagasRede: 0,
+        vagasRetorno: 0,
+        vagasReserva: 0,
+        totalPrestadores: 0,
+        totalCategorias: 0,
+        totalMedicos: 0,
+        agendaLocal: 0,
+        agendaNaoLocal: 0,
+        perfil: permissao.perfil
+      };
+    }
+    
+    // Contadores gerais
+    let totalVagas = 0;
+    let vagasRede = 0;
+    let vagasRetorno = 0;
+    let vagasReserva = 0;
+    
+    // Contadores por tipo de agenda
+    let vagasAgendaLocal = 0;
+    let vagasAgendaNaoLocal = 0;
+    
+    const prestadoresSet = new Set();
+    const categoriasSet = new Set();
+    const medicosSet = new Set();
+    
+    // Processa em um único loop
+    dados.forEach(d => {
+      const status = d.escala_status;
+      if (!status) return;
+      
+      const statusLower = status.toString().toLowerCase().trim();
+      if (statusLower !== 'ativo' && statusLower !== 'ativa') return;
+      
+      // Soma vagas
+      const rede = parseFloat(d['Rede'] || 0);
+      const retorno = parseFloat(d['Retorno '] || d['Retorno'] || 0);
+      const reserva = parseFloat(d['Reserva'] || 0);
+      
+      vagasRede += rede;
+      vagasRetorno += retorno;
+      vagasReserva += reserva;
+      
+      const totalVagasRegistro = rede + retorno + reserva;
+      totalVagas += totalVagasRegistro;
+      
+      // Verifica tipo de agenda
+      const local = d.Local;
+      if (local) {
+        const localUpper = local.toString().toUpperCase().trim();
+        if (localUpper === 'SIM') {
+          vagasAgendaLocal += totalVagasRegistro;
+        } else if (localUpper === 'NÃO' || localUpper === 'NAO') {
+          vagasAgendaNaoLocal += totalVagasRegistro;
+        }
+      }
+      
+      // Adiciona aos sets
+      if (d.unidade_nome) prestadoresSet.add(d.unidade_nome);
+      if (d.item_nome) categoriasSet.add(d.item_nome);
+      if (d['Nome Médico']) medicosSet.add(d['Nome Médico']);
+    });
+    
+    const resultado = {
+      totalOfertas: Math.round(totalVagas),
+      vagasRede: Math.round(vagasRede),
+      vagasRetorno: Math.round(vagasRetorno),
+      vagasReserva: Math.round(vagasReserva),
+      totalPrestadores: prestadoresSet.size,
+      totalCategorias: categoriasSet.size,
+      totalMedicos: medicosSet.size,
+      agendaLocal: Math.round(vagasAgendaLocal),
+      agendaNaoLocal: Math.round(vagasAgendaNaoLocal),
+      perfil: permissao.perfil
+    };
+    
+    Logger.log('>>> getEstatisticas: FIM - Total=' + resultado.totalOfertas);
+    return resultado;
+    
+  } catch (error) {
+    Logger.log('>>> getEstatisticas: ERRO - ' + error.toString());
+    return {
+      totalOfertas: 0,
+      vagasRede: 0,
+      vagasRetorno: 0,
+      vagasReserva: 0,
+      totalPrestadores: 0,
+      totalCategorias: 0,
+      totalMedicos: 0,
+      agendaLocal: 0,
+      agendaNaoLocal: 0,
+      perfil: null
+    };
+  }
+}
+
+// ============================================
+// FUNÇÕES DE CALENDÁRIO
+// ============================================
+
+/**
+ * VERSÃO COM CONTROLE DE ACESSO
+ */
+function getDadosCalendario(mesAno) {
+  try {
+    Logger.log('=== getDadosCalendario COM CONTROLE DE ACESSO ===');
+    
+    const permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return { erro: true, mensagem: permissao.mensagem };
+    }
+    
+    // 1. Ler dados COM PERMISSÃO
+    const dados = lerDadosComPermissao();
+    Logger.log('Total de dados (com permissão): ' + dados.length);
+    
+    if (!dados || dados.length === 0) {
+      return {};
+    }
+    
+    // 2. Detectar escalas compartilhadas
+    const escalasMap = {};
+    dados.forEach(d => {
+      const escalaCodigo = d.escala_codigo;
+      if (escalaCodigo) {
+        if (!escalasMap[escalaCodigo]) {
+          escalasMap[escalaCodigo] = [];
+        }
+        escalasMap[escalaCodigo].push(d.item_nome);
+      }
+    });
+    
+    const escalasCompartilhadas = new Set();
+    Object.keys(escalasMap).forEach(codigo => {
+      if (escalasMap[codigo].length > 1) {
+        escalasCompartilhadas.add(codigo);
+      }
+    });
+    
+    // 3. Filtrar ativos
+    const ativos = [];
+    for (let i = 0; i < dados.length; i++) {
+      const d = dados[i];
+      if (d.escala_status) {
+        const status = d.escala_status.toString().toLowerCase().trim();
+        if (status === 'ativo' || status === 'ativa') {
+          ativos.push(d);
+        }
+      }
+    }
+    
+    Logger.log('Dados ativos: ' + ativos.length);
+    
+    if (ativos.length === 0) {
+      return {};
+    }
+    
+    // 4. Processar por dia
+    const calendario = {};
+    
+    for (let i = 0; i < ativos.length; i++) {
+      const row = ativos[i];
+      const dia = row.escala_dia_semana;
+      
+      if (!dia) continue;
+      
+      if (!calendario[dia]) {
+        calendario[dia] = {
+          diaSemana: dia,
+          diaExtenso: DIAS_SEMANA[dia] || dia,
+          totalOfertas: 0,
+          totalBloqueios: 0,
+          agendaLocal: {
+            total: 0,
+            categorias: {}
+          },
+          agendaNaoLocal: {
+            total: 0,
+            categorias: {}
+          }
+        };
+      }
+      
+      const rede = parseFloat(row['Rede'] || 0);
+      const retorno = parseFloat(row['Retorno '] || row['Retorno'] || 0);
+      const reserva = parseFloat(row['Reserva'] || 0);
+      const totalVagas = rede + retorno + reserva;
+      
+      calendario[dia].totalOfertas += totalVagas;
+
+      // Verifica se tem bloqueio ativo
+      const temBloqueio = (row.tem_afastamento_ativo || '').toString().toUpperCase().trim() === 'SIM';
+      if (temBloqueio) {
+        calendario[dia].totalBloqueios += 1;
+      }
+
+      // Determina se é agenda local ou não
+      const local = row.Local;
+      
+      let isAgendaLocal = false;
+      
+      if (local) {
+        const localUpper = local.toString().toUpperCase().trim();
+        isAgendaLocal = (localUpper === 'SIM');
+      }
+      
+      // Seleciona a estrutura correta (local ou não local)
+      const tipoAgenda = isAgendaLocal ? 'agendaLocal' : 'agendaNaoLocal';
+      calendario[dia][tipoAgenda].total += totalVagas;
+      
+      const categoria = row.item_nome;
+      if (!categoria) continue;
+      
+      if (!calendario[dia][tipoAgenda].categorias[categoria]) {
+        calendario[dia][tipoAgenda].categorias[categoria] = {
+          nome: categoria,
+          quantidade: 0,
+          prestadores: {}
+        };
+      }
+      
+      calendario[dia][tipoAgenda].categorias[categoria].quantidade += totalVagas;
+      
+      const prestador = row.unidade_nome;
+      if (!prestador) continue;
+      
+      if (!calendario[dia][tipoAgenda].categorias[categoria].prestadores[prestador]) {
+        calendario[dia][tipoAgenda].categorias[categoria].prestadores[prestador] = {
+          nome: prestador,
+          quantidade: 0,
+          vagasRede: 0,
+          vagasRetorno: 0,
+          vagasReserva: 0,
+          medicosTexto: ''
+        };
+      }
+      
+      const prest = calendario[dia][tipoAgenda].categorias[categoria].prestadores[prestador];
+      prest.quantidade += totalVagas;
+      prest.vagasRede += rede;
+      prest.vagasRetorno += retorno;
+      prest.vagasReserva += reserva;
+      
+      // Médico como STRING + escala_codigo + compartilhamento + bloqueio
+      const medico = row['Nome Médico'];
+      const horarioRaw = row.escala_horario;
+      const horario = formatarHorario(horarioRaw);
+      const escalaCodigo = row.escala_codigo || 'S/N';
+      const isCompartilhada = escalasCompartilhadas.has(escalaCodigo);
+
+      // Verifica bloqueio para exibição no médico
+      const temBloqueioMedico = (row.tem_afastamento_ativo || '').toString().toUpperCase().trim() === 'SIM';
+      const dtInicioBloqueio = row.dt_inicio_afastamento ? formatarDataBloqueio(row.dt_inicio_afastamento) : '';
+      const dtFimBloqueio = row.dt_fim_afastamento ? formatarDataBloqueio(row.dt_fim_afastamento) : '';
+      const codigoBloqueio = row.codigo_afastamento || '';
+
+      if (medico) {
+        const compartilhadoMark = isCompartilhada ? ' ⚠️ AGRUPADA' : '';
+        const bloqueioMark = temBloqueioMedico ? ` 🚫 BLOQUEADA (${dtInicioBloqueio} a ${dtFimBloqueio})` : '';
+        const medicoInfo = `Escala ${escalaCodigo}${compartilhadoMark}${bloqueioMark} | ${medico} - ${horario} (R:${rede}, Ret:${retorno}, Res:${reserva})`;
+        if (prest.medicosTexto) {
+          prest.medicosTexto += ' | ' + medicoInfo;
+        } else {
+          prest.medicosTexto = medicoInfo;
+        }
+      }
+    }
+    
+    
+    // 5. Converter em arrays
+    const diasKeys = Object.keys(calendario);
+    for (let i = 0; i < diasKeys.length; i++) {
+      const dia = diasKeys[i];
+      
+      calendario[dia].totalOfertas = Math.round(calendario[dia].totalOfertas);
+      calendario[dia].agendaLocal.total = Math.round(calendario[dia].agendaLocal.total);
+      calendario[dia].agendaNaoLocal.total = Math.round(calendario[dia].agendaNaoLocal.total);
+      
+      // Processar agenda local
+      const categoriasLocalArray = [];
+      const catLocalKeys = Object.keys(calendario[dia].agendaLocal.categorias);
+      
+      for (let j = 0; j < catLocalKeys.length; j++) {
+        const catNome = catLocalKeys[j];
+        const cat = calendario[dia].agendaLocal.categorias[catNome];
+        
+        const prestadoresArray = [];
+        const prestKeys = Object.keys(cat.prestadores);
+        
+        for (let k = 0; k < prestKeys.length; k++) {
+          const prestNome = prestKeys[k];
+          const prest = cat.prestadores[prestNome];
+          
+          prestadoresArray.push({
+            nome: prest.nome,
+            quantidade: Math.round(prest.quantidade),
+            vagasRede: Math.round(prest.vagasRede),
+            vagasRetorno: Math.round(prest.vagasRetorno),
+            vagasReserva: Math.round(prest.vagasReserva),
+            medicosTexto: prest.medicosTexto || 'Nenhum médico informado'
+          });
+        }
+        
+        categoriasLocalArray.push({
+          nome: cat.nome,
+          quantidade: Math.round(cat.quantidade),
+          prestadores: prestadoresArray
+        });
+      }
+      
+      calendario[dia].agendaLocal.categorias = categoriasLocalArray;
+      
+      // Processar agenda não local
+      const categoriasNaoLocalArray = [];
+      const catNaoLocalKeys = Object.keys(calendario[dia].agendaNaoLocal.categorias);
+      
+      for (let j = 0; j < catNaoLocalKeys.length; j++) {
+        const catNome = catNaoLocalKeys[j];
+        const cat = calendario[dia].agendaNaoLocal.categorias[catNome];
+        
+        const prestadoresArray = [];
+        const prestKeys = Object.keys(cat.prestadores);
+        
+        for (let k = 0; k < prestKeys.length; k++) {
+          const prestNome = prestKeys[k];
+          const prest = cat.prestadores[prestNome];
+          
+          prestadoresArray.push({
+            nome: prest.nome,
+            quantidade: Math.round(prest.quantidade),
+            vagasRede: Math.round(prest.vagasRede),
+            vagasRetorno: Math.round(prest.vagasRetorno),
+            vagasReserva: Math.round(prest.vagasReserva),
+            medicosTexto: prest.medicosTexto || 'Nenhum médico informado'
+          });
+        }
+        
+        categoriasNaoLocalArray.push({
+          nome: cat.nome,
+          quantidade: Math.round(cat.quantidade),
+          prestadores: prestadoresArray
+        });
+      }
+      
+      calendario[dia].agendaNaoLocal.categorias = categoriasNaoLocalArray;
+    }
+    
+    Logger.log('Dias processados: ' + Object.keys(calendario).join(', '));
+    return calendario;
+    
+  } catch (error) {
+    Logger.log('ERRO: ' + error.toString());
+    return {};
+  }
+}
+
+function getCalendarioMensal(mes, ano) {
+  try {
+    Logger.log('>>> getCalendarioMensal: INÍCIO - mes=' + mes + ', ano=' + ano);
+    
+    const primeiroDia = new Date(ano, mes, 1);
+    const ultimoDia = new Date(ano, mes + 1, 0);
+    const diasNoMes = ultimoDia.getDate();
+    const diaSemanaInicio = primeiroDia.getDay();
+    
+    const calendario = [];
+    let semana = [];
+    
+    // Preenche dias vazios no início
+    for (let i = 0; i < diaSemanaInicio; i++) {
+      semana.push(null);
+    }
+    
+    // Preenche os dias do mês
+    for (let dia = 1; dia <= diasNoMes; dia++) {
+      const data = new Date(ano, mes, dia);
+      const diaSemana = data.getDay();
+      
+      const diasMap = ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB'];
+      const diaSemanaAbrev = diasMap[diaSemana];
+      
+      semana.push({
+        dia: dia,
+        diaSemana: diaSemanaAbrev,
+        data: Utilities.formatDate(data, Session.getScriptTimeZone(), 'yyyy-MM-dd'),
+        dataFormatada: Utilities.formatDate(data, Session.getScriptTimeZone(), 'dd/MM/yyyy')
+      });
+      
+      if (semana.length === 7) {
+        calendario.push(semana);
+        semana = [];
+      }
+    }
+    
+    // Preenche dias vazios no final
+    if (semana.length > 0) {
+      while (semana.length < 7) {
+        semana.push(null);
+      }
+      calendario.push(semana);
+    }
+    
+    return calendario;
+    
+  } catch (error) {
+    Logger.log('>>> getCalendarioMensal: ERRO - ' + error.toString());
+    return [];
+  }
+}
+
+// ============================================
+// FUNÇÕES DE LISTAS
+// ============================================
+
+function getPrestadores() {
+  try {
+    Logger.log('>>> getPrestadores: INÍCIO');
+    const dados = lerDadosComPermissao();
+    const prestadores = [...new Set(dados.map(d => d.unidade_nome))];
+    const resultado = prestadores.filter(p => p).sort();
+    Logger.log('>>> getPrestadores: FIM - ' + resultado.length + ' prestadores');
+    return resultado;
+  } catch (error) {
+    Logger.log('>>> getPrestadores: ERRO - ' + error.toString());
+    return [];
+  }
+}
+
+function getCategorias() {
+  try {
+    Logger.log('>>> getCategorias: INÍCIO');
+    const dados = lerDadosComPermissao();
+    const categorias = [...new Set(dados.map(d => d.item_nome))];
+    const resultado = categorias.filter(c => c).sort();
+    Logger.log('>>> getCategorias: FIM - ' + resultado.length + ' categorias');
+    return resultado;
+  } catch (error) {
+    Logger.log('>>> getCategorias: ERRO - ' + error.toString());
+    return [];
+  }
+}
+
+/**
+ * Retorna categorias filtradas por prestador
+ */
+function getCategoriasPorPrestador(prestador) {
+  try {
+    Logger.log('>>> getCategoriasPorPrestador: INÍCIO - prestador=' + prestador);
+    
+    if (!prestador || prestador === 'todos') {
+      return getCategorias();
+    }
+    
+    const dados = lerDadosComPermissao();
+    const categorias = [...new Set(
+      dados
+        .filter(d => d.unidade_nome === prestador)
+        .map(d => d.item_nome)
+    )];
+    
+    const resultado = categorias.filter(c => c).sort();
+    Logger.log('>>> getCategoriasPorPrestador: FIM - ' + resultado.length + ' categorias');
+    return resultado;
+  } catch (error) {
+    Logger.log('>>> getCategoriasPorPrestador: ERRO - ' + error.toString());
+    return [];
+  }
+}
+
+/**
+ * Retorna grupos (procedimento_nome)
+ */
+function getGrupos() {
+  try {
+    Logger.log('>>> getGrupos: INÍCIO');
+    const dados = lerDadosComPermissao();
+    const grupos = [...new Set(dados.map(d => d.procedimento_nome))];
+    const resultado = grupos.filter(g => g).sort();
+    Logger.log('>>> getGrupos: FIM - ' + resultado.length + ' grupos');
+    return resultado;
+  } catch (error) {
+    Logger.log('>>> getGrupos: ERRO - ' + error.toString());
+    return [];
+  }
+}
+
+function getMedicos() {
+  try {
+    Logger.log('>>> getMedicos: INÍCIO');
+    const dados = lerDadosComPermissao();
+    const medicos = [...new Set(dados.map(d => d['Nome Médico']))];
+    const resultado = medicos.filter(m => m).sort();
+    Logger.log('>>> getMedicos: FIM - ' + resultado.length + ' médicos');
+    return resultado;
+  } catch (error) {
+    Logger.log('>>> getMedicos: ERRO - ' + error.toString());
+    return [];
+  }
+}
+
+// ============================================
+// FUNÇÕES DE FILTRO
+// ============================================
+
+function getDadosFiltrados(filtros) {
+  try {
+    Logger.log('>>> getDadosFiltrados: INÍCIO');
+    Logger.log('>>> getDadosFiltrados: Filtros = ' + JSON.stringify(filtros));
+    
+    const permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return [];
+    }
+    
+    let dados = lerDadosComPermissao();
+    Logger.log('>>> getDadosFiltrados: Total de dados = ' + dados.length);
+    
+    // Detectar escalas compartilhadas
+    const escalasMap = {};
+    dados.forEach(d => {
+      const escalaCodigo = d.escala_codigo;
+      if (escalaCodigo) {
+        if (!escalasMap[escalaCodigo]) {
+          escalasMap[escalaCodigo] = [];
+        }
+        escalasMap[escalaCodigo].push(d.item_nome);
+      }
+    });
+    
+    const escalasCompartilhadas = new Set();
+    Object.keys(escalasMap).forEach(codigo => {
+      if (escalasMap[codigo].length > 1) {
+        escalasCompartilhadas.add(codigo);
+      }
+    });
+    
+    // Filtra ativos
+    dados = dados.filter(d => {
+      const status = d.escala_status;
+      if (!status) return false;
+      const statusLower = status.toString().toLowerCase().trim();
+      return statusLower === 'ativo' || statusLower === 'ativa';
+    });
+    
+    // Aplica filtros
+    if (filtros.prestador && filtros.prestador !== 'todos') {
+      dados = dados.filter(d => d.unidade_nome === filtros.prestador);
+    }
+    
+    if (filtros.categoria && filtros.categoria !== 'todos') {
+      dados = dados.filter(d => d.item_nome === filtros.categoria);
+    }
+    
+    if (filtros.grupo && filtros.grupo !== 'todos') {
+      dados = dados.filter(d => d.procedimento_nome === filtros.grupo);
+    }
+    
+    if (filtros.medico && filtros.medico.trim() !== '') {
+      const medicoLower = filtros.medico.toLowerCase();
+      dados = dados.filter(d => 
+        d['Nome Médico'] && 
+        d['Nome Médico'].toString().toLowerCase().includes(medicoLower)
+      );
+    }
+    
+    if (filtros.diaSemana && filtros.diaSemana !== 'todos') {
+      dados = dados.filter(d => d.escala_dia_semana === filtros.diaSemana);
+    }
+    
+    // Filtro de tipo de agenda (respeitando permissão)
+    if (filtros.tipoAgenda && filtros.tipoAgenda !== 'todos') {
+      dados = dados.filter(d => {
+        const local = d.Local;
+        if (!local) return false;
+        
+        const localUpper = local.toString().toUpperCase().trim();
+        if (filtros.tipoAgenda === 'local') {
+          // Se perfil é parcial, não pode filtrar por local
+          if (permissao.perfil === 'parcial') return false;
+          return localUpper === 'SIM';
+        } else if (filtros.tipoAgenda === 'naoLocal') {
+          return localUpper === 'NÃO' || localUpper === 'NAO';
+        }
+        return false;
+      });
+    }
+    
+    // Sanitizar dados
+    // Sanitizar dados
+    dados = dados.map(d => {
+      const escalaCodigo = String(d.escala_codigo || '');
+      const isCompartilhada = escalasCompartilhadas.has(escalaCodigo);
+      
+      // Processar informações de afastamento/bloqueio
+      const temAfastamento = (d.tem_afastamento_ativo || '').toString().toUpperCase().trim() === 'SIM';
+      
+      return {
+        unidade_nome: String(d.unidade_nome || ''),
+        item_nome: String(d.item_nome || ''),
+        procedimento_nome: String(d.procedimento_nome || ''),
+        Nome_Medico: String(d['Nome Médico'] || ''),
+        escala_horario: formatarHorario(d.escala_horario),
+        escala_dia_semana: String(d.escala_dia_semana || ''),
+        escala_codigo: escalaCodigo,
+        isCompartilhada: isCompartilhada,
+        Local: String(d.Local || ''),
+        Rede: Number(d.Rede || 0),
+        Retorno: Number(d['Retorno '] || d['Retorno'] || 0),
+        Reserva: Number(d.Reserva || 0),
+        // Campos de bloqueio
+        tem_afastamento_ativo: temAfastamento,
+        codigo_afastamento: String(d.codigo_afastamento || ''),
+        dt_inicio_afastamento: d.dt_inicio_afastamento ? formatarDataBloqueio(d.dt_inicio_afastamento) : '',
+        dt_fim_afastamento: d.dt_fim_afastamento ? formatarDataBloqueio(d.dt_fim_afastamento) : '',
+        procedimentos_afastamento: String(d.procedimentos_afastamento || ''),
+        // NOVOS CAMPOS - VIGÊNCIA DA ESCALA
+        vigencia_inicial: d.vigencia_inicial ? formatarDataBloqueio(d.vigencia_inicial) : '',
+        vigencia_final: d.vigencia_final ? formatarDataBloqueio(d.vigencia_final) : ''
+      };
+    });
+
+    Logger.log('>>> getDadosFiltrados: Dados sanitizados - ' + dados.length);
+    return dados;
+        
+  } catch (error) {
+    Logger.log('>>> getDadosFiltrados: ERRO - ' + error.toString());
+    return [];
+  }
+}
+
+/**
+ * Gera resumo por procedimento respeitando o teto
+ * Considera vigência das escalas no mês de referência
+ */
+function getResumoPorProcedimento(filtros, mesReferencia, anoReferencia) {
+  try {
+    Logger.log('>>> getResumoPorProcedimento: INÍCIO');
+    
+    const permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return { erro: true, mensagem: permissao.mensagem };
+    }
+    
+    // Se não informou mês/ano, usa o atual
+    if (!mesReferencia || !anoReferencia) {
+      var hoje = new Date();
+      mesReferencia = hoje.getMonth() + 1;
+      anoReferencia = hoje.getFullYear();
+    }
+    
+    let dados = lerDadosComPermissao();
+    Logger.log('>>> Total de dados: ' + dados.length);
+    
+    // Filtra ativos e expirados
+    dados = dados.filter(function(d) {
+      const status = (d.escala_status || '').toString().toLowerCase().trim();
+      return status === 'ativo' || status === 'ativa' || status === 'expirado' || status === 'expirada';
+    });
+    
+    // Aplica filtros (mesma lógica do getDadosFiltrados)
+    if (filtros.prestador && filtros.prestador !== 'todos') {
+      dados = dados.filter(function(d) { return d.unidade_nome === filtros.prestador; });
+    }
+    
+    if (filtros.categoria && filtros.categoria !== 'todos') {
+      dados = dados.filter(function(d) { return d.item_nome === filtros.categoria; });
+    }
+    
+    if (filtros.grupo && filtros.grupo !== 'todos') {
+      dados = dados.filter(function(d) { return d.procedimento_nome === filtros.grupo; });
+    }
+    
+    if (filtros.medico && filtros.medico.trim() !== '') {
+      const medicoLower = filtros.medico.toLowerCase();
+      dados = dados.filter(function(d) {
+        return d['Nome Médico'] && d['Nome Médico'].toString().toLowerCase().indexOf(medicoLower) !== -1;
+      });
+    }
+    
+    if (filtros.diaSemana && filtros.diaSemana !== 'todos') {
+      dados = dados.filter(function(d) { return d.escala_dia_semana === filtros.diaSemana; });
+    }
+    
+    // Filtro de tipo de agenda
+    if (filtros.tipoAgenda && filtros.tipoAgenda !== 'todos') {
+      dados = dados.filter(function(d) {
+        const local = d.Local;
+        if (!local) return false;
+        const localUpper = local.toString().toUpperCase().trim();
+        if (filtros.tipoAgenda === 'local') {
+          return localUpper === 'SIM';
+        } else if (filtros.tipoAgenda === 'naoLocal') {
+          return localUpper === 'NÃO' || localUpper === 'NAO';
+        }
+        return false;
+      });
+    }
+    
+    Logger.log('>>> Dados após filtros: ' + dados.length);
+    
+
+    // Detecta escalas compartilhadas
+    const escalasItemMap = {};
+    dados.forEach(function(d) {
+      var escalaCodigo = (d.escala_codigo || '').toString().trim();
+      var itemNome = (d.item_nome || '').toString().trim();
+      if (escalaCodigo && itemNome) {
+        if (!escalasItemMap[escalaCodigo]) {
+          escalasItemMap[escalaCodigo] = new Set();
+        }
+        escalasItemMap[escalaCodigo].add(itemNome);
+      }
+    });
+
+    var escalasCompartilhadas = {};
+    Object.keys(escalasItemMap).forEach(function(codigo) {
+      if (escalasItemMap[codigo].size > 1) {
+        escalasCompartilhadas[codigo] = true;
+      }
+    });
+
+    // Agrupa por unidade_codigo + item_nome (procedimento)
+    // Rastreia escalas já contabilizadas para não duplicar
+    const agrupado = {};
+    const escalasContabilizadas = {};
+    
+    dados.forEach(function(d) {
+      const unidadeCodigo = (d.unidade_codigo || '').toString().trim();
+      const unidadeNome = (d.unidade_nome || '').toString().trim();
+      const itemNome = (d.item_nome || '').toString().trim();
+      const escalaCodigo = (d.escala_codigo || '').toString().trim();
+      const valorTeto = parseFloat(d.teto_fisico || 0);
+      
+      if (!unidadeCodigo || !itemNome) return;
+      
+      // Verifica vigência da escala
+      const vigenciaInicial = d.vigencia_inicial;
+      const vigenciaFinal = d.vigencia_final;
+      const semanasNoMes = calcularSemanasNoMes(vigenciaInicial, vigenciaFinal, mesReferencia, anoReferencia);
+      
+      // Se a escala não está ativa neste mês, pula
+      if (semanasNoMes === 0) {
+        return;
+      }
+      
+      // Chave única para agrupamento (prestador + procedimento)
+      const chave = unidadeCodigo + '|' + itemNome;
+      
+      // Inicializa estruturas se não existirem
+      if (!escalasContabilizadas[chave]) {
+        escalasContabilizadas[chave] = new Set();
+      }
+      
+      if (!agrupado[chave]) {
+        agrupado[chave] = {
+          unidade_codigo: unidadeCodigo,
+          unidade_nome: unidadeNome,
+          item_nome: itemNome,
+          valor_teto: valorTeto,
+          total_escala: 0,
+          vagas_rede: 0,
+          vagas_locais: 0,
+          qtd_escalas: 0,
+          tem_compartilhada: false
+        };
+      }
+
+      // Atualiza o teto se encontrar um valor maior (pega o maior teto encontrado)
+      if (valorTeto > agrupado[chave].valor_teto) {
+        agrupado[chave].valor_teto = valorTeto;
+      }
+      
+      // Verifica se esta escala já foi contabilizada
+      if (escalaCodigo && escalasContabilizadas[chave].has(escalaCodigo)) {
+        return;
+      }
+      
+      // Marca escala como contabilizada
+      if (escalaCodigo) {
+        escalasContabilizadas[chave].add(escalaCodigo);
+      }
+      
+      // Verifica se esta escala é compartilhada
+      if (escalaCodigo && escalasCompartilhadas[escalaCodigo]) {
+        if (!agrupado[chave]) {
+          // será criado abaixo
+        }
+      }
+
+      // Soma as vagas (usando colunas originais) multiplicadas pelas semanas
+      const vagasPrimeiraVez = parseFloat(d['Rede'] || 0);
+      const vagasRetorno = parseFloat(d['Retorno'] || 0);
+      const vagasReserva = parseFloat(d['Reserva'] || 0);
+      const totalVagasSemanal = vagasPrimeiraVez + vagasRetorno + vagasReserva;
+      const totalVagasMensal = totalVagasSemanal * semanasNoMes;
+      
+      const isLocal = (d.Local || '').toString().toUpperCase().trim() === 'SIM';
+
+      agrupado[chave].total_escala += totalVagasMensal;
+      if (isLocal) {
+        agrupado[chave].vagas_locais += totalVagasMensal;
+      } else {
+        agrupado[chave].vagas_rede += totalVagasMensal;
+      }
+      agrupado[chave].qtd_escalas += 1;
+
+      if (escalaCodigo && escalasCompartilhadas[escalaCodigo]) {
+        agrupado[chave].tem_compartilhada = true;
+      }
+    });
+    
+    Logger.log('>>> Combinações agrupadas: ' + Object.keys(agrupado).length);
+    
+    // Agora agrupa por procedimento (item_nome), somando os valores corretos de cada prestador
+    const resumoPorProcedimento = {};
+    
+    Object.keys(agrupado).forEach(function(chave) {
+      const item = agrupado[chave];
+      const itemNome = item.item_nome;
+      
+      // Calcula valor correto (mínimo entre escala e teto)
+      // Se teto é 0 ou não existe, usa o valor da escala
+      let valorCorreto;
+      if (item.valor_teto > 0) {
+        valorCorreto = Math.min(item.total_escala, item.valor_teto);
+      } else {
+        valorCorreto = Math.min(item.total_escala, item.valor_teto);
+      }
+      
+      if (!resumoPorProcedimento[itemNome]) {
+        resumoPorProcedimento[itemNome] = {
+          item_nome: itemNome,
+          total_geral: 0,
+          detalhes: []
+        };
+      }
+      
+      resumoPorProcedimento[itemNome].total_geral += valorCorreto;
+      resumoPorProcedimento[itemNome].detalhes.push({
+        unidade_codigo: item.unidade_codigo,
+        unidade_nome: item.unidade_nome,
+        total_escala: Math.round(item.total_escala),
+        vagas_rede: Math.round(item.vagas_rede),
+        vagas_locais: Math.round(item.vagas_locais),
+        valor_teto: Math.round(item.valor_teto),
+        valor_correto: Math.round(valorCorreto),
+        qtd_escalas: item.qtd_escalas,
+        tem_compartilhada: item.tem_compartilhada
+      });
+    });
+    
+    // Converte para array e ordena por nome do procedimento
+    const resultado = Object.values(resumoPorProcedimento).map(function(proc) {
+      proc.total_geral = Math.round(proc.total_geral);
+      // Ordena detalhes por nome do prestador
+      proc.detalhes.sort(function(a, b) {
+        return a.unidade_nome.localeCompare(b.unidade_nome);
+      });
+      return proc;
+    });
+    
+    resultado.sort(function(a, b) {
+      return a.item_nome.localeCompare(b.item_nome);
+    });
+    
+    Logger.log('>>> getResumoPorProcedimento: FIM - ' + resultado.length + ' procedimentos');
+    
+    return {
+      erro: false,
+      resumo: resultado,
+      mes_referencia: mesReferencia,
+      ano_referencia: anoReferencia,
+      total_procedimentos: resultado.length,
+      total_geral: resultado.reduce(function(sum, p) { return sum + p.total_geral; }, 0)
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO em getResumoPorProcedimento: ' + error.toString());
+    return { erro: true, mensagem: error.toString() };
+  }
+}
+
+/**
+ * Exporta o resumo por procedimento para Excel
+ */
+function exportarResumoProcedimentoExcel(filtros, mesReferencia, anoReferencia) {
+  try {
+    // Obtém os dados do resumo
+    const dadosResumo = getResumoPorProcedimento(filtros, mesReferencia, anoReferencia);
+    
+    if (dadosResumo.erro) {
+      return { sucesso: false, mensagem: dadosResumo.mensagem };
+    }
+    
+    if (!dadosResumo.resumo || dadosResumo.resumo.length === 0) {
+      return { sucesso: false, mensagem: 'Nenhum dado para exportar.' };
+    }
+    
+    // Cria uma nova planilha
+    const mesesNomes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    const nomeMes = mesesNomes[mesReferencia - 1];
+    const nomeArquivo = 'Resumo_Procedimentos_' + nomeMes + '_' + anoReferencia + '_' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyyMMdd_HHmm');
+    
+    const ss = SpreadsheetApp.create(nomeArquivo);
+    
+    // ========== ABA 1: RESUMO CONSOLIDADO ==========
+    const sheetResumo = ss.getActiveSheet();
+    sheetResumo.setName('Resumo Consolidado');
+    
+    // Cabeçalho do relatório
+    sheetResumo.getRange('A1').setValue('RESUMO POR PROCEDIMENTO - ' + nomeMes.toUpperCase() + ' ' + anoReferencia);
+    sheetResumo.getRange('A1').setFontSize(14).setFontWeight('bold').setBackground('#8B5CF6').setFontColor('white');
+    sheetResumo.getRange('A1:B1').merge();
+    
+    sheetResumo.getRange('A2').setValue('Gerado em: ' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'dd/MM/yyyy HH:mm'));
+    sheetResumo.getRange('A3').setValue('Total de Procedimentos: ' + dadosResumo.total_procedimentos);
+    sheetResumo.getRange('A4').setValue('Total Geral de Vagas: ' + dadosResumo.total_geral.toLocaleString('pt-BR'));
+    
+    // Cabeçalhos da tabela
+    const headersResumo = ['Procedimento', 'Total de Vagas'];
+    sheetResumo.getRange(6, 1, 1, headersResumo.length).setValues([headersResumo]);
+    sheetResumo.getRange(6, 1, 1, headersResumo.length).setFontWeight('bold').setBackground('#A78BFA').setFontColor('white');
+    
+    // Dados
+    const linhasResumo = dadosResumo.resumo.map(function(proc) {
+      return [proc.item_nome, proc.total_geral];
+    });
+    
+    if (linhasResumo.length > 0) {
+      sheetResumo.getRange(7, 1, linhasResumo.length, headersResumo.length).setValues(linhasResumo);
+      sheetResumo.getRange(7, 2, linhasResumo.length, 1).setNumberFormat('#,##0');
+    }
+    
+    // Linha de total
+    const linhaTotal = 7 + linhasResumo.length;
+    sheetResumo.getRange(linhaTotal, 1).setValue('TOTAL GERAL');
+    sheetResumo.getRange(linhaTotal, 2).setValue(dadosResumo.total_geral);
+    sheetResumo.getRange(linhaTotal, 1, 1, 2).setFontWeight('bold').setBackground('#E5E7EB');
+    sheetResumo.getRange(linhaTotal, 2).setNumberFormat('#,##0');
+    
+    // Auto-ajusta colunas
+    sheetResumo.autoResizeColumn(1);
+    sheetResumo.autoResizeColumn(2);
+    
+    // ========== ABA 2: DETALHAMENTO POR PRESTADOR ==========
+    const sheetDetalhe = ss.insertSheet('Detalhamento por Prestador');
+    
+    // Cabeçalho
+    sheetDetalhe.getRange('A1').setValue('DETALHAMENTO POR PRESTADOR - ' + nomeMes.toUpperCase() + ' ' + anoReferencia);
+    sheetDetalhe.getRange('A1').setFontSize(14).setFontWeight('bold').setBackground('#8B5CF6').setFontColor('white');
+    sheetDetalhe.getRange('A1:F1').merge();
+    
+    // Cabeçalhos da tabela
+    const headersDetalhe = ['Procedimento', 'Prestador', 'CNES', 'Vagas Escala', 'Vagas Rede', 'Vagas Locais', 'Teto', 'Valor Considerado', 'Observação'];
+    sheetDetalhe.getRange(3, 1, 1, headersDetalhe.length).setValues([headersDetalhe]);
+    sheetDetalhe.getRange(3, 1, 1, headersDetalhe.length).setFontWeight('bold').setBackground('#A78BFA').setFontColor('white');
+    
+    // Dados detalhados
+    const linhasDetalhe = [];
+    dadosResumo.resumo.forEach(function(proc) {
+      proc.detalhes.forEach(function(det) {
+        var observacao = det.tem_compartilhada ? 'Escala compartilhada - valor representa capacidade máxima' : '';
+        linhasDetalhe.push([
+          proc.item_nome,
+          det.unidade_nome,
+          det.unidade_codigo,
+          det.total_escala,
+          det.vagas_rede,
+          det.vagas_locais,
+          det.valor_teto,
+          det.valor_correto,
+          observacao
+        ]);
+      });
+    });
+    
+    if (linhasDetalhe.length > 0) {
+      sheetDetalhe.getRange(4, 1, linhasDetalhe.length, headersDetalhe.length).setValues(linhasDetalhe);
+      sheetDetalhe.getRange(4, 4, linhasDetalhe.length, 1).setNumberFormat('#,##0');
+      sheetDetalhe.getRange(4, 6, linhasDetalhe.length, 1).setNumberFormat('#,##0');
+    }
+    
+    // Auto-ajusta colunas
+    for (var i = 1; i <= headersDetalhe.length; i++) {
+      sheetDetalhe.autoResizeColumn(i);
+    }
+    
+    // Adiciona filtros
+    if (linhasDetalhe.length > 0) {
+      sheetDetalhe.getRange(3, 1, linhasDetalhe.length + 1, headersDetalhe.length).createFilter();
+    }
+    
+    // Formata células onde escala > teto (destacar em vermelho)
+    for (var row = 4; row < 4 + linhasDetalhe.length; row++) {
+      var escala = sheetDetalhe.getRange(row, 4).getValue();
+      var teto = sheetDetalhe.getRange(row, 5).getValue();
+      if (typeof teto === 'number' && escala > teto) {  // ← JÁ ESTÁ CORRETO
+        sheetDetalhe.getRange(row, 4).setBackground('#FEE2E2'); // Vermelho claro
+        sheetDetalhe.getRange(row, 6).setBackground('#D1FAE5'); // Verde claro (valor corrigido)
+      }
+    }
+    
+    Logger.log('>>> Resumo exportado com sucesso: ' + nomeArquivo);
+    
+    return {
+      sucesso: true,
+      url: ss.getUrl(),
+      mensagem: 'Relatório gerado com sucesso!'
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO ao exportar resumo: ' + error.toString());
+    return {
+      sucesso: false,
+      mensagem: error.toString()
+    };
+  }
+}
+
+// ============================================
+// FUNÇÕES DE TESTE
+// ============================================
+
+function testarConexao() {
+  try {
+    const permissao = verificarPermissao();
+    Logger.log('Permissão: ' + JSON.stringify(permissao));
+    
+    const dados = lerDadosComPermissao();
+    Logger.log(`Total de registros: ${dados.length}`);
+    
+    return {
+      sucesso: true,
+      permissao: permissao,
+      mensagem: `Conexão OK! ${dados.length} registros encontrados.`
+    };
+  } catch (error) {
+    Logger.log('Erro no teste: ' + error.toString());
+    return {
+      sucesso: false,
+      mensagem: error.toString()
+    };
+  }
+}
+
+/**
+ * Função auxiliar para criar a aba de permissões
+ * Execute esta função uma vez para criar a estrutura
+ */
+function criarAbaPermissoes() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName(CONFIG.PERMISSOES_SHEET);
+  
+  if (!sheet) {
+    sheet = ss.insertSheet(CONFIG.PERMISSOES_SHEET);
+    
+    // Cabeçalhos
+    sheet.getRange('A1:C1').setValues([['email', 'perfil', 'nome']]);
+    sheet.getRange('A1:C1').setFontWeight('bold');
+    sheet.getRange('A1:C1').setBackground('#4285f4');
+    sheet.getRange('A1:C1').setFontColor('white');
+    
+    // Exemplo de dados
+    sheet.getRange('A2:C2').setValues([['admin@exemplo.com', 'total', 'Administrador']]);
+    sheet.getRange('A3:C3').setValues([['usuario@exemplo.com', 'parcial', 'Usuário Padrão']]);
+    
+    // Ajusta largura das colunas
+    sheet.setColumnWidth(1, 250);
+    sheet.setColumnWidth(2, 100);
+    sheet.setColumnWidth(3, 200);
+    
+    // Validação de dados para coluna perfil
+    const regra = SpreadsheetApp.newDataValidation()
+      .requireValueInList(['total', 'parcial'], true)
+      .setAllowInvalid(false)
+      .build();
+    sheet.getRange('B2:B100').setDataValidation(regra);
+    
+    Logger.log('>>> Aba de permissões criada com sucesso!');
+    return 'Aba "Permissoes" criada com sucesso!';
+  } else {
+    Logger.log('>>> Aba de permissões já existe.');
+    return 'Aba "Permissoes" já existe.';
+  }
+}
+
+
+// ============================================
+// FUNÇÕES DE EXPORTAÇÃO DE RELATÓRIOS
+// ============================================
+
+/**
+ * Exporta relatório para Excel (Google Sheets)
+ */
+function exportarRelatorioExcel(dados) {
+  try {
+    if (!dados || dados.length === 0) {
+      return { sucesso: false, mensagem: 'Nenhum dado para exportar.' };
+    }
+    
+    // Cria uma nova planilha
+    var nomeArquivo = 'Relatorio_Escalas_' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyyMMdd_HHmm');
+    var ss = SpreadsheetApp.create(nomeArquivo);
+    var sheet = ss.getActiveSheet();
+    sheet.setName('Escalas');
+    
+    // Cabeçalhos
+    var headers = [
+      'Dia da Semana',
+      'Categoria',
+      'Prestador',
+      'Médico',
+      'Horário',
+      'Código Escala',
+      'Grupo/Procedimento',
+      'Tipo Agenda',
+      'Vagas Rede',
+      'Vagas Retorno',
+      'Vagas Reserva',
+      'Total Vagas',
+      'Bloqueio Ativo',
+      'Início Bloqueio',
+      'Fim Bloqueio',
+      'Código Bloqueio',
+      'Vigência Inicial',    // NOVO
+      'Vigência Final'       // NOVO
+    ];
+    
+    // Estiliza cabeçalhos
+    var headerRange = sheet.getRange(1, 1, 1, headers.length);
+    headerRange.setValues([headers]);
+    headerRange.setFontWeight('bold');
+    headerRange.setBackground('#8B5CF6');
+    headerRange.setFontColor('white');
+    headerRange.setHorizontalAlignment('center');
+    
+    // Dados
+    var linhas = [];
+    dados.forEach(function(r) {
+      var rede = parseFloat(r.Rede || 0);
+      var retorno = parseFloat(r.Retorno || 0);
+      var reserva = parseFloat(r.Reserva || 0);
+      var total = rede + retorno + reserva;
+      var tipoAgenda = (r.Local || '').toString().toUpperCase().trim() === 'SIM' ? 'Local' : 'Não Local';
+      
+      // Informações de bloqueio
+      var bloqueioAtivo = r.tem_afastamento_ativo ? 'SIM' : 'NÃO';
+      var inicioBloqueio = r.dt_inicio_afastamento || '';
+      var fimBloqueio = r.dt_fim_afastamento || '';
+      var codigoBloqueio = r.codigo_afastamento || '';
+      
+      linhas.push([
+        r.escala_dia_semana || '',
+        r.item_nome || '',
+        r.unidade_nome || '',
+        r.Nome_Medico || '',
+        r.escala_horario || '',
+        r.escala_codigo || '',
+        r.procedimento_nome || '',
+        tipoAgenda,
+        rede,
+        retorno,
+        reserva,
+        total,
+        bloqueioAtivo,
+        inicioBloqueio,
+        fimBloqueio,
+        codigoBloqueio,
+        r.vigencia_inicial || '',    // NOVO
+        r.vigencia_final || ''       // NOVO
+      ]);
+    });
+    
+    if (linhas.length > 0) {
+      sheet.getRange(2, 1, linhas.length, headers.length).setValues(linhas);
+    }
+    
+    // Auto-ajusta colunas
+    for (var i = 1; i <= headers.length; i++) {
+      sheet.autoResizeColumn(i);
+    }
+    
+    // Adiciona filtros
+    sheet.getRange(1, 1, linhas.length + 1, headers.length).createFilter();
+    
+    // Formata colunas numéricas
+    sheet.getRange(2, 9, linhas.length, 4).setNumberFormat('#,##0');
+    
+    // Adiciona aba de resumo
+    var resumoSheet = ss.insertSheet('Resumo');
+    var totalVagas = 0, totalRede = 0, totalRetorno = 0, totalReserva = 0;
+    linhas.forEach(function(l) {
+      totalRede += l[8];
+      totalRetorno += l[9];
+      totalReserva += l[10];
+      totalVagas += l[11];
+    });
+    
+    resumoSheet.getRange('A1:B1').setValues([['RESUMO DO RELATÓRIO', '']]);
+    resumoSheet.getRange('A1').setFontSize(14).setFontWeight('bold');
+    resumoSheet.getRange('A3:B7').setValues([
+      ['Total de Registros', linhas.length],
+      ['Total de Vagas', totalVagas],
+      ['Vagas Rede', totalRede],
+      ['Vagas Retorno', totalRetorno],
+      ['Vagas Reserva', totalReserva]
+    ]);
+    resumoSheet.getRange('A3:A7').setFontWeight('bold');
+    resumoSheet.autoResizeColumn(1);
+    resumoSheet.autoResizeColumn(2);
+    
+    // Retorna URL do arquivo
+    return {
+      sucesso: true,
+      url: ss.getUrl(),
+      mensagem: 'Relatório gerado com sucesso!'
+    };
+    
+  } catch (error) {
+    Logger.log('Erro ao exportar Excel: ' + error.toString());
+    return {
+      sucesso: false,
+      mensagem: error.toString()
+    };
+  }
+}
+
+/**
+ * Retorna a data da última extração dos dados
+ */
+function getUltimaAtualizacao() {
+  try {
+    const dados = lerDadosPlanilha();
+    
+    if (!dados || dados.length === 0) {
+      return { sucesso: false, data: null };
+    }
+    
+    let ultimaData = null;
+    
+    dados.forEach(function(d) {
+      const dataExtracao = d.data_extracao;
+      if (dataExtracao) {
+        let dataObj;
+        
+        // Se for string no formato "2026-01-19 09:36:03"
+        if (typeof dataExtracao === 'string') {
+          // Pega apenas a parte da data (antes do espaço)
+          const partesDateTime = dataExtracao.split(' ');
+          const partesData = partesDateTime[0].split('-');
+          if (partesData.length === 3) {
+            dataObj = new Date(partesData[0], partesData[1] - 1, partesData[2]);
+          }
+        } 
+        // Se for objeto Date
+        else if (dataExtracao instanceof Date) {
+          dataObj = dataExtracao;
+        }
+        
+        if (dataObj && !isNaN(dataObj.getTime())) {
+          if (!ultimaData || dataObj > ultimaData) {
+            ultimaData = dataObj;
+          }
+        }
+      }
+    });
+    
+    if (ultimaData) {
+      // Formata para dd/mm/yyyy
+      const dia = String(ultimaData.getDate()).padStart(2, '0');
+      const mes = String(ultimaData.getMonth() + 1).padStart(2, '0');
+      const ano = ultimaData.getFullYear();
+      
+      return {
+        sucesso: true,
+        data: dia + '/' + mes + '/' + ano
+      };
+    }
+    
+    return { sucesso: false, data: null };
+    
+  } catch (error) {
+    Logger.log('Erro ao obter última atualização: ' + error.toString());
+    return { sucesso: false, data: null };
+  }
+}
+
+/**
+ * Retorna dados de distribuição de escalas por prestador
+ * (% Local vs % Não Local)
+ */
+function getDistribuicaoEscalas() {
+  try {
+    Logger.log('>>> getDistribuicaoEscalas: INÍCIO');
+    
+    const permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return { erro: true, mensagem: permissao.mensagem };
+    }
+    
+    // Usa a função que já respeita permissões
+    const dados = lerDadosComPermissao();
+    
+    if (!dados || dados.length === 0) {
+      return [];
+    }
+    
+    // Filtra apenas ativos
+    const ativos = dados.filter(function(d) {
+      if (!d.escala_status) return false;
+      const status = d.escala_status.toString().toLowerCase().trim();
+      return status === 'ativo' || status === 'ativa';
+    });
+    
+    // Agrupa por prestador
+    const prestadoresMap = {};
+    
+    ativos.forEach(function(d) {
+      const prestador = d.unidade_nome;
+      if (!prestador) return;
+      
+      if (!prestadoresMap[prestador]) {
+        prestadoresMap[prestador] = {
+          nome: prestador,
+          local: 0,
+          naoLocal: 0,
+          total: 0
+        };
+      }
+      
+      const rede = parseFloat(d['Rede'] || 0);
+      const retorno = parseFloat(d['Retorno '] || d['Retorno'] || 0);
+      const reserva = parseFloat(d['Reserva'] || 0);
+      const totalVagas = rede + retorno + reserva;
+      
+      // Verifica se é local ou não
+      const local = d.Local;
+      if (local) {
+        const localUpper = local.toString().toUpperCase().trim();
+        if (localUpper === 'SIM') {
+          prestadoresMap[prestador].local += totalVagas;
+        } else if (localUpper === 'NÃO' || localUpper === 'NAO') {
+          prestadoresMap[prestador].naoLocal += totalVagas;
+        }
+      } else {
+        // Se não tem informação, considera como não local
+        prestadoresMap[prestador].naoLocal += totalVagas;
+      }
+      
+      prestadoresMap[prestador].total += totalVagas;
+    });
+    
+    // Converte para array e ordena por nome
+    const resultado = Object.values(prestadoresMap)
+      .filter(function(p) { return p.total > 0; })
+      .sort(function(a, b) { return a.nome.localeCompare(b.nome); });
+    
+    // Arredonda valores
+    resultado.forEach(function(p) {
+      p.local = Math.round(p.local);
+      p.naoLocal = Math.round(p.naoLocal);
+      p.total = Math.round(p.total);
+    });
+    
+    Logger.log('>>> getDistribuicaoEscalas: FIM - ' + resultado.length + ' prestadores');
+    return resultado;
+    
+  } catch (error) {
+    Logger.log('>>> getDistribuicaoEscalas: ERRO - ' + error.toString());
+    return { erro: true, mensagem: error.toString() };
+  }
+}
+
+// ============================================
+// DISTRIBUIÇÃO DE ESCALAS V2 - COM PERÍODO E VIGÊNCIA
+// ============================================
+
+/**
+ * Retorna dados de distribuição de escalas por prestador
+ * VERSÃO V2: Considera vigência, escalas expiradas, compartilhadas E BLOQUEIOS
+ * @param {number} mesReferencia - Mês de referência (1-12)
+ * @param {number} anoReferencia - Ano de referência
+ */
+function getDistribuicaoEscalasV2(mesReferencia, anoReferencia) {
+  try {
+    Logger.log('>>> getDistribuicaoEscalasV2: INÍCIO - Mês: ' + mesReferencia + '/' + anoReferencia);
+    
+    var permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return { erro: true, mensagem: permissao.mensagem };
+    }
+    
+    // Se não informou mês/ano, usa o atual
+    if (!mesReferencia || !anoReferencia) {
+      var hoje = new Date();
+      mesReferencia = hoje.getMonth() + 1;
+      anoReferencia = hoje.getFullYear();
+    }
+    
+    // Lê dados COM permissão (respeita perfil parcial)
+    var dados = lerDadosPlanilha();
+    
+    // Aplica filtro de permissão se necessário
+    if (permissao.perfil === 'parcial') {
+      dados = dados.filter(function(d) {
+        var local = d.Local;
+        if (!local) return true;
+        var localUpper = local.toString().toUpperCase().trim();
+        return localUpper === 'NÃO' || localUpper === 'NAO';
+      });
+    }
+    
+    if (!dados || dados.length === 0) {
+      return { erro: false, distribuicao: [], resumo: { totalPrestadores: 0, totalVagas: 0, totalLocal: 0, totalNaoLocal: 0, totalBloqueado: 0, totalDisponivel: 0 }, mes_referencia: mesReferencia, ano_referencia: anoReferencia };
+    }
+    
+    // 1. Filtra apenas ativos E expirados
+    var dadosFiltrados = dados.filter(function(d) {
+      var status = (d.escala_status || '').toString().toLowerCase().trim();
+      return status === 'ativo' || status === 'ativa' || status === 'expirado' || status === 'expirada';
+    });
+    
+    Logger.log('>>> Dados ativos/expirados: ' + dadosFiltrados.length);
+    
+    // 2. Identifica escalas compartilhadas
+    var escalasProcedimentos = {};
+    
+    dadosFiltrados.forEach(function(d) {
+      var escalaCodigo = (d.escala_codigo || '').toString().trim();
+      var itemNome = (d.item_nome || '').toString().trim();
+      
+      if (!escalaCodigo) return;
+      
+      if (!escalasProcedimentos[escalaCodigo]) {
+        escalasProcedimentos[escalaCodigo] = new Set();
+      }
+      escalasProcedimentos[escalaCodigo].add(itemNome);
+    });
+    
+    var escalasQtdProcedimentos = {};
+    Object.keys(escalasProcedimentos).forEach(function(escala) {
+      escalasQtdProcedimentos[escala] = escalasProcedimentos[escala].size;
+    });
+    
+    // 3. Agrupa por prestador, controlando escalas já contabilizadas
+    var prestadoresMap = {};
+    var escalasContabilizadas = {};
+    
+    dadosFiltrados.forEach(function(d) {
+      var prestador = (d.unidade_nome || '').toString().trim();
+      var escalaCodigo = (d.escala_codigo || '').toString().trim();
+      
+      if (!prestador) return;
+      
+      // Verifica vigência da escala no mês de referência
+      var vigenciaInicial = d.vigencia_inicial;
+      var vigenciaFinal = d.vigencia_final;
+      var semanasNoMes = calcularSemanasNoMes(vigenciaInicial, vigenciaFinal, mesReferencia, anoReferencia);
+      
+      if (semanasNoMes === 0) {
+        return;
+      }
+      
+      // Inicializa estruturas
+      if (!escalasContabilizadas[prestador]) {
+        escalasContabilizadas[prestador] = new Set();
+      }
+      
+      if (!prestadoresMap[prestador]) {
+        prestadoresMap[prestador] = {
+          nome: prestador,
+          local: 0,
+          naoLocal: 0,
+          total: 0,
+          bloqueado: 0,
+          bloqueadoLocal: 0,
+          bloqueadoNaoLocal: 0,
+          qtdEscalas: 0,
+          qtdEscalasCompartilhadas: 0,
+          qtdEscalasBloqueadas: 0
+        };
+      }
+      
+      // Verifica se esta escala já foi contabilizada para este prestador
+      if (escalaCodigo && escalasContabilizadas[prestador].has(escalaCodigo)) {
+        return;
+      }
+      
+      // Marca escala como contabilizada
+      if (escalaCodigo) {
+        escalasContabilizadas[prestador].add(escalaCodigo);
+      }
+      
+      // Calcula vagas semanais
+      var rede = parseFloat(d['Rede'] || 0);
+      var retorno = parseFloat(d['Retorno '] || d['Retorno'] || 0);
+      var reserva = parseFloat(d['Reserva'] || 0);
+      var totalSemanal = rede + retorno + reserva;
+      
+      // Calcula total mensal baseado nas semanas ativas
+      var totalMensal = totalSemanal * semanasNoMes;
+      
+      // ====== CÁLCULO DE BLOQUEIO ======
+      var temBloqueio = (d.tem_afastamento_ativo || '').toString().toUpperCase().trim() === 'SIM';
+      var semanasComBloqueio = 0;
+      
+      if (temBloqueio) {
+        var dtInicio = d.dt_inicio_afastamento;
+        var dtFim = d.dt_fim_afastamento;
+        
+        if (dtInicio && dtFim) {
+          var dataInicioBloq = converterParaData(dtInicio);
+          var dataFimBloq = converterParaData(dtFim);
+          
+          if (dataInicioBloq && dataFimBloq && !isNaN(dataInicioBloq.getTime()) && !isNaN(dataFimBloq.getTime())) {
+            // Limites do mês de referência
+            var primeiroDiaMes = new Date(anoReferencia, mesReferencia - 1, 1);
+            var ultimoDiaMes = new Date(anoReferencia, mesReferencia, 0);
+            
+            // Ajusta datas do bloqueio para dentro do mês
+            var inicioBloqueioEfetivo = dataInicioBloq > primeiroDiaMes ? dataInicioBloq : primeiroDiaMes;
+            var fimBloqueioEfetivo = dataFimBloq < ultimoDiaMes ? dataFimBloq : ultimoDiaMes;
+            
+            if (inicioBloqueioEfetivo <= fimBloqueioEfetivo) {
+              var diffDias = Math.ceil((fimBloqueioEfetivo - inicioBloqueioEfetivo) / (1000 * 60 * 60 * 24)) + 1;
+              semanasComBloqueio = Math.min(semanasNoMes, Math.ceil(diffDias / 7));
+            }
+          }
+        } else {
+          // Sem datas específicas → considera bloqueio total nas semanas ativas
+          semanasComBloqueio = semanasNoMes;
+        }
+      }
+      
+      var totalBloqueadoMensal = totalSemanal * semanasComBloqueio;
+      // ====== FIM CÁLCULO DE BLOQUEIO ======
+      
+      // Verifica se é local ou não
+      var local = d.Local;
+      var isLocal = false;
+      if (local) {
+        var localUpper = local.toString().toUpperCase().trim();
+        isLocal = (localUpper === 'SIM');
+      }
+      
+      // Verifica se é escala compartilhada
+      var qtdProcedimentosNaEscala = escalasQtdProcedimentos[escalaCodigo] || 1;
+      var isCompartilhada = qtdProcedimentosNaEscala > 1;
+      
+      // Soma vagas brutas (antes do desconto)
+      if (isLocal) {
+        prestadoresMap[prestador].local += totalMensal;
+        prestadoresMap[prestador].bloqueadoLocal += totalBloqueadoMensal;
+      } else {
+        prestadoresMap[prestador].naoLocal += totalMensal;
+        prestadoresMap[prestador].bloqueadoNaoLocal += totalBloqueadoMensal;
+      }
+      prestadoresMap[prestador].total += totalMensal;
+      prestadoresMap[prestador].bloqueado += totalBloqueadoMensal;
+      prestadoresMap[prestador].qtdEscalas += 1;
+      
+      if (isCompartilhada) {
+        prestadoresMap[prestador].qtdEscalasCompartilhadas += 1;
+      }
+      
+      if (temBloqueio && semanasComBloqueio > 0) {
+        prestadoresMap[prestador].qtdEscalasBloqueadas += 1;
+      }
+    });
+    
+    // 4. Converte para array, arredonda e ordena
+    var resultado = Object.values(prestadoresMap)
+      .filter(function(p) { return p.total > 0; })
+      .map(function(p) {
+        var localDisp = p.local - p.bloqueadoLocal;
+        var naoLocalDisp = p.naoLocal - p.bloqueadoNaoLocal;
+        var totalDisp = p.total - p.bloqueado;
+        
+        return {
+          nome: p.nome,
+          // Valores BRUTOS (antes do desconto)
+          localBruto: Math.round(p.local),
+          naoLocalBruto: Math.round(p.naoLocal),
+          totalBruto: Math.round(p.total),
+          // Valores BLOQUEADOS
+          bloqueado: Math.round(p.bloqueado),
+          bloqueadoLocal: Math.round(p.bloqueadoLocal),
+          bloqueadoNaoLocal: Math.round(p.bloqueadoNaoLocal),
+          // Valores DISPONÍVEIS (bruto - bloqueado)
+          local: Math.round(localDisp),
+          naoLocal: Math.round(naoLocalDisp),
+          total: Math.round(totalDisp),
+          // Contadores
+          qtdEscalas: p.qtdEscalas,
+          qtdEscalasCompartilhadas: p.qtdEscalasCompartilhadas,
+          qtdEscalasBloqueadas: p.qtdEscalasBloqueadas
+        };
+      })
+      .sort(function(a, b) { return a.nome.localeCompare(b.nome); });
+    
+    // 5. Calcula resumo geral
+    var resumo = {
+      totalPrestadores: resultado.length,
+      totalVagas: resultado.reduce(function(sum, p) { return sum + p.totalBruto; }, 0),
+      totalLocal: resultado.reduce(function(sum, p) { return sum + p.localBruto; }, 0),
+      totalNaoLocal: resultado.reduce(function(sum, p) { return sum + p.naoLocalBruto; }, 0),
+      totalBloqueado: resultado.reduce(function(sum, p) { return sum + p.bloqueado; }, 0),
+      totalDisponivel: resultado.reduce(function(sum, p) { return sum + p.total; }, 0),
+      totalEscalas: resultado.reduce(function(sum, p) { return sum + p.qtdEscalas; }, 0),
+      totalEscalasBloqueadas: resultado.reduce(function(sum, p) { return sum + p.qtdEscalasBloqueadas; }, 0)
+    };
+    
+    Logger.log('>>> getDistribuicaoEscalasV2: FIM - ' + resultado.length + ' prestadores, Bruto: ' + resumo.totalVagas + ', Bloqueado: ' + resumo.totalBloqueado + ', Disponível: ' + resumo.totalDisponivel);
+    
+    return {
+      erro: false,
+      distribuicao: resultado,
+      resumo: resumo,
+      mes_referencia: mesReferencia,
+      ano_referencia: anoReferencia
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO em getDistribuicaoEscalasV2: ' + error.toString());
+    return { erro: true, mensagem: error.toString() };
+  }
+}
+
+/**
+ * Exporta relatório de distribuição de escalas para Excel
+ * @param {number} mesReferencia - Mês (1-12)
+ * @param {number} anoReferencia - Ano
+ * @param {string} filtroPrestador - Filtro opcional
+ * @param {string} ordenacao - Tipo de ordenação
+ */
+function exportarDistribuicaoExcel(mesReferencia, anoReferencia, filtroPrestador, ordenacao) {
+  try {
+    Logger.log('>>> exportarDistribuicaoExcel: INÍCIO');
+    
+    // Obtém os dados
+    var dados = getDistribuicaoEscalasV2(mesReferencia, anoReferencia);
+    
+    if (dados.erro) {
+      return { sucesso: false, mensagem: dados.mensagem };
+    }
+    
+    if (!dados.distribuicao || dados.distribuicao.length === 0) {
+      return { sucesso: false, mensagem: 'Nenhum dado para exportar.' };
+    }
+    
+    // Aplica filtro de prestador se informado
+    var prestadores = dados.distribuicao;
+    if (filtroPrestador && filtroPrestador.trim() !== '') {
+      var filtroLower = filtroPrestador.toLowerCase().trim();
+      prestadores = prestadores.filter(function(p) {
+        return p.nome.toLowerCase().indexOf(filtroLower) !== -1;
+      });
+    }
+    
+    // Aplica ordenação
+    if (ordenacao) {
+      prestadores = ordenarPrestadoresDistribuicao(prestadores, ordenacao);
+    }
+    
+    if (prestadores.length === 0) {
+      return { sucesso: false, mensagem: 'Nenhum prestador encontrado com o filtro informado.' };
+    }
+    
+    // Cria planilha
+    var mesesNomes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    var nomeMes = mesesNomes[mesReferencia - 1];
+    var nomeArquivo = 'Distribuicao_Escalas_' + nomeMes + '_' + anoReferencia + '_' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyyMMdd_HHmm');
+    
+    var ss = SpreadsheetApp.create(nomeArquivo);
+    var sheet = ss.getActiveSheet();
+    sheet.setName('Distribuição por Prestador');
+    
+    // ===== CABEÇALHO DO RELATÓRIO =====
+    sheet.getRange('A1').setValue('DISTRIBUIÇÃO DE ESCALAS POR PRESTADOR - ' + nomeMes.toUpperCase() + ' ' + anoReferencia);
+    sheet.getRange('A1').setFontSize(14).setFontWeight('bold').setBackground('#8B5CF6').setFontColor('white');
+    sheet.getRange('A1:H1').merge();
+    
+    sheet.getRange('A2').setValue('Gerado em: ' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'dd/MM/yyyy HH:mm'));
+    sheet.getRange('A3').setValue('Total de Prestadores: ' + prestadores.length);
+    sheet.getRange('A4').setValue('Total Geral de Vagas: ' + dados.resumo.totalVagas.toLocaleString('pt-BR'));
+    
+    // ===== CABEÇALHOS DA TABELA =====
+    var headers = ['Prestador', 'Vagas Locais (Disp.)', 'Vagas Não Locais (Disp.)', 'Total Disponível', 'Total Bruto', 'Bloqueado', '% Local', '% Não Local', 'Qtd Escalas', 'Esc. Compartilhadas', 'Esc. Bloqueadas'];
+    sheet.getRange(6, 1, 1, headers.length).setValues([headers]);
+    sheet.getRange(6, 1, 1, headers.length).setFontWeight('bold').setBackground('#A78BFA').setFontColor('white').setHorizontalAlignment('center');
+    
+    // ===== DADOS =====
+    var linhas = prestadores.map(function(p) {
+      var percentLocal = p.total > 0 ? ((p.local / p.total) * 100).toFixed(1) : '0.0';
+      var percentNaoLocal = p.total > 0 ? ((p.naoLocal / p.total) * 100).toFixed(1) : '0.0';
+      
+      return [
+        p.nome,
+        p.local,
+        p.naoLocal,
+        p.total,
+        p.totalBruto,
+        p.bloqueado,
+        parseFloat(percentLocal) / 100,
+        parseFloat(percentNaoLocal) / 100,
+        p.qtdEscalas,
+        p.qtdEscalasCompartilhadas,
+        p.qtdEscalasBloqueadas
+      ];
+    });
+    
+    if (linhas.length > 0) {
+      sheet.getRange(7, 1, linhas.length, headers.length).setValues(linhas);
+      
+      // Formata colunas numéricas
+      sheet.getRange(7, 2, linhas.length, 5).setNumberFormat('#,##0');
+      sheet.getRange(7, 7, linhas.length, 2).setNumberFormat('0.0%');
+      sheet.getRange(7, 9, linhas.length, 3).setNumberFormat('#,##0');
+    }
+    
+    // ===== LINHA DE TOTAIS =====
+    var linhaTotal = 7 + linhas.length;
+    var totalLocal = prestadores.reduce(function(sum, p) { return sum + p.local; }, 0);
+    var totalNaoLocal = prestadores.reduce(function(sum, p) { return sum + p.naoLocal; }, 0);
+    var totalDisponivel = prestadores.reduce(function(sum, p) { return sum + p.total; }, 0);
+    var totalBruto = prestadores.reduce(function(sum, p) { return sum + p.totalBruto; }, 0);
+    var totalBloqueado = prestadores.reduce(function(sum, p) { return sum + p.bloqueado; }, 0);
+    var totalEscalas = prestadores.reduce(function(sum, p) { return sum + p.qtdEscalas; }, 0);
+    var totalCompartilhadas = prestadores.reduce(function(sum, p) { return sum + p.qtdEscalasCompartilhadas; }, 0);
+    var totalEscBloqueadas = prestadores.reduce(function(sum, p) { return sum + p.qtdEscalasBloqueadas; }, 0);
+    var pctLocalGeral = totalDisponivel > 0 ? (totalLocal / totalDisponivel) : 0;
+    var pctNaoLocalGeral = totalDisponivel > 0 ? (totalNaoLocal / totalDisponivel) : 0;
+    
+    sheet.getRange(linhaTotal, 1, 1, headers.length).setValues([['TOTAL GERAL', totalLocal, totalNaoLocal, totalDisponivel, totalBruto, totalBloqueado, pctLocalGeral, pctNaoLocalGeral, totalEscalas, totalCompartilhadas, totalEscBloqueadas]]);
+    sheet.getRange(linhaTotal, 1, 1, headers.length).setFontWeight('bold').setBackground('#E5E7EB');
+    sheet.getRange(linhaTotal, 2, 1, 5).setNumberFormat('#,##0');
+    sheet.getRange(linhaTotal, 7, 1, 2).setNumberFormat('0.0%');
+    sheet.getRange(linhaTotal, 9, 1, 3).setNumberFormat('#,##0');
+    
+    // ===== FORMATAÇÃO CONDICIONAL - barras nas % =====
+    for (var row = 7; row < 7 + linhas.length; row++) {
+      var pctLocal = sheet.getRange(row, 5).getValue();
+      var pctNaoLocal = sheet.getRange(row, 6).getValue();
+      
+      // Destaca prestadores com 100% local ou 100% não local
+      if (pctLocal >= 0.95) {
+        sheet.getRange(row, 5).setBackground('#DDD6FE'); // Lavanda
+      }
+      if (pctNaoLocal >= 0.95) {
+        sheet.getRange(row, 6).setBackground('#A7F3D0'); // Verde claro
+      }
+    }
+    
+    // ===== AUTO-AJUSTA COLUNAS =====
+    for (var i = 1; i <= headers.length; i++) {
+      sheet.autoResizeColumn(i);
+    }
+    
+    // ===== ADICIONA FILTROS =====
+    if (linhas.length > 0) {
+      sheet.getRange(6, 1, linhas.length + 1, headers.length).createFilter();
+    }
+    
+    // Força a gravação
+    SpreadsheetApp.flush();
+    Utilities.sleep(500);
+    
+    Logger.log('>>> Distribuição exportada com sucesso: ' + nomeArquivo);
+    
+    return {
+      sucesso: true,
+      url: 'https://docs.google.com/spreadsheets/d/' + ss.getId(),
+      mensagem: 'Relatório gerado com sucesso!'
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO ao exportar distribuição: ' + error.toString());
+    return { sucesso: false, mensagem: error.toString() };
+  }
+}
+
+/**
+ * Ordena array de prestadores para exportação
+ */
+function ordenarPrestadoresDistribuicao(prestadores, ordenacao) {
+  var copia = prestadores.slice();
+  
+  copia.sort(function(a, b) {
+    switch (ordenacao) {
+      case 'nome':
+        return a.nome.localeCompare(b.nome);
+      case 'total-desc':
+        return b.total - a.total;
+      case 'total-asc':
+        return a.total - b.total;
+      case 'local-desc':
+        var pA = a.total > 0 ? (a.local / a.total) : 0;
+        var pB = b.total > 0 ? (b.local / b.total) : 0;
+        return pB - pA;
+      case 'naolocal-desc':
+        var pNA = a.total > 0 ? (a.naoLocal / a.total) : 0;
+        var pNB = b.total > 0 ? (b.naoLocal / b.total) : 0;
+        return pNB - pNA;
+      default:
+        return a.nome.localeCompare(b.nome);
+    }
+  });
+  
+  return copia;
+}
+
+/**
+ * Exporta relatório para PDF
+ */
+function exportarRelatorioPDF(dados) {
+  try {
+    if (!dados || dados.length === 0) {
+      return { sucesso: false, mensagem: 'Nenhum dado para exportar.' };
+    }
+    
+    // Primeiro cria o Excel
+    var resultadoExcel = exportarRelatorioExcel(dados);
+    
+    if (!resultadoExcel.sucesso) {
+      return resultadoExcel;
+    }
+    
+    // Abre a planilha criada
+    var ssId = resultadoExcel.url.match(/\/d\/([a-zA-Z0-9-_]+)/)[1];
+    var ss = SpreadsheetApp.openById(ssId);
+    
+    // Gera PDF
+    var pdfBlob = ss.getAs('application/pdf');
+    pdfBlob.setName('Relatorio_Escalas_' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyyMMdd_HHmm') + '.pdf');
+    
+    // Salva no Drive
+    var file = DriveApp.createFile(pdfBlob);
+    
+    // Define permissão para qualquer pessoa com o link visualizar
+    file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+    
+    return {
+      sucesso: true,
+      url: file.getUrl(),
+      mensagem: 'PDF gerado com sucesso!'
+    };
+    
+  } catch (error) {
+    Logger.log('Erro ao exportar PDF: ' + error.toString());
+    return {
+      sucesso: false,
+      mensagem: error.toString()
+    };
+  }
+}
+// ============================================
+// FUNÇÕES DE COMPARAÇÃO FPO × SISREG
+// ============================================
+
+/**
+ * Lê os dados da aba Dados FPO
+ */
+function lerDadosFPO() {
+  try {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const sheet = ss.getSheetByName('Dados FPO');
+    
+    if (!sheet) {
+      Logger.log('>>> Aba "Dados FPO" não encontrada');
+      return [];
+    }
+    
+    const values = sheet.getDataRange().getValues();
+    
+    if (values.length <= 3) { // Cabeçalho + descrição + linha 3
+      return [];
+    }
+    
+    const dados = [];
+    // Começa na linha 4 (índice 3) pois linhas 1-3 são cabeçalho/descrição
+    for (let i = 3; i < values.length; i++) {
+      const cnes = (values[i][0] || '').toString().trim();
+      const codigoSigtap = (values[i][2] || '').toString().trim();
+      const qtdContratada = parseFloat(values[i][4]) || 0;
+      
+      if (cnes && codigoSigtap && qtdContratada > 0) {
+        dados.push({
+          cnes: cnes,
+          nome_prestador: (values[i][1] || '').toString().trim(),
+          codigo_sigtap: codigoSigtap,
+          nome_procedimento: (values[i][3] || '').toString().trim(),
+          qtd_contratada: qtdContratada,
+          competencia: (values[i][5] || '').toString().trim()
+        });
+      }
+    }
+    
+    Logger.log('>>> lerDadosFPO: ' + dados.length + ' registros');
+    return dados;
+  } catch (error) {
+    Logger.log('>>> ERRO em lerDadosFPO: ' + error.toString());
+    return [];
+  }
+}
+
+/**
+ * Lê os dados da aba DePara_Procedimentos
+ */
+function lerDePara() {
+  try {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const sheet = ss.getSheetByName('DePara_Procedimentos');
+    
+    if (!sheet) {
+      Logger.log('>>> Aba "DePara_Procedimentos" não encontrada');
+      return {};
+    }
+    
+    const values = sheet.getDataRange().getValues();
+    
+    if (values.length <= 3) {
+      return {};
+    }
+    
+    const dePara = {};
+    // Começa na linha 4 (índice 3)
+    for (let i = 3; i < values.length; i++) {
+      const codigoInterno = (values[i][0] || '').toString().trim();
+      const codigoSigtap = (values[i][1] || '').toString().trim();
+      const status = (values[i][4] || '').toString().toLowerCase().trim();
+      
+      if (codigoInterno && codigoSigtap && status === 'ativo') {
+        dePara[codigoInterno] = codigoSigtap;
+      }
+    }
+    
+    Logger.log('>>> lerDePara: ' + Object.keys(dePara).length + ' vinculações ativas');
+    return dePara;
+  } catch (error) {
+    Logger.log('>>> ERRO em lerDePara: ' + error.toString());
+    return {};
+  }
+}
+
+/**
+ * Retorna a comparação FPO × SISREG
+ * VERSÃO ATUALIZADA: Considera vigência das escalas no cálculo mensal
+ * @param {number} mesReferencia - Mês de referência (1-12)
+ * @param {number} anoReferencia - Ano de referência
+ */
+function getComparacaoFpoSisreg(mesReferencia, anoReferencia) {
+  try {
+    Logger.log('>>> getComparacaoFpoSisreg: INÍCIO - Mês: ' + mesReferencia + '/' + anoReferencia);
+    
+    const permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return { erro: true, mensagem: permissao.mensagem };
+    }
+    
+    // Se não informou mês/ano, usa o atual
+    if (!mesReferencia || !anoReferencia) {
+      var hoje = new Date();
+      mesReferencia = hoje.getMonth() + 1;
+      anoReferencia = hoje.getFullYear();
+    }
+    
+    // 1. Carregar dados
+    const dadosSisreg = lerDadosPlanilha();
+    const dadosFpo = lerDadosFPO();
+    const dePara = lerDePara();
+    
+    if (dadosFpo.length === 0) {
+      return { erro: true, mensagem: 'Aba "Dados FPO" não encontrada ou vazia.' };
+    }
+    
+    // 2. Identificar escalas compartilhadas e contar procedimentos por escala
+    const escalasProcedimentos = {};  // escala_codigo -> Set de item_codigo
+    const escalasVagas = {};          // escala_codigo -> total de vagas da escala
+    
+    dadosSisreg.forEach(function(d) {
+      const status = (d.escala_status || '').toString().toLowerCase().trim();
+      if (status !== 'ativo' && status !== 'ativa' && status !== 'expirado' && status !== 'expirada') return;
+      
+      const escalaCodigo = (d.escala_codigo || '').toString().trim();
+      const itemCodigo = (d.item_codigo || '').toString().trim();
+      
+      if (!escalaCodigo || !itemCodigo) return;
+      
+      // Conta procedimentos únicos por escala
+      if (!escalasProcedimentos[escalaCodigo]) {
+        escalasProcedimentos[escalaCodigo] = new Set();
+      }
+      escalasProcedimentos[escalaCodigo].add(itemCodigo);
+      
+      // Armazena vagas da escala (pega da primeira ocorrência)
+      if (!escalasVagas[escalaCodigo]) {
+        const rede = parseFloat(d['Rede'] || 0);
+        const retorno = parseFloat(d['Retorno '] || d['Retorno'] || 0);
+        const reserva = parseFloat(d['Reserva'] || 0);
+        escalasVagas[escalaCodigo] = rede + retorno + reserva;
+      }
+    });
+    
+    // Converte Sets para contagem
+    const escalasQtdProcedimentos = {};
+    Object.keys(escalasProcedimentos).forEach(function(escala) {
+      escalasQtdProcedimentos[escala] = escalasProcedimentos[escala].size;
+    });
+    
+    Logger.log('>>> Escalas identificadas: ' + Object.keys(escalasQtdProcedimentos).length);
+    
+    // 3. Agrupar SISREG por CNES + SIGTAP (COM DIVISÃO PROPORCIONAL, BLOQUEIOS E VIGÊNCIA)
+    const sisregAgrupado = {};
+    const procedimentosCompartilhados = new Set();
+    const escalasContabilizadas = {}; // Para evitar duplicação de escalas compartilhadas
+
+    dadosSisreg.forEach(function(d) {
+      const status = (d.escala_status || '').toString().toLowerCase().trim();
+      if (status !== 'ativo' && status !== 'ativa' && status !== 'expirado' && status !== 'expirada') return;
+      
+      const cnes = (d.unidade_codigo || '').toString().trim();
+      const codigoInterno = (d.item_codigo || '').toString().trim();
+      const nomeProcedimento = (d.item_nome || '').toString().trim();
+      const nomePrestador = (d.unidade_nome || '').toString().trim();
+      const escalaCodigo = (d.escala_codigo || '').toString().trim();
+      
+      if (!cnes || !codigoInterno) return;
+      
+      // Converte codigo_interno para codigo_sigtap usando DePara
+      const codigoSigtap = dePara[codigoInterno] || null;
+      
+      // Chave única para verificar duplicação
+      const chave = cnes + '|' + (codigoSigtap || 'SEM_SIGTAP_' + codigoInterno);
+      
+      // Inicializa estrutura de controle de escalas
+      if (!escalasContabilizadas[chave]) {
+        escalasContabilizadas[chave] = new Set();
+      }
+      
+      // Verifica se esta escala já foi contabilizada para esta combinação
+      if (escalaCodigo && escalasContabilizadas[chave].has(escalaCodigo)) {
+        return; // Escala já contabilizada, pula
+      }
+      
+      // Marca escala como contabilizada
+      if (escalaCodigo) {
+        escalasContabilizadas[chave].add(escalaCodigo);
+      }
+      
+      // *** NOVA LÓGICA: Calcula semanas no mês baseado na vigência ***
+      const vigenciaInicial = d.vigencia_inicial;
+      const vigenciaFinal = d.vigencia_final;
+      const semanasNoMes = calcularSemanasNoMes(vigenciaInicial, vigenciaFinal, mesReferencia, anoReferencia);
+      
+      // Se a escala não está ativa neste mês, pula
+      if (semanasNoMes === 0) {
+        return;
+      }
+      
+      // Calcula vagas totais da linha (semanal)
+      const rede = parseFloat(d['Rede'] || 0);
+      const retorno = parseFloat(d['Retorno '] || d['Retorno'] || 0);
+      const reserva = parseFloat(d['Reserva'] || 0);
+      let totalSemanal = rede + retorno + reserva;
+      
+      // Verifica bloqueio
+      const temBloqueio = (d.tem_afastamento_ativo || '').toString().toUpperCase().trim() === 'SIM';
+      let semanasComBloqueio = 0;
+      
+      if (temBloqueio) {
+        const dtInicio = d.dt_inicio_afastamento;
+        const dtFim = d.dt_fim_afastamento;
+        
+        if (dtInicio && dtFim) {
+          let dataInicio = converterParaData(dtInicio);
+          let dataFim = converterParaData(dtFim);
+          
+          if (dataInicio && dataFim && !isNaN(dataInicio.getTime()) && !isNaN(dataFim.getTime())) {
+            // Calcula bloqueio apenas dentro do mês de referência
+            const primeiroDiaMes = new Date(anoReferencia, mesReferencia - 1, 1);
+            const ultimoDiaMes = new Date(anoReferencia, mesReferencia, 0);
+            
+            // Ajusta datas do bloqueio para o mês de referência
+            const inicioBloqueioEfetivo = dataInicio > primeiroDiaMes ? dataInicio : primeiroDiaMes;
+            const fimBloqueioEfetivo = dataFim < ultimoDiaMes ? dataFim : ultimoDiaMes;
+            
+            if (inicioBloqueioEfetivo <= fimBloqueioEfetivo) {
+              const diffDias = Math.ceil((fimBloqueioEfetivo - inicioBloqueioEfetivo) / (1000 * 60 * 60 * 24)) + 1;
+              semanasComBloqueio = Math.min(semanasNoMes, Math.ceil(diffDias / 7));
+            }
+          }
+        } else {
+          // Se não tem datas específicas, considera bloqueio total nas semanas ativas
+          semanasComBloqueio = semanasNoMes;
+        }
+      }
+      
+      // Aplica divisão proporcional se escala compartilhada
+      const qtdProcedimentosNaEscala = escalasQtdProcedimentos[escalaCodigo] || 1;
+      let isCompartilhada = false;
+      
+      if (qtdProcedimentosNaEscala > 1) {
+        totalSemanal = totalSemanal / qtdProcedimentosNaEscala;
+        isCompartilhada = true;
+        procedimentosCompartilhados.add(chave);
+      }
+      
+      // *** Calcula total MENSAL baseado nas semanas ativas no mês ***
+      const totalMensal = totalSemanal * semanasNoMes;
+      const totalBloqueadoMensal = totalSemanal * semanasComBloqueio;
+      
+      if (!sisregAgrupado[chave]) {
+        sisregAgrupado[chave] = {
+          cnes: cnes,
+          nome_prestador: nomePrestador,
+          codigo_sigtap: codigoSigtap,
+          codigo_interno: codigoInterno,
+          nome_procedimento: nomeProcedimento,
+          total_mensal: 0,
+          total_mensal_bloqueado: 0,
+          tem_vinculo: !!codigoSigtap,
+          is_compartilhada: isCompartilhada,
+          tem_bloqueio: false,
+          bloqueio_total: false
+        };
+      }
+      
+      sisregAgrupado[chave].total_mensal += totalMensal;
+      
+      // Adiciona vagas bloqueadas
+      if (temBloqueio) {
+        sisregAgrupado[chave].tem_bloqueio = true;
+        sisregAgrupado[chave].total_mensal_bloqueado += totalBloqueadoMensal;
+        
+        // Se bloqueio cobre todas as semanas ativas, marca como bloqueio total
+        if (semanasComBloqueio >= semanasNoMes) {
+          sisregAgrupado[chave].bloqueio_total = true;
+        }
+      }
+      
+      if (isCompartilhada) {
+        sisregAgrupado[chave].is_compartilhada = true;
+      }
+    });
+    
+    // 4. Agrupar FPO por CNES + SIGTAP
+    const fpoAgrupado = {};
+    
+    dadosFpo.forEach(function(d) {
+      const chave = d.cnes + '|' + d.codigo_sigtap;
+      
+      if (!fpoAgrupado[chave]) {
+        fpoAgrupado[chave] = {
+          cnes: d.cnes,
+          nome_prestador: d.nome_prestador,
+          codigo_sigtap: d.codigo_sigtap,
+          nome_procedimento: d.nome_procedimento,
+          qtd_contratada: 0
+        };
+      }
+      
+      fpoAgrupado[chave].qtd_contratada += d.qtd_contratada;
+    });
+    
+    // 5. Fazer a comparação
+    const comparacao = {};
+    const alertas = {
+      somenteSisreg: [],
+      somenteFpo: []
+    };
+    
+    // 5.1 Processar todos do SISREG
+    Object.keys(sisregAgrupado).forEach(function(chave) {
+      const sisreg = sisregAgrupado[chave];
+      const totalMensal = Math.round(sisreg.total_mensal);
+      
+      if (!sisreg.tem_vinculo) {
+        alertas.somenteSisreg.push({
+          cnes: sisreg.cnes,
+          nome_prestador: sisreg.nome_prestador,
+          codigo_interno: sisreg.codigo_interno,
+          nome_procedimento: sisreg.nome_procedimento,
+          implantado: totalMensal,
+          motivo: 'Sem vínculo no DePara',
+          is_compartilhada: sisreg.is_compartilhada
+        });
+        return;
+      }
+      
+      const fpo = fpoAgrupado[chave];
+      
+      if (!comparacao[sisreg.cnes]) {
+        comparacao[sisreg.cnes] = {
+          cnes: sisreg.cnes,
+          nome_prestador: sisreg.nome_prestador,
+          total_contratado: 0,
+          total_implantado: 0,
+          total_bloqueado: 0,
+          total_disponivel: 0,
+          procedimentos: []
+        };
+      }
+
+      const contratado = fpo ? fpo.qtd_contratada : 0;
+      const implantado = totalMensal;
+      const bloqueado = Math.round(sisreg.total_mensal_bloqueado);
+      const disponivel = implantado - bloqueado;
+      const diferenca = implantado - contratado;
+      const diferencaDisponivel = disponivel - contratado;
+      const percentual = contratado > 0 ? Math.round((implantado / contratado) * 100) : (implantado > 0 ? 999 : 0);
+      const percentualDisponivel = contratado > 0 ? Math.round((disponivel / contratado) * 100) : (disponivel > 0 ? 999 : 0);
+
+      comparacao[sisreg.cnes].total_implantado += implantado;
+      comparacao[sisreg.cnes].total_contratado += contratado;
+      comparacao[sisreg.cnes].total_bloqueado += bloqueado;
+
+      // NOVO: Para o cálculo do percentual, limita disponível ao máximo do contratado
+      var disponivel_para_percentual = contratado > 0 ? Math.min(disponivel, contratado) : disponivel;
+      comparacao[sisreg.cnes].total_disponivel += disponivel;
+      comparacao[sisreg.cnes].total_disponivel_limitado = (comparacao[sisreg.cnes].total_disponivel_limitado || 0) + disponivel_para_percentual;
+
+      comparacao[sisreg.cnes].procedimentos.push({
+        codigo_sigtap: sisreg.codigo_sigtap,
+        nome_procedimento: fpo ? fpo.nome_procedimento : sisreg.nome_procedimento,
+        contratado: contratado,
+        implantado: implantado,
+        bloqueado: bloqueado,
+        disponivel: disponivel,
+        diferenca: diferenca,
+        diferenca_disponivel: diferencaDisponivel,
+        percentual: percentual,
+        percentual_disponivel: percentualDisponivel,
+        status: contratado === 0 ? 'sem_contrato' : (percentualDisponivel >= 100 ? 'ok' : (percentualDisponivel >= 80 ? 'atencao' : 'critico')),
+        is_compartilhada: sisreg.is_compartilhada,
+        tem_bloqueio: sisreg.tem_bloqueio,
+        bloqueio_total: sisreg.bloqueio_total
+      });
+      
+      if (!fpo) {
+        alertas.somenteSisreg.push({
+          cnes: sisreg.cnes,
+          nome_prestador: sisreg.nome_prestador,
+          codigo_sigtap: sisreg.codigo_sigtap,
+          nome_procedimento: sisreg.nome_procedimento,
+          implantado: implantado,
+          motivo: 'Não existe na FPO',
+          is_compartilhada: sisreg.is_compartilhada
+        });
+      }
+    });
+    
+    // 5.2 Verificar itens da FPO que não estão no SISREG
+    Object.keys(fpoAgrupado).forEach(function(chave) {
+      const fpo = fpoAgrupado[chave];
+      
+      if (!sisregAgrupado[chave]) {
+        if (!comparacao[fpo.cnes]) {
+          comparacao[fpo.cnes] = {
+            cnes: fpo.cnes,
+            nome_prestador: fpo.nome_prestador,
+            total_contratado: 0,
+            total_implantado: 0,
+            total_bloqueado: 0,
+            total_disponivel: 0,
+            procedimentos: []
+          };
+        }
+        
+        comparacao[fpo.cnes].total_contratado += fpo.qtd_contratada;
+        
+        comparacao[fpo.cnes].procedimentos.push({
+          codigo_sigtap: fpo.codigo_sigtap,
+          nome_procedimento: fpo.nome_procedimento,
+          contratado: fpo.qtd_contratada,
+          implantado: 0,
+          bloqueado: 0,
+          disponivel: 0,
+          diferenca: -fpo.qtd_contratada,
+          diferenca_disponivel: -fpo.qtd_contratada,
+          percentual: 0,
+          percentual_disponivel: 0,
+          status: 'nao_implantado',
+          is_compartilhada: false,
+          tem_bloqueio: false,
+          bloqueio_total: false
+        });
+        
+        alertas.somenteFpo.push({
+          cnes: fpo.cnes,
+          nome_prestador: fpo.nome_prestador,
+          codigo_sigtap: fpo.codigo_sigtap,
+          nome_procedimento: fpo.nome_procedimento,
+          contratado: fpo.qtd_contratada,
+          motivo: 'Não implantado no SISREG',
+          is_compartilhada: false
+        });
+      }
+    });
+    
+    // 6. Calcular percentuais dos prestadores e converter para array
+    const resultado = [];
+    
+    Object.keys(comparacao).forEach(function(cnes) {
+      const p = comparacao[cnes];
+      p.diferenca = p.total_implantado - p.total_contratado;
+      p.percentual = p.total_contratado > 0 ? Math.round((p.total_implantado / p.total_contratado) * 100) : 0;
+      // USA o valor limitado para calcular o percentual (máximo 100% por procedimento)
+      var disponivel_para_calc = p.total_disponivel_limitado !== undefined ? p.total_disponivel_limitado : p.total_disponivel;
+      p.percentual_disponivel = p.total_contratado > 0 ? Math.round((disponivel_para_calc / p.total_contratado) * 100) : 0;
+      // Limita o percentual geral a no máximo 100%
+      p.percentual_disponivel = Math.min(p.percentual_disponivel, 100);
+      p.status = p.percentual_disponivel >= 100 ? 'ok' : (p.percentual_disponivel >= 80 ? 'atencao' : 'critico');
+      
+      p.tem_compartilhada = p.procedimentos.some(function(proc) { return proc.is_compartilhada; });
+      
+      resultado.push(p);
+    });
+    
+    // Ordena por nome do prestador
+    resultado.sort(function(a, b) {
+      return a.nome_prestador.localeCompare(b.nome_prestador);
+    });
+    
+    Logger.log('>>> getComparacaoFpoSisreg: FIM - ' + resultado.length + ' prestadores');
+    
+    return {
+      erro: false,
+      prestadores: resultado,
+      alertas: alertas,
+      mes_referencia: mesReferencia,
+      ano_referencia: anoReferencia,
+      resumo: {
+        total_prestadores: resultado.length,
+        total_contratado: resultado.reduce(function(sum, p) { return sum + p.total_contratado; }, 0),
+        total_implantado: resultado.reduce(function(sum, p) { return sum + p.total_implantado; }, 0),
+        total_bloqueado: resultado.reduce(function(sum, p) { return sum + p.total_bloqueado; }, 0),
+        total_disponivel: resultado.reduce(function(sum, p) { return sum + p.total_disponivel; }, 0),
+        // NOVO: Total limitado para cálculo de percentual
+        total_disponivel_limitado: resultado.reduce(function(sum, p) { return sum + (p.total_disponivel_limitado || p.total_disponivel); }, 0),
+        sem_vinculo: alertas.somenteSisreg.filter(function(a) { return a.motivo === 'Sem vínculo no DePara'; }).length,
+        nao_implantados: alertas.somenteFpo.length
+      }
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO em getComparacaoFpoSisreg: ' + error.toString());
+    return { erro: true, mensagem: error.toString() };
+  }
+}
+
+/**
+ * Exporta relatório FPO × SISREG por prestador para Excel
+ * @param {number} mesReferencia - Mês de referência (1-12)
+ * @param {number} anoReferencia - Ano de referência
+ * @param {string} filtroPrestador - Filtro opcional por nome do prestador
+ */
+function exportarRelatorioFpoPorPrestador(mesReferencia, anoReferencia, filtroPrestador) {
+  try {
+    Logger.log('>>> exportarRelatorioFpoPorPrestador: INÍCIO');
+    
+    // Obtém os dados da comparação
+    const dados = getComparacaoFpoSisreg(mesReferencia, anoReferencia);
+    
+    if (dados.erro) {
+      return { sucesso: false, mensagem: dados.mensagem };
+    }
+    
+    if (!dados.prestadores || dados.prestadores.length === 0) {
+      return { sucesso: false, mensagem: 'Nenhum dado para exportar.' };
+    }
+    
+    // Aplica filtro de prestador se informado
+    let prestadores = dados.prestadores;
+    if (filtroPrestador && filtroPrestador.trim() !== '') {
+      const filtroLower = filtroPrestador.toLowerCase().trim();
+      prestadores = prestadores.filter(function(p) {
+        return p.nome_prestador.toLowerCase().indexOf(filtroLower) !== -1;
+      });
+    }
+    
+    if (prestadores.length === 0) {
+      return { sucesso: false, mensagem: 'Nenhum prestador encontrado com o filtro informado.' };
+    }
+    
+    // Cria uma nova planilha
+    const mesesNomes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    const nomeMes = mesesNomes[mesReferencia - 1];
+    const nomeArquivo = 'Relatorio_FPO_SISREG_' + nomeMes + '_' + anoReferencia + '_' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyyMMdd_HHmm');
+    
+    const ss = SpreadsheetApp.create(nomeArquivo);
+    
+    // ========== ABA 1: RESUMO POR PRESTADOR ==========
+    const sheetResumo = ss.getActiveSheet();
+    sheetResumo.setName('Resumo por Prestador');
+    
+    // Cabeçalho do relatório
+    sheetResumo.getRange('A1').setValue('RELATÓRIO FPO × SISREG - ' + nomeMes.toUpperCase() + ' ' + anoReferencia);
+    sheetResumo.getRange('A1').setFontSize(14).setFontWeight('bold').setBackground('#8B5CF6').setFontColor('white');
+    sheetResumo.getRange('A1:G1').merge();
+    
+    sheetResumo.getRange('A2').setValue('Gerado em: ' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'dd/MM/yyyy HH:mm'));
+    sheetResumo.getRange('A3').setValue('Total de Prestadores: ' + prestadores.length);
+    
+    // Cabeçalhos da tabela
+    const headersResumo = ['CNES', 'Prestador', 'Contratado (FPO)', 'Implantado (SISREG)', 'Bloqueado', 'Disponível', '% Disponível', 'Status'];
+    sheetResumo.getRange(5, 1, 1, headersResumo.length).setValues([headersResumo]);
+    sheetResumo.getRange(5, 1, 1, headersResumo.length).setFontWeight('bold').setBackground('#A78BFA').setFontColor('white');
+    
+    // Dados
+    const linhasResumo = prestadores.map(function(p) {
+      var statusTexto = '';
+      if (p.status === 'ok') statusTexto = '✅ OK';
+      else if (p.status === 'atencao') statusTexto = '⚠️ Atenção';
+      else if (p.status === 'critico') statusTexto = '❌ Crítico';
+      
+      return [
+        p.cnes,
+        p.nome_prestador,
+        p.total_contratado,
+        p.total_implantado,
+        p.total_bloqueado,
+        p.total_disponivel,
+        p.percentual_disponivel + '%',
+        statusTexto
+      ];
+    });
+    
+    if (linhasResumo.length > 0) {
+      sheetResumo.getRange(6, 1, linhasResumo.length, headersResumo.length).setValues(linhasResumo);
+      sheetResumo.getRange(6, 3, linhasResumo.length, 4).setNumberFormat('#,##0');
+    }
+    
+    // Formatação condicional por status
+    for (var row = 6; row < 6 + linhasResumo.length; row++) {
+      var status = sheetResumo.getRange(row, 8).getValue();
+      if (status.indexOf('OK') !== -1) {
+        sheetResumo.getRange(row, 1, 1, headersResumo.length).setBackground('#D1FAE5');
+      } else if (status.indexOf('Atenção') !== -1) {
+        sheetResumo.getRange(row, 1, 1, headersResumo.length).setBackground('#FEF3C7');
+      } else if (status.indexOf('Crítico') !== -1) {
+        sheetResumo.getRange(row, 1, 1, headersResumo.length).setBackground('#FEE2E2');
+      }
+    }
+    
+    // Linha de totais
+    const linhaTotal = 6 + linhasResumo.length;
+    const totalContratado = prestadores.reduce(function(sum, p) { return sum + p.total_contratado; }, 0);
+    const totalImplantado = prestadores.reduce(function(sum, p) { return sum + p.total_implantado; }, 0);
+    const totalBloqueado = prestadores.reduce(function(sum, p) { return sum + p.total_bloqueado; }, 0);
+    const totalDisponivel = prestadores.reduce(function(sum, p) { return sum + p.total_disponivel; }, 0);
+    const percentualGeral = totalContratado > 0 ? Math.round((totalDisponivel / totalContratado) * 100) : 0;
+    
+    sheetResumo.getRange(linhaTotal, 1, 1, headersResumo.length).setValues([['', 'TOTAL GERAL', totalContratado, totalImplantado, totalBloqueado, totalDisponivel, percentualGeral + '%', '']]);
+    sheetResumo.getRange(linhaTotal, 1, 1, headersResumo.length).setFontWeight('bold').setBackground('#E5E7EB');
+    sheetResumo.getRange(linhaTotal, 3, 1, 4).setNumberFormat('#,##0');
+    
+    // Auto-ajusta colunas
+    for (var i = 1; i <= headersResumo.length; i++) {
+      sheetResumo.autoResizeColumn(i);
+    }
+    
+    // Adiciona filtros
+    if (linhasResumo.length > 0) {
+      sheetResumo.getRange(5, 1, linhasResumo.length + 1, headersResumo.length).createFilter();
+    }
+    
+    // ========== ABA 2: DETALHAMENTO POR PROCEDIMENTO ==========
+    const sheetDetalhe = ss.insertSheet('Detalhamento Procedimentos');
+    
+    // Cabeçalho
+    sheetDetalhe.getRange('A1').setValue('DETALHAMENTO POR PROCEDIMENTO - ' + nomeMes.toUpperCase() + ' ' + anoReferencia);
+    sheetDetalhe.getRange('A1').setFontSize(14).setFontWeight('bold').setBackground('#8B5CF6').setFontColor('white');
+    sheetDetalhe.getRange('A1:J1').merge();
+    
+    // Cabeçalhos da tabela
+    const headersDetalhe = ['CNES', 'Prestador', 'Código SIGTAP', 'Procedimento', 'Contratado', 'Implantado', 'Bloqueado', 'Disponível', '% Disp.', 'Status'];
+    sheetDetalhe.getRange(3, 1, 1, headersDetalhe.length).setValues([headersDetalhe]);
+    sheetDetalhe.getRange(3, 1, 1, headersDetalhe.length).setFontWeight('bold').setBackground('#A78BFA').setFontColor('white');
+    
+    // Dados detalhados
+    const linhasDetalhe = [];
+    prestadores.forEach(function(p) {
+      p.procedimentos.forEach(function(proc) {
+        var statusTexto = '';
+        if (proc.status === 'ok') statusTexto = '✅ OK';
+        else if (proc.status === 'atencao') statusTexto = '⚠️ Atenção';
+        else if (proc.status === 'critico') statusTexto = '❌ Crítico';
+        else if (proc.status === 'nao_implantado') statusTexto = '🚫 Não Implantado';
+        else if (proc.status === 'sem_contrato') statusTexto = '📋 Sem Contrato';
+        
+        linhasDetalhe.push([
+          p.cnes,
+          p.nome_prestador,
+          proc.codigo_sigtap,
+          proc.nome_procedimento + (proc.is_compartilhada ? ' ≈' : ''),
+          proc.contratado,
+          proc.implantado,
+          proc.bloqueado,
+          proc.disponivel,
+          proc.percentual_disponivel + '%',
+          statusTexto
+        ]);
+      });
+    });
+    
+    if (linhasDetalhe.length > 0) {
+      sheetDetalhe.getRange(4, 1, linhasDetalhe.length, headersDetalhe.length).setValues(linhasDetalhe);
+      sheetDetalhe.getRange(4, 5, linhasDetalhe.length, 4).setNumberFormat('#,##0');
+    }
+    
+    // Auto-ajusta colunas
+    for (var j = 1; j <= headersDetalhe.length; j++) {
+      sheetDetalhe.autoResizeColumn(j);
+    }
+    
+    // Adiciona filtros
+    if (linhasDetalhe.length > 0) {
+      sheetDetalhe.getRange(3, 1, linhasDetalhe.length + 1, headersDetalhe.length).createFilter();
+    }
+    
+    // Formatação condicional
+    for (var rowD = 4; rowD < 4 + linhasDetalhe.length; rowD++) {
+      var statusD = sheetDetalhe.getRange(rowD, 10).getValue();
+      if (statusD.indexOf('OK') !== -1) {
+        sheetDetalhe.getRange(rowD, 1, 1, headersDetalhe.length).setBackground('#D1FAE5');
+      } else if (statusD.indexOf('Atenção') !== -1) {
+        sheetDetalhe.getRange(rowD, 1, 1, headersDetalhe.length).setBackground('#FEF3C7');
+      } else if (statusD.indexOf('Crítico') !== -1 || statusD.indexOf('Não Implantado') !== -1) {
+        sheetDetalhe.getRange(rowD, 1, 1, headersDetalhe.length).setBackground('#FEE2E2');
+      }
+    }
+    
+    Logger.log('>>> Relatório FPO exportado com sucesso: ' + nomeArquivo);
+    
+    // Força a gravação de todas as alterações pendentes
+    SpreadsheetApp.flush();
+
+    // Pequena pausa para garantir que tudo foi salvo
+    Utilities.sleep(500);
+
+    Logger.log('>>> Relatório gerado: ' + ss.getUrl());
+
+    return {
+      sucesso: true,
+      url: 'https://docs.google.com/spreadsheets/d/' + ss.getId(),
+      mensagem: 'Relatório gerado com sucesso!'
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO ao exportar relatório FPO: ' + error.toString());
+    return {
+      sucesso: false,
+      mensagem: error.toString()
+    };
+  }
+}
+
+// ============================================
+// FUNÇÕES DE COMPARAÇÃO TETO × OFERTA
+// ============================================
+
+/**
+ * Lê os dados da aba Tabela_Teto
+ */
+function lerTabelaTeto() {
+  try {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const sheet = ss.getSheetByName('Tabela_Teto');
+    
+    if (!sheet) {
+      Logger.log('>>> Aba "Tabela_Teto" não encontrada');
+      return {};
+    }
+    
+    const values = sheet.getDataRange().getValues();
+    
+    if (values.length <= 1) {
+      return {};
+    }
+    
+    // Identifica índices das colunas pelo cabeçalho
+    const headers = values[0];
+    let idxUnidade = -1;
+    let idxProcedimento = -1;
+    let idxTeto = -1;
+    
+    for (let i = 0; i < headers.length; i++) {
+      const header = (headers[i] || '').toString().toLowerCase().trim();
+      if (header === 'unidade_codigo' || header === 'cnes') {
+        idxUnidade = i;
+      } else if (header === 'procedimento_codigo' || header === 'codigo_procedimento') {
+        idxProcedimento = i;
+      } else if (header === 'teto' || header === 'valor_teto' || header === 'qtd_teto') {
+        idxTeto = i;
+      }
+    }
+    
+    // Se não encontrou pelo nome, assume posições padrão
+    if (idxUnidade === -1) idxUnidade = 0;
+    if (idxProcedimento === -1) idxProcedimento = 1;
+    if (idxTeto === -1) idxTeto = 2;
+    
+    const tetos = {};
+    
+    // Começa na linha 2 (índice 1) para pular cabeçalho
+    for (let i = 1; i < values.length; i++) {
+      const unidadeCodigo = (values[i][idxUnidade] || '').toString().trim();
+      const procedimentoCodigo = (values[i][idxProcedimento] || '').toString().trim();
+      const valorTeto = parseFloat(values[i][idxTeto]) || 0;
+      
+      if (unidadeCodigo && procedimentoCodigo) {
+        const chave = unidadeCodigo + '|' + procedimentoCodigo;
+        tetos[chave] = {
+          unidade_codigo: unidadeCodigo,
+          procedimento_codigo: procedimentoCodigo,
+          valor_teto: valorTeto
+        };
+      }
+    }
+    
+    Logger.log('>>> lerTabelaTeto: ' + Object.keys(tetos).length + ' registros de teto');
+    return tetos;
+  } catch (error) {
+    Logger.log('>>> ERRO em lerTabelaTeto: ' + error.toString());
+    return {};
+  }
+}
+
+/**
+ * Retorna a comparação Teto × Oferta
+ * VERSÃO CORRIGIDA: Conta cada escala apenas uma vez, mesmo se compartilhada
+ */
+function getComparacaoTetoOferta() {
+  try {
+    Logger.log('>>> getComparacaoTetoOferta: INÍCIO');
+    
+    const permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return { erro: true, mensagem: permissao.mensagem };
+    }
+    
+    // 1. Carregar dados
+    const dadosSisreg = lerDadosPlanilha();
+    const tabelaTeto = lerTabelaTeto();
+    
+    if (Object.keys(tabelaTeto).length === 0) {
+      return { erro: true, mensagem: 'Aba "Tabela_Teto" não encontrada ou vazia.' };
+    }
+    
+    Logger.log('>>> Dados SISREG: ' + dadosSisreg.length + ' registros');
+    Logger.log('>>> Tabela Teto: ' + Object.keys(tabelaTeto).length + ' registros');
+    
+    // 2. Agrupar ofertas por unidade_codigo + procedimento_codigo
+    // CORREÇÃO: Usar Set para rastrear escalas já contabilizadas
+    const ofertasAgrupadas = {};
+    const prestadoresInfo = {};
+    const escalasContabilizadas = {}; // Chave: unidade_codigo|procedimento_codigo -> Set de escala_codigo
+    
+    dadosSisreg.forEach(function(d) {
+      // Filtra apenas ativos
+      const status = (d.escala_status || '').toString().toLowerCase().trim();
+      if (status !== 'ativo' && status !== 'ativa') return;
+      
+      const unidadeCodigo = (d.unidade_codigo || '').toString().trim();
+      const procedimentoCodigo = (d.procedimento_codigo || '').toString().trim();
+      const nomePrestador = (d.unidade_nome || '').toString().trim();
+      const nomeProcedimento = (d.procedimento_nome || '').toString().trim();
+      const escalaCodigo = (d.escala_codigo || '').toString().trim();
+      
+      if (!unidadeCodigo || !procedimentoCodigo) return;
+      
+      // Armazena info do prestador
+      if (!prestadoresInfo[unidadeCodigo]) {
+        prestadoresInfo[unidadeCodigo] = nomePrestador;
+      }
+      
+      // Chave única para agrupamento
+      const chave = unidadeCodigo + '|' + procedimentoCodigo;
+      
+      // Inicializa estruturas se não existirem
+      if (!escalasContabilizadas[chave]) {
+        escalasContabilizadas[chave] = new Set();
+      }
+      
+      if (!ofertasAgrupadas[chave]) {
+        ofertasAgrupadas[chave] = {
+          unidade_codigo: unidadeCodigo,
+          nome_prestador: nomePrestador,
+          procedimento_codigo: procedimentoCodigo,
+          nome_procedimento: nomeProcedimento,
+          total_oferta: 0,
+          qtd_escalas: 0,
+          escalas_unicas: new Set()
+        };
+      }
+      
+      // CORREÇÃO PRINCIPAL: Verifica se esta escala já foi contabilizada para esta combinação
+      if (escalaCodigo && escalasContabilizadas[chave].has(escalaCodigo)) {
+        // Escala já contabilizada, pula para não somar duplicado
+        Logger.log('>>> Escala ' + escalaCodigo + ' já contabilizada para ' + chave + ', pulando...');
+        return;
+      }
+      
+      // Marca escala como contabilizada
+      if (escalaCodigo) {
+        escalasContabilizadas[chave].add(escalaCodigo);
+        ofertasAgrupadas[chave].escalas_unicas.add(escalaCodigo);
+      }
+      
+      // Soma as vagas originais (apenas uma vez por escala)
+      const vagasPrimeiraVez = parseFloat(d['vagas_primeira_vez_original'] || 0);
+      const vagasRetorno = parseFloat(d['vagas_retorno_original'] || 0);
+      const vagasReserva = parseFloat(d['vagas_reserva_original'] || 0);
+      const totalVagas = vagasPrimeiraVez + vagasRetorno + vagasReserva;
+      
+      ofertasAgrupadas[chave].total_oferta += totalVagas;
+      ofertasAgrupadas[chave].qtd_escalas += 1;
+    });
+    
+    // Converte Set para número na contagem de escalas únicas
+    Object.keys(ofertasAgrupadas).forEach(function(chave) {
+      ofertasAgrupadas[chave].qtd_escalas = ofertasAgrupadas[chave].escalas_unicas.size;
+      delete ofertasAgrupadas[chave].escalas_unicas; // Remove o Set para não enviar ao frontend
+    });
+    
+    Logger.log('>>> Ofertas agrupadas: ' + Object.keys(ofertasAgrupadas).length + ' combinações');
+    
+    // 3. Fazer a comparação e agrupar por prestador
+    const prestadores = {};
+    const alertas = {
+      semTeto: [],      // Procedimentos sem teto cadastrado
+      excedidos: []     // Procedimentos que excedem o teto
+    };
+    
+    // 3.1 Processar ofertas e comparar com teto
+    Object.keys(ofertasAgrupadas).forEach(function(chave) {
+      const oferta = ofertasAgrupadas[chave];
+      const teto = tabelaTeto[chave];
+      
+      const unidadeCodigo = oferta.unidade_codigo;
+      
+      // Inicializa prestador se não existir
+      if (!prestadores[unidadeCodigo]) {
+        prestadores[unidadeCodigo] = {
+          unidade_codigo: unidadeCodigo,
+          nome_prestador: oferta.nome_prestador,
+          total_procedimentos: 0,
+          total_oferta: 0,
+          total_teto: 0,
+          qtd_ok: 0,
+          qtd_atencao: 0,
+          qtd_excedido: 0,
+          qtd_sem_teto: 0,
+          procedimentos: []
+        };
+      }
+      
+      const p = prestadores[unidadeCodigo];
+      p.total_procedimentos += 1;
+      p.total_oferta += oferta.total_oferta;
+      
+      let valorTeto = 0;
+      let status = '';
+      let diferenca = 0;
+      let percentual = 0;
+      let temTeto = false;
+      
+      if (teto) {
+        temTeto = true;
+        valorTeto = teto.valor_teto;
+        p.total_teto += valorTeto;
+        diferenca = oferta.total_oferta - valorTeto;
+        
+        // CORREÇÃO: Se teto é 0 e tem oferta, considera como excedido (percentual infinito)
+        if (valorTeto === 0) {
+          percentual = oferta.total_oferta > 0 ? 999 : 0;
+        } else {
+          percentual = Math.round((oferta.total_oferta / valorTeto) * 100);
+        }
+        
+        // CORREÇÃO: Teto 0 com qualquer oferta > 0 é excedido
+        if (valorTeto === 0 && oferta.total_oferta > 0) {
+          status = 'excedido';
+          p.qtd_excedido += 1;
+          
+          alertas.excedidos.push({
+            unidade_codigo: unidadeCodigo,
+            nome_prestador: oferta.nome_prestador,
+            procedimento_codigo: oferta.procedimento_codigo,
+            nome_procedimento: oferta.nome_procedimento,
+            teto: valorTeto,
+            oferta: Math.round(oferta.total_oferta),
+            excesso: Math.round(diferenca)
+          });
+        } else if (percentual <= 90) {
+          status = 'ok';
+          p.qtd_ok += 1;
+        } else if (percentual <= 100) {
+          status = 'atencao';
+          p.qtd_atencao += 1;
+        } else {
+          status = 'excedido';
+          p.qtd_excedido += 1;
+          
+          alertas.excedidos.push({
+            unidade_codigo: unidadeCodigo,
+            nome_prestador: oferta.nome_prestador,
+            procedimento_codigo: oferta.procedimento_codigo,
+            nome_procedimento: oferta.nome_procedimento,
+            teto: valorTeto,
+            oferta: Math.round(oferta.total_oferta),
+            excesso: Math.round(diferenca)
+          });
+        }
+      }
+
+      p.procedimentos.push({
+        procedimento_codigo: oferta.procedimento_codigo,
+        nome_procedimento: oferta.nome_procedimento,
+        teto: valorTeto,
+        oferta: Math.round(oferta.total_oferta),
+        diferenca: Math.round(diferenca),
+        percentual: percentual,
+        status: status,
+        tem_teto: temTeto,
+        qtd_escalas: oferta.qtd_escalas
+      });
+    });
+    
+    // 3.2 Verificar tetos que não têm oferta (procedimentos não implantados)
+    Object.keys(tabelaTeto).forEach(function(chave) {
+      if (!ofertasAgrupadas[chave]) {
+        const teto = tabelaTeto[chave];
+        const unidadeCodigo = teto.unidade_codigo;
+        const nomePrestador = prestadoresInfo[unidadeCodigo] || 'Prestador ' + unidadeCodigo;
+        
+        // Inicializa prestador se não existir
+        if (!prestadores[unidadeCodigo]) {
+          prestadores[unidadeCodigo] = {
+            unidade_codigo: unidadeCodigo,
+            nome_prestador: nomePrestador,
+            total_procedimentos: 0,
+            total_oferta: 0,
+            total_teto: 0,
+            qtd_ok: 0,
+            qtd_atencao: 0,
+            qtd_excedido: 0,
+            qtd_sem_teto: 0,
+            procedimentos: []
+          };
+        }
+        
+        const p = prestadores[unidadeCodigo];
+        p.total_procedimentos += 1;
+        p.total_teto += teto.valor_teto;
+        p.qtd_ok += 1; // Sem oferta = não excede
+        
+        p.procedimentos.push({
+          procedimento_codigo: teto.procedimento_codigo,
+          nome_procedimento: 'Procedimento ' + teto.procedimento_codigo,
+          teto: teto.valor_teto,
+          oferta: 0,
+          diferenca: -teto.valor_teto,
+          percentual: 0,
+          status: 'sem_oferta',
+          tem_teto: true,
+          qtd_escalas: 0
+        });
+      }
+    });
+    
+    // 4. Calcular status geral de cada prestador e converter para array
+    const resultado = [];
+    
+    Object.keys(prestadores).forEach(function(unidadeCodigo) {
+      const p = prestadores[unidadeCodigo];
+      
+      // Arredonda totais
+      p.total_oferta = Math.round(p.total_oferta);
+      p.total_teto = Math.round(p.total_teto);
+      
+      // Calcula percentual geral
+      p.percentual_geral = p.total_teto > 0 ? Math.round((p.total_oferta / p.total_teto) * 100) : 0;
+      
+      // Define status geral
+      if (p.qtd_excedido > 0) {
+        p.status = 'excedido';
+      } else if (p.qtd_atencao > 0 || p.qtd_sem_teto > 0) {
+        p.status = 'atencao';
+      } else {
+        p.status = 'ok';
+      }
+      
+      // Ordena procedimentos: excedidos primeiro, depois atenção, depois sem_teto, depois ok
+      p.procedimentos.sort(function(a, b) {
+        const ordem = { 'excedido': 0, 'atencao': 1, 'sem_teto': 2, 'ok': 3, 'sem_oferta': 4 };
+        return (ordem[a.status] || 5) - (ordem[b.status] || 5);
+      });
+      
+      resultado.push(p);
+    });
+    
+    // Ordena prestadores por nome
+    resultado.sort(function(a, b) {
+      return a.nome_prestador.localeCompare(b.nome_prestador);
+    });
+    
+    // 5. Calcula resumo geral
+    const resumo = {
+      total_prestadores: resultado.length,
+      total_procedimentos: resultado.reduce(function(sum, p) { return sum + p.total_procedimentos; }, 0),
+      total_oferta: resultado.reduce(function(sum, p) { return sum + p.total_oferta; }, 0),
+      total_teto: resultado.reduce(function(sum, p) { return sum + p.total_teto; }, 0),
+      qtd_ok: resultado.reduce(function(sum, p) { return sum + p.qtd_ok; }, 0),
+      qtd_atencao: resultado.reduce(function(sum, p) { return sum + p.qtd_atencao; }, 0),
+      qtd_excedido: resultado.reduce(function(sum, p) { return sum + p.qtd_excedido; }, 0),
+      qtd_sem_teto: resultado.reduce(function(sum, p) { return sum + p.qtd_sem_teto; }, 0),
+      prestadores_excedidos: resultado.filter(function(p) { return p.status === 'excedido'; }).length
+    };
+    
+    resumo.percentual_conformidade = resumo.total_procedimentos > 0 
+      ? Math.round(((resumo.qtd_ok + resumo.qtd_atencao) / resumo.total_procedimentos) * 100) 
+      : 0;
+    
+    Logger.log('>>> getComparacaoTetoOferta: FIM - ' + resultado.length + ' prestadores');
+    
+    return {
+      erro: false,
+      prestadores: resultado,
+      alertas: alertas,
+      resumo: resumo
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO em getComparacaoTetoOferta: ' + error.toString());
+    return { erro: true, mensagem: error.toString() };
+  }
+}
+
+/**
+ * Calcula quantas semanas (ocorrências) uma escala tem dentro de um mês específico
+ * Como cada escala ocorre 1 vez por semana, conta quantas semanas estão cobertas
+ */
+function calcularSemanasNoMes(vigenciaInicial, vigenciaFinal, mes, ano) {
+  try {
+    // Se não tem vigência, considera ativa o mês inteiro (4 semanas)
+    if (!vigenciaInicial && !vigenciaFinal) {
+      return 4;
+    }
+    
+    // Primeiro e último dia do mês de referência
+    var primeiroDiaMes = new Date(ano, mes - 1, 1);
+    var ultimoDiaMes = new Date(ano, mes, 0);
+    
+    // Converte vigências para Date
+    var dataInicio = converterParaData(vigenciaInicial);
+    var dataFim = converterParaData(vigenciaFinal);
+    
+    // Se não conseguiu converter, considera ativa o mês inteiro
+    if (!dataInicio) dataInicio = new Date(1900, 0, 1);
+    if (!dataFim) dataFim = new Date(2100, 11, 31);
+    
+    // Verifica se a escala está fora do mês completamente
+    if (dataFim < primeiroDiaMes || dataInicio > ultimoDiaMes) {
+      return 0; // Escala não está ativa neste mês
+    }
+    
+    // Calcula o período efetivo dentro do mês
+    var inicioEfetivo = dataInicio > primeiroDiaMes ? dataInicio : primeiroDiaMes;
+    var fimEfetivo = dataFim < ultimoDiaMes ? dataFim : ultimoDiaMes;
+    
+    // Calcula dias ativos no mês
+    var diasAtivos = Math.ceil((fimEfetivo - inicioEfetivo) / (1000 * 60 * 60 * 24)) + 1;
+    
+    // Cada 7 dias = 1 semana (1 ocorrência)
+    // Arredonda para cima pois mesmo 1 dia já conta como 1 ocorrência
+    var semanas = Math.ceil(diasAtivos / 7);
+    
+    // Limita a no máximo 5 semanas (alguns meses podem ter 5 ocorrências de um dia)
+    return Math.min(semanas, 5);
+    
+  } catch (error) {
+    Logger.log('>>> ERRO em calcularSemanasNoMes: ' + error.toString());
+    return 4; // Em caso de erro, considera o mês inteiro
+  }
+}
+
+// ============================================
+// AVALIAÇÃO DE PRESTADORES - CÓDIGO BACKEND
+// Adicionar ao arquivo Code.gs
+// ============================================
+
+// ============================================
+// CONFIGURAÇÃO - Adicionar ao CONFIG existente
+// ============================================
+// No objeto CONFIG, adicione:
+// AVALIACAO_SHEET: 'Dados_Avaliacao'
+
+// ============================================
+// FUNÇÃO PARA CRIAR A ABA DE DADOS
+// Execute UMA VEZ para criar a estrutura
+// ============================================
+
+/**
+ * Cria a aba Dados_Avaliacao com a estrutura necessária
+ * EXECUTAR UMA VEZ para criar a estrutura
+ */
+function criarAbaDadosAvaliacao() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName('Dados_Avaliacao');
+  
+  if (!sheet) {
+    sheet = ss.insertSheet('Dados_Avaliacao');
+    
+    // Cabeçalhos
+    const headers = [
+      'cnes',
+      'nome_prestador', 
+      'ano',
+      'mes',
+      'tipo_fixado',      // Pré-Fixado / Pós-Fixado
+      'complexidade',     // ALTA / MÉDIA / FAEC
+      'modalidade',       // Ambulatorial / Hospitalar
+      'meta',
+      'producao',
+      'desempenho',       // Decimal (0-1+)
+      'classificacao'     // Insatisfatório / Regular / Bom / Ótimo
+    ];
+    
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    sheet.getRange(1, 1, 1, headers.length).setFontWeight('bold');
+    sheet.getRange(1, 1, 1, headers.length).setBackground('#8B5CF6');
+    sheet.getRange(1, 1, 1, headers.length).setFontColor('white');
+    
+    // Validação para classificação
+    const regraClassif = SpreadsheetApp.newDataValidation()
+      .requireValueInList(['Insatisfatório', 'Regular', 'Bom', 'Ótimo'], true)
+      .setAllowInvalid(false)
+      .build();
+    sheet.getRange('K2:K1000').setDataValidation(regraClassif);
+    
+    // Validação para tipo_fixado
+    const regraTipo = SpreadsheetApp.newDataValidation()
+      .requireValueInList(['Pré-Fixado', 'Pós-Fixado'], true)
+      .setAllowInvalid(false)
+      .build();
+    sheet.getRange('E2:E1000').setDataValidation(regraTipo);
+    
+    // Validação para complexidade
+    const regraComplex = SpreadsheetApp.newDataValidation()
+      .requireValueInList(['ALTA', 'MÉDIA', 'FAEC'], true)
+      .setAllowInvalid(false)
+      .build();
+    sheet.getRange('F2:F1000').setDataValidation(regraComplex);
+    
+    // Validação para modalidade
+    const regraModal = SpreadsheetApp.newDataValidation()
+      .requireValueInList(['Ambulatorial', 'Hospitalar'], true)
+      .setAllowInvalid(false)
+      .build();
+    sheet.getRange('G2:G1000').setDataValidation(regraModal);
+    
+    // Formata colunas numéricas
+    sheet.getRange('H2:I1000').setNumberFormat('#,##0');
+    sheet.getRange('J2:J1000').setNumberFormat('0.00%');
+    
+    // Ajusta largura das colunas
+    sheet.setColumnWidth(1, 100);  // cnes
+    sheet.setColumnWidth(2, 250);  // nome_prestador
+    sheet.setColumnWidth(3, 60);   // ano
+    sheet.setColumnWidth(4, 60);   // mes
+    sheet.setColumnWidth(5, 100);  // tipo_fixado
+    sheet.setColumnWidth(6, 100);  // complexidade
+    sheet.setColumnWidth(7, 100);  // modalidade
+    sheet.setColumnWidth(8, 100);  // meta
+    sheet.setColumnWidth(9, 100);  // producao
+    sheet.setColumnWidth(10, 100); // desempenho
+    sheet.setColumnWidth(11, 120); // classificacao
+    
+    // Adiciona dados de exemplo
+    const exemplosDados = [
+      ['9606823', 'CLÍNICA BEM ESTAR', 2025, 11, 'Pré-Fixado', 'MÉDIA', 'Ambulatorial', 1338, 1412, 1.055, 'Ótimo'],
+      ['9606823', 'CLÍNICA BEM ESTAR', 2025, 12, 'Pré-Fixado', 'MÉDIA', 'Ambulatorial', 1338, 996, 0.744, 'Regular'],
+      ['9606823', 'CLÍNICA BEM ESTAR', 2026, 1, 'Pré-Fixado', 'MÉDIA', 'Ambulatorial', 1338, 958, 0.716, 'Regular'],
+    ];
+    
+    sheet.getRange(2, 1, exemplosDados.length, exemplosDados[0].length).setValues(exemplosDados);
+    
+    Logger.log('>>> Aba Dados_Avaliacao criada com sucesso!');
+    return 'Aba "Dados_Avaliacao" criada com sucesso! Preencha os dados dos prestadores.';
+  } else {
+    Logger.log('>>> Aba Dados_Avaliacao já existe.');
+    return 'Aba "Dados_Avaliacao" já existe.';
+  }
+}
+
+// ============================================
+// FUNÇÕES DE LEITURA DE DADOS DE AVALIAÇÃO
+// ============================================
+
+/**
+ * Lê os dados da aba Dados_Avaliacao
+ */
+function lerDadosAvaliacao() {
+  try {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const sheet = ss.getSheetByName('Dados_Avaliacao');
+    
+    if (!sheet) {
+      Logger.log('>>> Aba "Dados_Avaliacao" não encontrada');
+      return [];
+    }
+    
+    const values = sheet.getDataRange().getValues();
+    
+    if (values.length <= 1) {
+      return [];
+    }
+    
+    const headers = values[0];
+    const dados = [];
+    
+    for (let i = 1; i < values.length; i++) {
+      const row = {};
+      for (let j = 0; j < headers.length; j++) {
+        row[headers[j]] = values[i][j];
+      }
+      
+      // Só adiciona se tem dados essenciais
+      if (row.cnes && row.nome_prestador && row.ano && row.mes) {
+        dados.push(row);
+      }
+    }
+    
+    Logger.log('>>> lerDadosAvaliacao: ' + dados.length + ' registros');
+    return dados;
+  } catch (error) {
+    Logger.log('>>> ERRO em lerDadosAvaliacao: ' + error.toString());
+    return [];
+  }
+}
+
+/**
+ * Retorna avaliações dos prestadores para um período (trimestre)
+ * @param {number} mesReferencia - Mês de referência (1-12)
+ * @param {number} anoReferencia - Ano de referência
+ */
+function getAvaliacaoPrestadores(mesReferencia, anoReferencia) {
+  try {
+    Logger.log('>>> getAvaliacaoPrestadores: INÍCIO - Mês: ' + mesReferencia + '/' + anoReferencia);
+    
+    const permissao = verificarPermissao();
+    if (!permissao.autorizado) {
+      return { erro: true, mensagem: permissao.mensagem };
+    }
+    
+    // Se não informou mês/ano, usa o atual
+    if (!mesReferencia || !anoReferencia) {
+      var hoje = new Date();
+      mesReferencia = hoje.getMonth() + 1;
+      anoReferencia = hoje.getFullYear();
+    }
+    
+    const dados = lerDadosAvaliacao();
+    
+    if (dados.length === 0) {
+      return {
+        erro: false,
+        prestadores: [],
+        resumo: {
+          totalPrestadores: 0,
+          desempenhoGeral: 0,
+          qtdSatisfatorio: 0,
+          qtdAtencao: 0,
+          qtdCritico: 0
+        },
+        trimestre: [],
+        mes_referencia: mesReferencia,
+        ano_referencia: anoReferencia
+      };
+    }
+    
+    // Calcula o trimestre (mês atual + 2 anteriores)
+    const trimestre = calcularTrimestre(mesReferencia, anoReferencia);
+    Logger.log('>>> Trimestre: ' + JSON.stringify(trimestre));
+    
+    // Filtra dados do trimestre
+    const dadosTrimestre = dados.filter(function(d) {
+      return trimestre.some(function(t) {
+        return d.ano === t.ano && d.mes === t.mes;
+      });
+    });
+    
+    Logger.log('>>> Dados no trimestre: ' + dadosTrimestre.length);
+    
+    // Agrupa por prestador (CNES)
+    const prestadoresMap = {};
+    
+    dadosTrimestre.forEach(function(d) {
+      const cnes = d.cnes.toString().trim();
+      
+      if (!prestadoresMap[cnes]) {
+        prestadoresMap[cnes] = {
+          cnes: cnes,
+          nome_prestador: d.nome_prestador,
+          categorias: {},
+          meses: {},
+          totais: {
+            meta: 0,
+            producao: 0,
+            qtdOtimo: 0,
+            qtdBom: 0,
+            qtdRegular: 0,
+            qtdInsatisfatorio: 0
+          }
+        };
+      }
+      
+      const p = prestadoresMap[cnes];
+      
+      // Agrupa por categoria (tipo_fixado + complexidade + modalidade)
+      const categoria = [d.tipo_fixado, d.complexidade, d.modalidade].filter(Boolean).join(' - ');
+      if (!p.categorias[categoria]) {
+        p.categorias[categoria] = [];
+      }
+      p.categorias[categoria].push(d);
+      
+      // Agrupa por mês
+      const mesKey = d.ano + '-' + String(d.mes).padStart(2, '0');
+      if (!p.meses[mesKey]) {
+        p.meses[mesKey] = {
+          ano: d.ano,
+          mes: d.mes,
+          mesNome: getMesNome(d.mes),
+          meta: 0,
+          producao: 0,
+          desempenho: 0,
+          qtdOtimo: 0,
+          qtdBom: 0,
+          qtdRegular: 0,
+          qtdInsatisfatorio: 0
+        };
+      }
+      
+      const m = p.meses[mesKey];
+      m.meta += parseFloat(d.meta) || 0;
+      m.producao += parseFloat(d.producao) || 0;
+      
+      // Conta classificações
+      switch (d.classificacao) {
+        case 'Ótimo': m.qtdOtimo++; p.totais.qtdOtimo++; break;
+        case 'Bom': m.qtdBom++; p.totais.qtdBom++; break;
+        case 'Regular': m.qtdRegular++; p.totais.qtdRegular++; break;
+        case 'Insatisfatório': m.qtdInsatisfatorio++; p.totais.qtdInsatisfatorio++; break;
+      }
+      
+      // Totais
+      p.totais.meta += parseFloat(d.meta) || 0;
+      p.totais.producao += parseFloat(d.producao) || 0;
+    });
+    
+    // Converte para array e calcula métricas
+    const prestadores = [];
+    
+    Object.keys(prestadoresMap).forEach(function(cnes) {
+      const p = prestadoresMap[cnes];
+      
+      // Calcula desempenho geral
+      p.desempenhoGeral = p.totais.meta > 0 
+        ? Math.round((p.totais.producao / p.totais.meta) * 100) 
+        : 0;
+      
+      // Calcula desempenho por mês
+      Object.keys(p.meses).forEach(function(mesKey) {
+        const m = p.meses[mesKey];
+        m.desempenho = m.meta > 0 ? Math.round((m.producao / m.meta) * 100) : 0;
+      });
+      
+      // Converte meses para array ordenado
+      p.mesesArray = Object.values(p.meses).sort(function(a, b) {
+        return (a.ano * 100 + a.mes) - (b.ano * 100 + b.mes);
+      });
+      
+      // Converte categorias para array
+      p.categoriasArray = Object.keys(p.categorias).map(function(cat) {
+        return {
+          nome: cat,
+          dados: p.categorias[cat]
+        };
+      });
+      
+      // Define classificação geral
+      p.classificacaoGeral = classificarDesempenho(p.desempenhoGeral / 100);
+      
+      // Define status
+      if (p.totais.qtdInsatisfatorio > 0) {
+        p.status = 'critico';
+      } else if (p.totais.qtdRegular > 0) {
+        p.status = 'atencao';
+      } else {
+        p.status = 'ok';
+      }
+      
+      // Arredonda totais
+      p.totais.meta = Math.round(p.totais.meta);
+      p.totais.producao = Math.round(p.totais.producao);
+      
+      prestadores.push(p);
+    });
+    
+    // Ordena por nome
+    prestadores.sort(function(a, b) {
+      return a.nome_prestador.localeCompare(b.nome_prestador);
+    });
+    
+    // Calcula resumo geral
+    const resumo = {
+      totalPrestadores: prestadores.length,
+      desempenhoGeral: 0,
+      totalMeta: 0,
+      totalProducao: 0,
+      qtdSatisfatorio: prestadores.filter(function(p) { return p.status === 'ok'; }).length,
+      qtdAtencao: prestadores.filter(function(p) { return p.status === 'atencao'; }).length,
+      qtdCritico: prestadores.filter(function(p) { return p.status === 'critico'; }).length
+    };
+    
+    prestadores.forEach(function(p) {
+      resumo.totalMeta += p.totais.meta;
+      resumo.totalProducao += p.totais.producao;
+    });
+    
+    resumo.desempenhoGeral = resumo.totalMeta > 0 
+      ? Math.round((resumo.totalProducao / resumo.totalMeta) * 100) 
+      : 0;
+    
+    Logger.log('>>> getAvaliacaoPrestadores: FIM - ' + prestadores.length + ' prestadores');
+    
+    return {
+      erro: false,
+      prestadores: prestadores,
+      resumo: resumo,
+      trimestre: trimestre,
+      mes_referencia: mesReferencia,
+      ano_referencia: anoReferencia
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO em getAvaliacaoPrestadores: ' + error.toString());
+    return { erro: true, mensagem: error.toString() };
+  }
+}
+
+/**
+ * Retorna detalhes de avaliação de um prestador específico
+ */
+function getDetalheAvaliacaoPrestador(cnes, mesReferencia, anoReferencia) {
+  try {
+    Logger.log('>>> getDetalheAvaliacaoPrestador: CNES=' + cnes);
+    
+    const dados = lerDadosAvaliacao();
+    const trimestre = calcularTrimestre(mesReferencia, anoReferencia);
+    
+    // Filtra dados do prestador no trimestre
+    const dadosPrestador = dados.filter(function(d) {
+      return d.cnes.toString().trim() === cnes.toString().trim() &&
+        trimestre.some(function(t) {
+          return d.ano === t.ano && d.mes === t.mes;
+        });
+    });
+    
+    if (dadosPrestador.length === 0) {
+      return { erro: true, mensagem: 'Prestador não encontrado no período.' };
+    }
+    
+    // Agrupa por categoria
+    const categorias = {};
+    
+    dadosPrestador.forEach(function(d) {
+      const categoria = [d.tipo_fixado, d.complexidade, d.modalidade].filter(Boolean).join(' | ');
+      
+      if (!categorias[categoria]) {
+        categorias[categoria] = {
+          nome: categoria,
+          tipo_fixado: d.tipo_fixado,
+          complexidade: d.complexidade,
+          modalidade: d.modalidade,
+          meses: []
+        };
+      }
+      
+      categorias[categoria].meses.push({
+        ano: d.ano,
+        mes: d.mes,
+        mesNome: getMesNome(d.mes),
+        meta: Math.round(parseFloat(d.meta) || 0),
+        producao: Math.round(parseFloat(d.producao) || 0),
+        desempenho: Math.round((parseFloat(d.desempenho) || 0) * 100),
+        classificacao: d.classificacao
+      });
+    });
+    
+    // Ordena meses em cada categoria
+    Object.keys(categorias).forEach(function(cat) {
+      categorias[cat].meses.sort(function(a, b) {
+        return (a.ano * 100 + a.mes) - (b.ano * 100 + b.mes);
+      });
+    });
+    
+    return {
+      erro: false,
+      cnes: cnes,
+      nome_prestador: dadosPrestador[0].nome_prestador,
+      categorias: Object.values(categorias),
+      trimestre: trimestre
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO em getDetalheAvaliacaoPrestador: ' + error.toString());
+    return { erro: true, mensagem: error.toString() };
+  }
+}
+
+/**
+ * Calcula o trimestre (mês atual + 2 anteriores)
+ */
+function calcularTrimestre(mes, ano) {
+  const trimestre = [];
+  
+  for (let i = 0; i < 3; i++) {
+    let m = mes - i;
+    let a = ano;
+    
+    while (m <= 0) {
+      m += 12;
+      a--;
+    }
+    
+    trimestre.unshift({ mes: m, ano: a, mesNome: getMesNome(m) });
+  }
+  
+  return trimestre;
+}
+
+/**
+ * Classifica desempenho com base no percentual
+ */
+function classificarDesempenho(desempenho) {
+  if (desempenho >= 0.9) return 'Ótimo';
+  if (desempenho >= 0.8) return 'Bom';
+  if (desempenho >= 0.7) return 'Regular';
+  return 'Insatisfatório';
+}
+
+/**
+ * Retorna nome do mês
+ */
+function getMesNome(mes) {
+  const meses = ['', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 
+                'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+  return meses[mes] || '';
+}
+
+/**
+ * Exporta relatório de avaliação para Excel
+ */
+function exportarRelatorioAvaliacao(mesReferencia, anoReferencia, filtroPrestador) {
+  try {
+    Logger.log('>>> exportarRelatorioAvaliacao: INÍCIO');
+    
+    const dados = getAvaliacaoPrestadores(mesReferencia, anoReferencia);
+    
+    if (dados.erro) {
+      return { sucesso: false, mensagem: dados.mensagem };
+    }
+    
+    if (!dados.prestadores || dados.prestadores.length === 0) {
+      return { sucesso: false, mensagem: 'Nenhum dado para exportar.' };
+    }
+    
+    // Aplica filtro se informado
+    let prestadores = dados.prestadores;
+    if (filtroPrestador && filtroPrestador.trim() !== '') {
+      const filtroLower = filtroPrestador.toLowerCase().trim();
+      prestadores = prestadores.filter(function(p) {
+        return p.nome_prestador.toLowerCase().indexOf(filtroLower) !== -1;
+      });
+    }
+    
+    // Cria planilha
+    const mesesNomes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    const nomeMes = mesesNomes[mesReferencia - 1];
+    const nomeArquivo = 'Avaliacao_Prestadores_' + nomeMes + '_' + anoReferencia + '_' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyyMMdd_HHmm');
+    
+    const ss = SpreadsheetApp.create(nomeArquivo);
+    
+    // ========== ABA 1: RESUMO POR PRESTADOR ==========
+    const sheetResumo = ss.getActiveSheet();
+    sheetResumo.setName('Resumo por Prestador');
+    
+    // Cabeçalho
+    sheetResumo.getRange('A1').setValue('AVALIAÇÃO DE PRESTADORES - TRIMESTRE: ' + dados.trimestre.map(function(t) { return t.mesNome; }).join(' / ') + ' ' + anoReferencia);
+    sheetResumo.getRange('A1').setFontSize(14).setFontWeight('bold').setBackground('#8B5CF6').setFontColor('white');
+    sheetResumo.getRange('A1:H1').merge();
+    
+    sheetResumo.getRange('A2').setValue('Gerado em: ' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'dd/MM/yyyy HH:mm'));
+    
+    // Cabeçalhos da tabela
+    const headersResumo = ['CNES', 'Prestador', 'Meta Total', 'Produção Total', 'Desempenho %', 'Classificação', 'Ótimo', 'Bom', 'Regular', 'Insatisf.', 'Status'];
+    sheetResumo.getRange(4, 1, 1, headersResumo.length).setValues([headersResumo]);
+    sheetResumo.getRange(4, 1, 1, headersResumo.length).setFontWeight('bold').setBackground('#A78BFA').setFontColor('white');
+    
+    // Dados
+    const linhasResumo = prestadores.map(function(p) {
+      var statusTexto = '';
+      if (p.status === 'ok') statusTexto = '✅ Satisfatório';
+      else if (p.status === 'atencao') statusTexto = '⚠️ Atenção';
+      else statusTexto = '❌ Crítico';
+      
+      return [
+        p.cnes,
+        p.nome_prestador,
+        p.totais.meta,
+        p.totais.producao,
+        p.desempenhoGeral + '%',
+        p.classificacaoGeral,
+        p.totais.qtdOtimo,
+        p.totais.qtdBom,
+        p.totais.qtdRegular,
+        p.totais.qtdInsatisfatorio,
+        statusTexto
+      ];
+    });
+    
+    if (linhasResumo.length > 0) {
+      sheetResumo.getRange(5, 1, linhasResumo.length, headersResumo.length).setValues(linhasResumo);
+      sheetResumo.getRange(5, 3, linhasResumo.length, 2).setNumberFormat('#,##0');
+    }
+    
+    // Formatação condicional
+    for (var row = 5; row < 5 + linhasResumo.length; row++) {
+      var status = sheetResumo.getRange(row, 11).getValue();
+      if (status.indexOf('Satisfatório') !== -1) {
+        sheetResumo.getRange(row, 1, 1, headersResumo.length).setBackground('#D1FAE5');
+      } else if (status.indexOf('Atenção') !== -1) {
+        sheetResumo.getRange(row, 1, 1, headersResumo.length).setBackground('#FEF3C7');
+      } else if (status.indexOf('Crítico') !== -1) {
+        sheetResumo.getRange(row, 1, 1, headersResumo.length).setBackground('#FEE2E2');
+      }
+    }
+    
+    // Auto-ajusta colunas
+    for (var i = 1; i <= headersResumo.length; i++) {
+      sheetResumo.autoResizeColumn(i);
+    }
+    
+    // ========== ABA 2: DETALHAMENTO MENSAL ==========
+    const sheetDetalhe = ss.insertSheet('Detalhamento Mensal');
+    
+    // Cabeçalho
+    sheetDetalhe.getRange('A1').setValue('DETALHAMENTO MENSAL - ' + dados.trimestre.map(function(t) { return t.mesNome; }).join(' / ') + ' ' + anoReferencia);
+    sheetDetalhe.getRange('A1').setFontSize(14).setFontWeight('bold').setBackground('#8B5CF6').setFontColor('white');
+    sheetDetalhe.getRange('A1:G1').merge();
+    
+    // Cabeçalhos da tabela
+    const headersDetalhe = ['CNES', 'Prestador', 'Mês', 'Meta', 'Produção', 'Desempenho %', 'Status'];
+    sheetDetalhe.getRange(3, 1, 1, headersDetalhe.length).setValues([headersDetalhe]);
+    sheetDetalhe.getRange(3, 1, 1, headersDetalhe.length).setFontWeight('bold').setBackground('#A78BFA').setFontColor('white');
+    
+    // Dados detalhados
+    const linhasDetalhe = [];
+    prestadores.forEach(function(p) {
+      p.mesesArray.forEach(function(m) {
+        var statusMes = '';
+        if (m.qtdInsatisfatorio > 0) statusMes = '❌';
+        else if (m.qtdRegular > 0) statusMes = '⚠️';
+        else statusMes = '✅';
+        
+        linhasDetalhe.push([
+          p.cnes,
+          p.nome_prestador,
+          m.mesNome + '/' + m.ano,
+          m.meta,
+          m.producao,
+          m.desempenho + '%',
+          statusMes
+        ]);
+      });
+    });
+    
+    if (linhasDetalhe.length > 0) {
+      sheetDetalhe.getRange(4, 1, linhasDetalhe.length, headersDetalhe.length).setValues(linhasDetalhe);
+      sheetDetalhe.getRange(4, 4, linhasDetalhe.length, 2).setNumberFormat('#,##0');
+    }
+    
+    // Formatação condicional
+    for (var rowD = 4; rowD < 4 + linhasDetalhe.length; rowD++) {
+      var statusD = sheetDetalhe.getRange(rowD, 7).getValue();
+      if (statusD === '✅') {
+        sheetDetalhe.getRange(rowD, 1, 1, headersDetalhe.length).setBackground('#D1FAE5');
+      } else if (statusD === '⚠️') {
+        sheetDetalhe.getRange(rowD, 1, 1, headersDetalhe.length).setBackground('#FEF3C7');
+      } else {
+        sheetDetalhe.getRange(rowD, 1, 1, headersDetalhe.length).setBackground('#FEE2E2');
+      }
+    }
+    
+    // Auto-ajusta colunas
+    for (var j = 1; j <= headersDetalhe.length; j++) {
+      sheetDetalhe.autoResizeColumn(j);
+    }
+    
+    // Força gravação
+    SpreadsheetApp.flush();
+    Utilities.sleep(500);
+    
+    Logger.log('>>> Relatório de avaliação exportado: ' + nomeArquivo);
+    
+    return {
+      sucesso: true,
+      url: 'https://docs.google.com/spreadsheets/d/' + ss.getId(),
+      mensagem: 'Relatório gerado com sucesso!'
+    };
+    
+  } catch (error) {
+    Logger.log('>>> ERRO ao exportar avaliação: ' + error.toString());
+    return { sucesso: false, mensagem: error.toString() };
+  }
+}
+
+
+/**
+ * Converte diferentes formatos de data para objeto Date
+ */
+function converterParaData(valor) {
+  if (!valor) return null;
+  
+  // Se já é Date
+  if (valor instanceof Date) {
+    return valor;
+  }
+  
+  // Se é string
+  if (typeof valor === 'string') {
+    valor = valor.trim();
+    
+    // Formato dd/MM/yyyy
+    if (/^\d{2}\/\d{2}\/\d{4}$/.test(valor)) {
+      const partes = valor.split('/');
+      return new Date(partes[2], partes[1] - 1, partes[0]);
+    }
+    
+    // Formato yyyy-MM-dd
+    if (/^\d{4}-\d{2}-\d{2}/.test(valor)) {
+      const partes = valor.substring(0, 10).split('-');
+      return new Date(partes[0], partes[1] - 1, partes[2]);
+    }
+    
+    // Tenta parsing padrão
+    try {
+      const data = new Date(valor);
+      if (!isNaN(data.getTime())) {
+        return data;
+      }
+    } catch (e) {
+      return null;
+    }
+  }
+  
+  // Se é número (serial do Excel)
+  if (typeof valor === 'number') {
+    return new Date((valor - 25569) * 86400 * 1000);
+  }
+  
+  return null;
+}
